@@ -1068,7 +1068,7 @@ async def main():
 				await entity_tp_helper(foreground_client, "poopy", "Raid_Jewel_Reagent", debug=True)
 				await asyncio.sleep(0.2)
 				await p.send_key(Keycode.X, 0.2)
-				await foreground_client.teleport('insert tear Collector location') # Update this location
+				await foreground_client.teleport(XYZ(-17500.33984375, -3915.417236328125, 1.649688720703125))
 				await asyncio.sleep(0.2)
 				await p.send_key(Keycode.X, 0.2)
 				await asyncio.sleep(0.1)
@@ -1169,7 +1169,6 @@ async def main():
 			await asyncio.sleep(0.2)
 			await p.send_key(Keycode.X, 0.2)
 			await p.send_key(Keycode.X, 0.2)
-			# Update this to cauldron location
 			await foreground_client.teleport(XYZ(-2798.93701171875, 1090.9080810546875, -699.418701171875))
 	
 	async def lucien_hotkey():
@@ -1180,7 +1179,6 @@ async def main():
 			await asyncio.sleep(0.2)
 			await p.send_key(Keycode.X, 0.2)
 			await p.send_key(Keycode.X, 0.2)
-			# Update this to cauldron location
 			await foreground_client.teleport(XYZ(1144.9696044921875, 1094.712890625, -699.418701171875))
 
 	async def morg_hotkey():
@@ -1190,7 +1188,6 @@ async def main():
 			await asyncio.sleep(0.2)
 			await p.send_key(Keycode.X, 0.2)
 			await p.send_key(Keycode.X, 0.2)
-			# Update this to cauldron location
 			await foreground_client.teleport(XYZ(-2727.752197265625, 83.66287994384766, -699.418701171875))
 
 	async def mime_hotkey():
@@ -1201,7 +1198,6 @@ async def main():
 			await asyncio.sleep(0.2)
 			await p.send_key(Keycode.X, 0.2)
 			await p.send_key(Keycode.X, 0.2)
-			# Update this to cauldron location
 			await foreground_client.teleport(XYZ(1126.2415771484375, -73.92024230957031, -699.418701171875))
 
 	# GCR Toggles
