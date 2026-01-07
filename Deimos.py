@@ -1042,11 +1042,11 @@ async def main():
 					csr_drums_task = None
 
 					logger.debug("CSR Drums Disabled")
-					gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("CSRDrumsStatus", "Disabled")))
+					gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("DrumsStatus", "Disabled")))
 					return
 
 				logger.debug("CSR Drums Enabled")
-				gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("CSRDrumsStatus", "Enabled")))
+				gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("DrumsStatus", "Enabled")))
 				csr_drums_task = asyncio.create_task(drums_loop(client))
 
 	async def drums_loop(clients: list[Client]):
