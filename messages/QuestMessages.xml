@@ -1,0 +1,235 @@
+<?xml version="1.0" ?>
+<GameMessages>
+  <_ProtocolInfo>
+    <RECORD>
+      <ServiceID TYPE="UBYT">52</ServiceID>
+      <ProtocolType TYPE="STR">QUEST_MESSAGES</ProtocolType>
+      <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+      <ProtocolDescription TYPE="STR">Messages related to questing</ProtocolDescription>
+    </RECORD>
+  </_ProtocolInfo>
+  <MSG_SENDQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SENDQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Info for a given quest</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SendQuest</_MsgHandler>
+      <QuestID TYPE="GID"></QuestID>
+      <QuestNameID TYPE="UINT"></QuestNameID>
+      <QuestType TYPE="UINT"></QuestType>
+	  <QuestLevel TYPE="INT"></QuestLevel>
+      <QuestTitle TYPE="STR"></QuestTitle>
+      <QuestInfo TYPE="STR"></QuestInfo>
+      <New TYPE="UBYT"></New>
+      <QuestMadlibs TYPE="STR"></QuestMadlibs>
+      <GoalData TYPE="STR"></GoalData>
+      <Rewards TYPE="STR"></Rewards>
+      <ClientTags TYPE="STR"></ClientTags>
+	  <AssociatedWorlds TYPE="STR"></AssociatedWorlds>
+      <NoQuestHelper TYPE="UBYT"></NoQuestHelper>
+      <Mainline TYPE="UBYT"></Mainline>
+	  <ReadyToTurnIn TYPE="UBYT"></ReadyToTurnIn>
+   	  <SkipQHAutoSelect TYPE="UBYT"></SkipQHAutoSelect>
+      <PetOnlyQuest TYPE="UBYT"></PetOnlyQuest>
+	  <ActivityType TYPE="UBYT"></ActivityType>
+	</RECORD>
+  </MSG_SENDQUEST>
+  <MSG_SENDGOAL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SENDGOAL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Info for a given goal</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SendGoal</_MsgHandler>
+      <QuestID TYPE="GID"></QuestID>
+      <GoalID TYPE="GID"></GoalID>
+      <GoalNameID TYPE="UINT"></GoalNameID>
+      <GoalTitle TYPE="STR"></GoalTitle>
+      <GoalLocation TYPE="STR"></GoalLocation>
+      <GoalDestinationZone TYPE="STR"></GoalDestinationZone>
+      <GoalImage1 TYPE="STR"></GoalImage1>
+      <GoalImage2 TYPE="STR"></GoalImage2>
+      <PersonaName TYPE="STR"></PersonaName>
+      <GoalType TYPE="UBYT"></GoalType>
+      <GoalStatus TYPE="UBYT"></GoalStatus>
+      <GoalCount TYPE="INT"></GoalCount>
+      <GoalTotal TYPE="INT"></GoalTotal>
+      <SubscriberGoalTotal TYPE="INT"></SubscriberGoalTotal>
+      <UseTally TYPE="UBYT"></UseTally>
+      <TallyText TYPE="STR"></TallyText>
+      <SendType TYPE="INT"></SendType>
+      <GoalMadlibs TYPE="STR"></GoalMadlibs>
+      <ClientTags TYPE="STR"></ClientTags>
+      <PatronIcon TYPE="STR"></PatronIcon>
+      <NoQuestHelper TYPE="UBYT"></NoQuestHelper>
+      <PetOnlyQuest TYPE="UBYT"></PetOnlyQuest>
+      <HasActiveResults TYPE="UBYT"></HasActiveResults>
+      <HideGoalFloatyText TYPE="UBYT"></HideGoalFloatyText>
+    </RECORD>
+  </MSG_SENDGOAL>
+  <MSG_REMOVEQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REMOVEQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell the client to dump the quest</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RemoveQuest</_MsgHandler>
+      <QuestID TYPE="GID"></QuestID>
+      <NpcID TYPE="GID"></NpcID>
+    </RECORD>
+  </MSG_REMOVEQUEST>
+  <MSG_REMOVEGOAL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REMOVEGOAL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell the client to dump the goal</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RemoveGoal</_MsgHandler>
+      <QuestID TYPE="GID"></QuestID>
+      <GoalID TYPE="GID"></GoalID>
+    </RECORD>
+  </MSG_REMOVEGOAL>
+  <MSG_COMPLETEGOAL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_COMPLETEGOAL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">The given goal has just become complete</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CompleteGoal</_MsgHandler>
+      <QuestID TYPE="GID"></QuestID>
+      <GoalID TYPE="GID"></GoalID>
+      <CompleteText TYPE="STR"></CompleteText>
+    </RECORD>
+  </MSG_COMPLETEGOAL>
+  <MSG_NPCINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_NPCINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Send basic header information on an NPC</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_NPCInfo</_MsgHandler>
+      <MobileID TYPE="GID"></MobileID>
+      <Name TYPE="STR"></Name>
+      <Greeting TYPE="STR"></Greeting>
+      <PersonaMadlibs TYPE="STR"></PersonaMadlibs>
+    </RECORD>
+  </MSG_NPCINFO>
+  <MSG_QUESTOFFER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_QUESTOFFER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Info block for a quest being offered by an NPC</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_QuestOffer</_MsgHandler>
+      <MobileID TYPE="GID"></MobileID>
+      <QuestName TYPE="STR"></QuestName>
+      <QuestTitle TYPE="STR"></QuestTitle>
+      <QuestInfo TYPE="STR"></QuestInfo>
+      <Level TYPE="INT"></Level>
+      <Rewards TYPE="STR"></Rewards>
+      <GoalData TYPE="STR"></GoalData>
+      <Mainline TYPE="UBYT"></Mainline>
+    </RECORD>
+  </MSG_QUESTOFFER>
+  <MSG_PERSONAINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PERSONAINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Option to complete a persona goal, sent to client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PersonaComplete</_MsgHandler>
+      <MobileID TYPE="GID"></MobileID>
+      <QuestID TYPE="GID"></QuestID>
+      <GoalID TYPE="GID"></GoalID>
+      <GoalHyperlink TYPE="STR"></GoalHyperlink>
+    </RECORD>
+  </MSG_PERSONAINFO>
+  <MSG_ACCEPTQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ACCEPTQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell the server we want to accept an offered quest</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_AcceptQuest</_MsgHandler>
+      <MobileID TYPE="GID"></MobileID>
+      <QuestName TYPE="STR"></QuestName>
+    </RECORD>
+  </MSG_ACCEPTQUEST>
+  <MSG_DECLINEQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DECLINEQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell the server about a declined quest</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DeclineQuest</_MsgHandler>
+      <QuestName TYPE="STR"></QuestName>
+    </RECORD>
+  </MSG_DECLINEQUEST>
+  <MSG_COMPLETEPERSONA>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_COMPLETEPERSONA</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell the server to complete talking to an NPC</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CompletePersonaGoal</_MsgHandler>
+      <MobileID TYPE="GID"></MobileID>
+      <QuestID TYPE="GID"></QuestID>
+      <GoalID TYPE="GID"></GoalID>
+    </RECORD>
+  </MSG_COMPLETEPERSONA>
+  <MSG_COMPLETEQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_COMPLETEQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Notification to the client that a quest has been completed</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CompleteQuest</_MsgHandler>
+      <QuestID TYPE="GID"></QuestID>
+      <CompleteText TYPE="STR"></CompleteText>
+    </RECORD>
+  </MSG_COMPLETEQUEST>
+  <MSG_CANACQUIREWORLDELIXIR>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CANACQUIREWORLDELIXIR</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Notification to the client if a world elixir can be bought</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CanAcquireWorldElixir</_MsgHandler>
+      <ElixirTemplateGID TYPE="GID"></ElixirTemplateGID>
+      <Result TYPE="INT"></Result>
+    </RECORD>
+  </MSG_CANACQUIREWORLDELIXIR>
+  <MSG_INTERACTNPC>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_INTERACTNPC</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Some kind of interaction with an NPC</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_InteractNPC</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <ServiceName TYPE="STR"></ServiceName>
+      <Reinteract TYPE="INT"></Reinteract>
+      <ServiceIndex TYPE="UINT"></ServiceIndex>
+      <RequestedSigilMode TYPE="UINT"></RequestedSigilMode>
+    </RECORD>
+  </MSG_INTERACTNPC>
+  <MSG_SENDNPCOPTIONS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SENDNPCOPTIONS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Informing the client of a set of things an NPC can do</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SendNPCOptions</_MsgHandler>
+      <MobileID TYPE="GID"></MobileID>
+      <Options TYPE="STR"></Options>
+      <Reinteract TYPE="INT"></Reinteract>
+    </RECORD>
+  </MSG_SENDNPCOPTIONS>
+  <MSG_DEBUGQUESTDATA>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DEBUGQUESTDATA</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Informing the client of a set of things an NPC can do</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DebugQuestData</_MsgHandler>
+      <QuestID TYPE="GID"></QuestID>
+      <GoalID TYPE="UINT"></GoalID>
+      <QuestName TYPE="STR"></QuestName>
+      <GoalName TYPE="STR"></GoalName>
+    </RECORD>
+  </MSG_DEBUGQUESTDATA>
+  <MSG_QUESTREADYTOTURNIN>
+	<RECORD>
+	  <_MsgName TYPE="STR" NOXFER="TRUE">MSG_QUESTREADYTOTURNIN</_MsgName>
+	  <_MsgDescription TYPE="STR" NOXFER="TRUE">Notification to the client that a quest is ready to turn in</_MsgDescription>
+	  <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_QuestReadyToTurnIn</_MsgHandler>
+	  <QuestID TYPE="GID"></QuestID>
+	</RECORD>
+  </MSG_QUESTREADYTOTURNIN>
+  <MSG_UPDATEUSERHIDDENQUESTS>
+	<RECORD>
+	  <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEUSERHIDDENQUESTS</_MsgName>
+	  <_MsgDescription TYPE="STR" NOXFER="TRUE">Update the user hidden quests list from client to server</_MsgDescription>
+	  <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateUserHiddenQuests</_MsgHandler>	  
+	  <Data TYPE="STR"></Data>	  
+	</RECORD>
+  </MSG_UPDATEUSERHIDDENQUESTS>
+  <MSG_GETNEXTWORLD>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_GETNEXTWORLD</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Send to the client the next world to be completed</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_GetNextWorld</_MsgHandler>
+      <World TYPE="STR"></World>
+    </RECORD>
+  </MSG_GETNEXTWORLD>
+
+</GameMessages>

@@ -1,0 +1,198 @@
+<?xml version="1.0" ?>
+<CantripsMessages>
+  <_ProtocolInfo>
+    <RECORD>
+      <ServiceID TYPE="UBYT">57</ServiceID>
+      <ProtocolType TYPE="STR">CantripsMessages</ProtocolType>
+      <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+      <ProtocolDescription TYPE="STR">Messages for Cantrips</ProtocolDescription>
+    </RECORD>
+  </_ProtocolInfo>
+  <MSG_CANTRIPSSPELLCAST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CANTRIPSSPELLCAST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requested a cantrips spell cast</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CantripsSpellCast</_MsgHandler>
+      <SpellTemplateID TYPE="UINT"></SpellTemplateID>
+      <IsTreasureCard TYPE="UBYT"></IsTreasureCard>
+    </RECORD>
+  </MSG_CANTRIPSSPELLCAST>
+  <MSG_CANTRIPSRESPONSE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CANTRIPSRESPONSE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell the client the energy spent or if there is not enough</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CantripsResponse</_MsgHandler>
+      <EnergyUsed TYPE="UINT"></EnergyUsed>
+      <CooldownSeconds TYPE="UINT"></CooldownSeconds>
+      <OutOfEnergy TYPE="UBYT"></OutOfEnergy>
+    </RECORD>
+  </MSG_CANTRIPSRESPONSE>
+  <MSG_CASTEFFECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CASTEFFECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell the client to cast an effect. If there are more than one, pick one at random.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CastEffect</_MsgHandler>
+      <GameObjectID TYPE="GID"></GameObjectID>
+      <SpellTemplateID TYPE="INT"></SpellTemplateID>
+      <AnimationKFM TYPE="STR"></AnimationKFM>
+      <AnimationName TYPE="STR"></AnimationName>
+    </RECORD>
+  </MSG_CASTEFFECT>
+  <MSG_CASTRITUAL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CASTRITUAL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Ask the player to select a ritual target</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CastRitual</_MsgHandler>
+      <CasterGID TYPE="GID"></CasterGID>
+      <SpellTemplateID TYPE="INT"></SpellTemplateID>
+      <TargetObjectID TYPE="GID"></TargetObjectID>
+      <TargetX TYPE="FLT"></TargetX>
+      <TargetY TYPE="FLT"></TargetY>
+      <TargetZ TYPE="FLT"></TargetZ>
+      <SchoolID TYPE="UINT"></SchoolID>
+      <Phase TYPE="UBYT"></Phase>
+    </RECORD>
+  </MSG_CASTRITUAL>
+  <MSG_UPDATERITUALOBJECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATERITUALOBJECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server updates a ritual target</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateRitualObject</_MsgHandler>
+      <CasterGID TYPE="GID"></CasterGID>
+      <ObjectGID TYPE="GID"></ObjectGID>
+      <Uses TYPE="UBYT"></Uses>
+      <Count TYPE="UBYT"></Count>
+    </RECORD>
+  </MSG_UPDATERITUALOBJECT>
+
+  <MSG_UPDATECANTRIPXP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATECANTRIPXP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">The player has changed cantrip xp or cantrip level</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateCantripXP</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <XP TYPE="INT"></XP>
+      <Level TYPE="INT"></Level>
+    </RECORD>
+  </MSG_UPDATECANTRIPXP>
+
+  <MSG_CANTRIPLEVELUP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CANTRIPLEVELUP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">This player has gained a new cantrip level</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CantripLevelUp</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <NewLevel TYPE="INT"></NewLevel>
+    </RECORD>
+  </MSG_CANTRIPLEVELUP>
+
+  <MSG_CANTRIPSRESPONSEERROR>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CANTRIPSRESPONSEERROR</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell the client about a cantrip problem</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CantripsResponseError</_MsgHandler>
+      <ProblemType TYPE="UINT"></ProblemType>
+    </RECORD>
+  </MSG_CANTRIPSRESPONSEERROR>
+
+  <MSG_CANTRIPSIGILSPELL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CANTRIPSIGILSPELL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell the client a sigil spell was cast</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CantripsSigilSpell</_MsgHandler>
+      <CasterGID TYPE="GID"></CasterGID>
+      <TargetObjectID TYPE="GID"></TargetObjectID>
+      <TargetX TYPE="FLT"></TargetX>
+      <TargetY TYPE="FLT"></TargetY>
+      <TargetZ TYPE="FLT"></TargetZ>
+      <SpellTemplateID TYPE="UINT"></SpellTemplateID>
+    </RECORD>
+  </MSG_CANTRIPSIGILSPELL>
+
+  <MSG_ENTERBENEFICIALOBJECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ENTERBENEFICIALOBJECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Local player is entering a benefical object range</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_EnterBeneficialObject</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <BenefitType TYPE="UINT"></BenefitType>
+    </RECORD>
+  </MSG_ENTERBENEFICIALOBJECT>
+
+  <MSG_BENEFICIALLUCKUPDATE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BENEFICIALLUCKUPDATE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Update the displayed luck for a benefical object</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BeneficialLuckUpdate</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <LuckOffset TYPE="FLT"></LuckOffset>
+    </RECORD>
+  </MSG_BENEFICIALLUCKUPDATE>
+
+  <MSG_CANCELINVISIBLITY>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CANCELINVISIBLITY</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Cancel Invisibility effect</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CancelInvisibility</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_CANCELINVISIBLITY>
+
+  <MSG_CANTRIPAFFECTEDPLAYER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CANTRIPAFFECTEDPLAYER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to play affected by cantrip effect</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CantripAffectedPlayer</_MsgHandler>
+      <GameObjectID TYPE="GID"></GameObjectID>
+    </RECORD>
+  </MSG_CANTRIPAFFECTEDPLAYER>
+
+  <MSG_CANTRIPENDLOOP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CANTRIPENDLOOP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to stop looping animation</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CantripEndLoop</_MsgHandler>
+      <GameObjectID TYPE="GID"></GameObjectID>
+    </RECORD>
+  </MSG_CANTRIPENDLOOP>
+
+  <MSG_EXITBENEFICIALOBJECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_EXITBENEFICIALOBJECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Local player is exiting a benefical object range</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ExitBeneficialObject</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <BenefitType TYPE="UINT"></BenefitType>
+    </RECORD>
+  </MSG_EXITBENEFICIALOBJECT>
+
+  <MSG_CANTRIPTUTORIALEFFECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CANTRIPTUTORIALEFFECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to play cantrip tutorial effect</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CantripTutorialEffect</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_CANTRIPTUTORIALEFFECT>
+
+  <MSG_CANTRIPNOAGGRO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CANTRIPNOAGGRO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to play the no aggro effect</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CantripNoAggro</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_CANTRIPNOAGGRO>
+
+  <MSG_CONTROLVISIBLITY>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CONTROLVISIBLITY</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server controls objects visibility</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ControlVisibility</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <IsVisible TYPE="UBYT"></IsVisible>
+    </RECORD>
+  </MSG_CONTROLVISIBLITY>
+
+
+</CantripsMessages>

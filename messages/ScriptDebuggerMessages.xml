@@ -1,0 +1,180 @@
+<?xml version="1.0" ?>
+<JobMessages>
+  <_ProtocolInfo>
+    <RECORD>
+      <ServiceID TYPE="UBYT">10</ServiceID>
+      <ProtocolType TYPE="STR">SCRIPT</ProtocolType>
+      <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+      <ProtocolDescription TYPE="STR">Script Debugger Messages</ProtocolDescription>
+    </RECORD>
+  </_ProtocolInfo>
+  <MSG_ENUM_PROCESS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ENUM_PROCESS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client sends this message to request a process list from the server.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ENUM_PROCESS</_MsgHandler>
+    </RECORD>
+  </MSG_ENUM_PROCESS>
+  <MSG_ATTACH_PROCESS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ATTACH_PROCESS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client request to attach to script PID for debugging.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ATTACH_PROCESS</_MsgHandler>
+      <PID TYPE="UINT"></PID>
+    </RECORD>
+  </MSG_ATTACH_PROCESS>
+  <MSG_DETACH_PROCESS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DETACH_PROCESS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is detaching from script process.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DETACH_PROCESS</_MsgHandler>
+      <PID TYPE="UINT"></PID>
+    </RECORD>
+  </MSG_DETACH_PROCESS>
+  <MSG_START_PROCESS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_START_PROCESS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is starting a script process.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_START_PROCESS</_MsgHandler>
+      <DataRoot TYPE="STR"></DataRoot>
+      <Zone TYPE="STR"></Zone>
+      <Script TYPE="STR"></Script>
+      <StartAttached TYPE="INT"></StartAttached>
+      <StartRunning TYPE="INT"></StartRunning>
+    </RECORD>
+  </MSG_START_PROCESS>
+  <MSG_KILL_PROCESS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_KILL_PROCESS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is requesting the specified process be killed.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_KILL_PROCESS</_MsgHandler>
+      <PID TYPE="UINT"></PID>
+    </RECORD>
+  </MSG_KILL_PROCESS>
+  <MSG_BREAK_PROCESS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BREAK_PROCESS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is requesting to break a process.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BREAK_PROCESS</_MsgHandler>
+    </RECORD>
+  </MSG_BREAK_PROCESS>
+  <MSG_STEP_PROCESS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_STEP_PROCESS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is requesting to step a process.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_STEP_PROCESS</_MsgHandler>
+    </RECORD>
+  </MSG_STEP_PROCESS>
+  <MSG_STEPOVER_PROCESS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_STEPOVER_PROCESS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is requesting to stepover a process.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_STEPOVER_PROCESS</_MsgHandler>
+    </RECORD>
+  </MSG_STEPOVER_PROCESS>
+  <MSG_RUN_PROCESS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_RUN_PROCESS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is requesting to run a process.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RUN_PROCESS</_MsgHandler>
+    </RECORD>
+  </MSG_RUN_PROCESS>
+  <MSG_ADD_WATCH>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ADD_WATCH</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is adding a watch.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ADD_WATCH</_MsgHandler>
+      <Variable TYPE="STR"></Variable>
+    </RECORD>
+  </MSG_ADD_WATCH>
+  <MSG_DEL_WATCH>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DEL_WATCH</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is removing a watch.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DEL_WATCH</_MsgHandler>
+      <Variable TYPE="STR"></Variable>
+    </RECORD>
+  </MSG_DEL_WATCH>
+  <MSG_ADD_BREAKPOINT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ADD_BREAKPOINT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is adding a breakpoint.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ADD_BREAKPOINT</_MsgHandler>
+      <File TYPE="STR"></File>
+      <Line TYPE="UINT"></Line>
+    </RECORD>
+  </MSG_ADD_BREAKPOINT>
+  <MSG_DEL_BREAKPOINT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DEL_BREAKPOINT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is removing a breakpoint.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DEL_BREAKPOINT</_MsgHandler>
+      <File TYPE="STR"></File>
+      <Line TYPE="UINT"></Line>
+    </RECORD>
+  </MSG_DEL_BREAKPOINT>
+  <MSG_SET_VARIABLE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SET_VARIABLE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is setting a variable.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SET_VARIABLE</_MsgHandler>
+      <Variable TYPE="STR"></Variable>
+      <Value TYPE="STR"></Value>
+    </RECORD>
+  </MSG_SET_VARIABLE>
+  <MSG_SEND_STATE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SEND_STATE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requesting the current process state.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SEND_STATE</_MsgHandler>
+    </RECORD>
+  </MSG_SEND_STATE>
+  <MSG_PROCESS_STATE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PROCESS_STATE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends this message to the client with the XML debug state.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PROCESS_STATE</_MsgHandler>
+      <PID TYPE="UINT"></PID>
+      <State TYPE="STR"></State>
+    </RECORD>
+  </MSG_PROCESS_STATE>
+  <MSG_ADD_MESSAGE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ADD_MESSAGE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends any this message for any debug messages.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ADD_MESSAGE</_MsgHandler>
+      <Message TYPE="STR"></Message>
+    </RECORD>
+  </MSG_ADD_MESSAGE>
+  <MSG_ADD_PROCESS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ADD_PROCESS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends this message to signify a new process.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ADD_PROCESS</_MsgHandler>
+      <PID TYPE="UINT"></PID>
+      <Root TYPE="STR"></Root>
+      <Zone TYPE="STR"></Zone>
+      <Name TYPE="STR"></Name>
+      <Status TYPE="STR"></Status>
+    </RECORD>
+  </MSG_ADD_PROCESS>
+  <MSG_REMOVE_PROCESS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REMOVE_PROCESS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends this message to signify a closed process.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_REMOVE_PROCESS</_MsgHandler>
+      <PID TYPE="UINT"></PID>
+      <Name TYPE="STR"></Name>
+      <Status TYPE="STR"></Status>
+    </RECORD>
+  </MSG_REMOVE_PROCESS>
+  <MSG_PROCESS_STATUS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PROCESS_STATUS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends this message to the client with the process status.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PROCESS_STATUS</_MsgHandler>
+      <PID TYPE="UINT"></PID>
+      <Status TYPE="STR"></Status>
+    </RECORD>
+  </MSG_PROCESS_STATUS>
+</JobMessages>

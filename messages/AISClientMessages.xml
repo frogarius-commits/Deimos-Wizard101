@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<AISClientMessages>
+<_ProtocolInfo>
+  <RECORD>
+    <ServiceID TYPE="UBYT">19</ServiceID>
+    <ProtocolType TYPE="STR">AISCLIENT</ProtocolType>
+    <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+    <ProtocolDescription TYPE="STR">All Anti-Indulgence System Messages To/From the Client</ProtocolDescription>
+  </RECORD>
+</_ProtocolInfo>
+<MSG_AISMESSAGE>
+  <RECORD>
+    <_MsgName TYPE="STR" NOXFER="TRUE">MSG_AISMESSAGE</_MsgName>
+    <_MsgDescription TYPE="STR" NOXFER="TRUE">Send message to client</_MsgDescription>
+    <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_AISMessage</_MsgHandler>
+    <Message TYPE="STR"></Message>
+    <Modal TYPE="UBYT"></Modal>
+  </RECORD>
+</MSG_AISMESSAGE>
+</AISClientMessages>

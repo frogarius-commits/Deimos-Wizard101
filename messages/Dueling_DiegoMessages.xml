@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<MG6Messages>
+<_ProtocolInfo>
+    <RECORD>
+      <ServiceID TYPE="UBYT">47</ServiceID>
+      <ProtocolType TYPE="STR">MG6_MESSAGES</ProtocolType>
+      <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+      <ProtocolDescription TYPE="STR">Messages for MG6 MinigameWindow Mini-Game</ProtocolDescription>
+    </RECORD>
+  </_ProtocolInfo>
+
+   <MSG_MG6_REWARDS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MG6_REWARDS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_MG6_Rewards</_MsgHandler>
+      		<score TYPE="INT"></score>
+		<gameName TYPE="STR"></gameName>
+    </RECORD>
+  </MSG_MG6_REWARDS>
+  
+   <MSG_MG6_MOVED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MG6_MOVED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_MG6_Moved</_MsgHandler>
+    </RECORD>
+  </MSG_MG6_MOVED>
+
+   <MSG_MG6_CONNECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MG6_CONNECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_MG6_Connect</_MsgHandler>
+    </RECORD>
+  </MSG_MG6_CONNECT>
+</MG6Messages>

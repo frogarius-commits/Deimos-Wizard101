@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<DoodleDougMessages>
+
+<_ProtocolInfo>
+    <RECORD>
+      <ServiceID TYPE="UBYT">41</ServiceID>
+      <ProtocolType TYPE="STR">DOODLEDOUG_MESSAGES</ProtocolType>
+      <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+      <ProtocolDescription TYPE="STR">Messages for all DoodleDoug minigames</ProtocolDescription>
+    </RECORD>
+  </_ProtocolInfo>
+
+   <MSG_DOODLEDOUG_REWARDS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DOODLEDOUG_REWARDS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_DoodleDoug_Rewards</_MsgHandler>
+      		<score TYPE="INT"></score>
+		<gameName TYPE="STR"></gameName>
+    </RECORD>
+  </MSG_DOODLEDOUG_REWARDS>
+
+   <MSG_DOODLEDOUG_MOVED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DOODLEDOUG_MOVED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_DoodleDoug_Moved</_MsgHandler>
+    </RECORD>
+  </MSG_DOODLEDOUG_MOVED>
+  
+  <MSG_DOODLEDOUG_CONNECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DOODLEDOUG_CONNECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_DoodleDoug_Connect</_MsgHandler>
+    </RECORD>
+  </MSG_DOODLEDOUG_CONNECT>
+    
+</DoodleDougMessages>

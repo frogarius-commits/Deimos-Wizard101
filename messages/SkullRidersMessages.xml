@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<SkullRidersMessages>
+<_ProtocolInfo>
+    <RECORD>
+      <ServiceID TYPE="UBYT">40</ServiceID>
+      <ProtocolType TYPE="STR">SKULLRIDERS_MESSAGES</ProtocolType>
+      <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+      <ProtocolDescription TYPE="STR">Messages for all SkullRiders minigames</ProtocolDescription>
+    </RECORD>
+  </_ProtocolInfo>
+
+   <MSG_SKULLRIDERS_REWARDS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SKULLRIDERS_REWARDS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_SkullRiders_Rewards</_MsgHandler>
+      		<score TYPE="INT"></score>
+		<gameName TYPE="STR"></gameName>
+    </RECORD>
+  </MSG_SKULLRIDERS_REWARDS>
+  
+   <MSG_SKULLRIDERS_MOVED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SKULLRIDERS_MOVED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_SkullRiders_Moved</_MsgHandler>
+    </RECORD>
+  </MSG_SKULLRIDERS_MOVED>
+
+   <MSG_SKULLRIDERS_CONNECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SKULLRIDERS_CONNECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_SkullRiders_Connect</_MsgHandler>
+    </RECORD>
+  </MSG_SKULLRIDERS_CONNECT>
+</SkullRidersMessages>

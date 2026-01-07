@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<MG3Messages>
+<_ProtocolInfo>
+    <RECORD>
+      <ServiceID TYPE="UBYT">44</ServiceID>
+      <ProtocolType TYPE="STR">MG3_MESSAGES</ProtocolType>
+      <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+      <ProtocolDescription TYPE="STR">Messages for MG3 MinigameWindow Mini-Game</ProtocolDescription>
+    </RECORD>
+  </_ProtocolInfo>
+
+   <MSG_MG3_REWARDS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MG3_REWARDS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_MG3_Rewards</_MsgHandler>
+      		<score TYPE="INT"></score>
+		<gameName TYPE="STR"></gameName>
+    </RECORD>
+  </MSG_MG3_REWARDS>
+  
+   <MSG_MG3_MOVED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MG3_MOVED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_MG3_Moved</_MsgHandler>
+    </RECORD>
+  </MSG_MG3_MOVED>
+  
+  
+   <MSG_MG3_CONNECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MG3_CONNECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_MG3_Connect</_MsgHandler>
+    </RECORD>
+  </MSG_MG3_CONNECT>
+</MG3Messages>

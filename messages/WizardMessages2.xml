@@ -1,0 +1,2696 @@
+<?xml version="1.0" ?>
+<WizardMessages>
+  <_ProtocolInfo>
+    <RECORD>
+      <ServiceID TYPE="UBYT">53</ServiceID>
+      <ProtocolType TYPE="STR">WIZARD2</ProtocolType>
+      <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+      <ProtocolDescription TYPE="STR">Wizard Messages2</ProtocolDescription>
+    </RECORD>
+  </_ProtocolInfo>
+
+  <MSG_REQUESTTEAMUP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTTEAMUP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client request team up</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestTeamUp</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <NPCID TYPE="GID"></NPCID>
+      <RequestedSigilMode TYPE="UBYT"></RequestedSigilMode>
+      <IsFarming TYPE="UBYT"></IsFarming>
+      <TeamSize TYPE="UBYT"></TeamSize>
+      <Edit TYPE="UBYT"></Edit>
+      <MinimumLevel TYPE="UINT"></MinimumLevel>
+      <MaximumLevel TYPE="UINT"></MaximumLevel>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+   </RECORD>
+  </MSG_REQUESTTEAMUP>
+
+  <MSG_TEAMUPADDPLAYER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TEAMUPADDPLAYER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server request to chat server for team up</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TeamUpAddPlayer</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <SigilID TYPE="UINT"></SigilID>
+      <SchoolID TYPE="UINT"></SchoolID>
+      <IsFarming TYPE="UBYT"></IsFarming>
+      <RequestedSigilMode TYPE="UBYT"></RequestedSigilMode>
+      <TeamSize TYPE="UBYT"></TeamSize>
+      <UseHighestPlayerLevel TYPE="UBYT"></UseHighestPlayerLevel>
+      <Level TYPE="UINT"></Level>
+      <MinimumLevel TYPE="UINT"></MinimumLevel>
+      <MaximumLevel TYPE="UINT"></MaximumLevel>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+    </RECORD>
+  </MSG_TEAMUPADDPLAYER>
+
+  <MSG_TEAMUPADDPLAYERTOCLIENT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TEAMUPADDPLAYERTOCLIENT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server request for client to add team up player</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TeamUpAddPlayerToClient</_MsgHandler>
+      <SigilID TYPE="GID"></SigilID>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <PackedName TYPE="STR"></PackedName>
+      <PlayerSchool TYPE="STR"></PlayerSchool>
+      <PlayerLevel TYPE="UINT"></PlayerLevel>
+      <SigilName TYPE="STR"></SigilName>      
+      <UpdatePlayerGID TYPE="GID"></UpdatePlayerGID>
+      <SecondsLeft TYPE="UINT"></SecondsLeft>
+      <FromSigil TYPE="UBYT"></FromSigil>
+      <RequestedSigilMode TYPE="UBYT"></RequestedSigilMode>       
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+    </RECORD>
+  </MSG_TEAMUPADDPLAYERTOCLIENT>
+
+  <MSG_TEAMUPREMOVEPLAYERFROMCLIENT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TEAMUPREMOVEPLAYERFROMCLIENT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server request for client to remove team up player</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TeamUpRemovePlayerFromClient</_MsgHandler>
+      <SigilID TYPE="GID"></SigilID>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <UpdatePlayerGID TYPE="GID"></UpdatePlayerGID>
+      <Disbanded TYPE="UBYT"></Disbanded>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+      <StopTimer TYPE="UBYT"></StopTimer>
+    </RECORD>
+  </MSG_TEAMUPREMOVEPLAYERFROMCLIENT>
+
+  <MSG_TEAMUPREMOVEPLAYER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TEAMUPREMOVEPLAYER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client request to remove player from team up</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TeamUpRemovePlayer</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <SigilID TYPE="UINT"></SigilID>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+    </RECORD>
+  </MSG_TEAMUPREMOVEPLAYER>
+
+  <MSG_TEAMUPTELEPORTPLAYER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TEAMUPTELEPORTPLAYER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server request for zone server to teleport a player</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TeamUpTeleportPlayer</_MsgHandler>
+      <SigilID TYPE="UINT"></SigilID>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <ZoneID TYPE="GID"></ZoneID >
+      <PlayerPosition TYPE="UBYT"></PlayerPosition>
+      <PlayerCount TYPE="UBYT"></PlayerCount>
+      <Level TYPE="UINT"></Level>
+      <EventCredit TYPE="UBYT"></EventCredit>
+      <EventScaleUp TYPE="UBYT"></EventScaleUp>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+    </RECORD>
+  </MSG_TEAMUPTELEPORTPLAYER>
+
+  <MSG_SETRESUMEINSTANCE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SETRESUMEINSTANCE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client that it can resume an instance</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SetResumeInstance</_MsgHandler>
+      <CharacterGID TYPE="GID"></CharacterGID>
+      <ClusterGID TYPE="GID"></ClusterGID>
+      <ZoneDisplayNameID TYPE="STR"></ZoneDisplayNameID>
+      <ExpireTime TYPE="UINT"></ExpireTime>
+      <Source TYPE="UBYT"></Source>
+      <StartingZoneName TYPE="STR"></StartingZoneName>
+      <StartingZoneLocation TYPE="STR"></StartingZoneLocation>
+      <ClusterTemplate TYPE="STR"></ClusterTemplate>
+    </RECORD>
+  </MSG_SETRESUMEINSTANCE>
+
+  <MSG_RESUMEINSTANCETELEPORTPLAYER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_RESUMEINSTANCETELEPORTPLAYER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests teleporting to an instances</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ResumeInstanceTeleportPlayer</_MsgHandler>
+      <ClusterGID TYPE="GID"></ClusterGID>
+    </RECORD>
+  </MSG_RESUMEINSTANCETELEPORTPLAYER>
+
+  <MSG_UPDATERESUMEINSTANCETIME>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATERESUMEINSTANCETIME</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Zone server sends chat server a list of players to be updated</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateResumeInstanceTime</_MsgHandler>
+      <ExpireTime TYPE="UINT"></ExpireTime>
+      <ClusterGID TYPE="GID"></ClusterGID>
+      <Player1 TYPE="GID"></Player1>
+      <Player2 TYPE="GID"></Player2>
+      <Player3 TYPE="GID"></Player3>
+      <Player4 TYPE="GID"></Player4>
+    </RECORD>
+  </MSG_UPDATERESUMEINSTANCETIME>
+
+  <MSG_UPDATERESUMEINSTANCETIME2>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATERESUMEINSTANCETIME2</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server sends zone server which sends to client cluster time update info</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateResumeInstanceTime2</_MsgHandler>
+      <ExpireTime TYPE="UINT"></ExpireTime>
+      <ClusterGID TYPE="GID"></ClusterGID>
+      <PlayerGID TYPE="GID"></PlayerGID>
+    </RECORD>
+  </MSG_UPDATERESUMEINSTANCETIME2>
+
+  <MSG_CLEARRESUMEINSTANCE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLEARRESUMEINSTANCE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Zone server tells client to clear resume instance</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClearResumeInstance</_MsgHandler>
+    </RECORD>
+  </MSG_CLEARRESUMEINSTANCE>
+
+  <MSG_COMPLETEINSTANCE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_COMPLETEINSTANCE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Zone server sends chat server a list of players in the cluster that completed</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CompleteInstance</_MsgHandler>
+      <ClusterGID TYPE="GID"></ClusterGID>
+      <Player1 TYPE="GID"></Player1>
+      <Player2 TYPE="GID"></Player2>
+      <Player3 TYPE="GID"></Player3>
+      <Player4 TYPE="GID"></Player4>
+    </RECORD>
+  </MSG_COMPLETEINSTANCE>
+
+  <MSG_COMPLETEINSTANCE2>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_COMPLETEINSTANCE2</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server sends zone server which sends to client completed message</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CompleteInstance2</_MsgHandler>
+      <ClusterGID TYPE="GID"></ClusterGID>
+      <PlayerGID TYPE="GID"></PlayerGID>
+    </RECORD>
+  </MSG_COMPLETEINSTANCE2>
+
+  <MSG_GETITEMINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_GETITEMINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Item Identifier wants more information about item.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_GetItemInfo</_MsgHandler>
+      <ItemID TYPE="UINT"></ItemID>
+    </RECORD>
+  </MSG_GETITEMINFO>
+
+  <MSG_ITEMIDENTIFIERINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ITEMIDENTIFIERINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">ItemIdentifier - Send info about if/where player can find items.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ItemIdentifierInfo</_MsgHandler>
+      <IsAvailable TYPE="UBYT"></IsAvailable>
+      <Locations TYPE="STR"></Locations>
+    </RECORD>
+  </MSG_ITEMIDENTIFIERINFO>
+
+  <MSG_LOGVIDEOCAPABILITIES>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_LOGVIDEOCAPABILITIES</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message sent from the client to log the video caps</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_LogVideoCapabilities</_MsgHandler>
+      <UserCapsBin TYPE="STR"></UserCapsBin>
+    </RECORD>
+  </MSG_LOGVIDEOCAPABILITIES>
+
+  <MSG_CLIENTZONED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLIENTZONED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message sent from the client after it enters a new zone</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClientZoned</_MsgHandler>
+      <ZoneNameID TYPE="UINT"></ZoneNameID>
+    </RECORD>
+  </MSG_CLIENTZONED>
+
+  <MSG_UPDATEFISHINGXP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEFISHINGXP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">The player has changed fishing xp or fishing level</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateFishingXP</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <XP TYPE="INT"></XP>
+      <Level TYPE="INT"></Level>
+    </RECORD>
+  </MSG_UPDATEFISHINGXP>
+
+  <MSG_FISHINGLEVELUP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_FISHINGLEVELUP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">This player has gained a new fishing level</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_FishingLevelUp</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <NewLevel TYPE="INT"></NewLevel>
+    </RECORD>
+  </MSG_FISHINGLEVELUP>
+
+  <MSG_SENDTRIVIA>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SENDTRIVIA</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Send a question from the chat server to all players</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SendTrivia</_MsgHandler>
+      <QuestionNumber TYPE="INT"></QuestionNumber>
+    </RECORD>
+  </MSG_SENDTRIVIA>
+
+  <MSG_ISFRIENDSWITHHOUSEOWNER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ISFRIENDSWITHHOUSEOWNER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Ask or respond if the Originator is friends with the HouseOwner</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_IsFriendsWithHouseOwner</_MsgHandler>
+      <OriginatorID TYPE="GID"></OriginatorID>
+      <HouseOwnerID TYPE="GID"></HouseOwnerID>
+      <IsFriend TYPE="UBYT"></IsFriend>
+    </RECORD>
+  </MSG_ISFRIENDSWITHHOUSEOWNER>
+
+  <MSG_CSRREQUESTFISHLIST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CSRREQUESTFISHLIST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">CSR Client requests a players fish list and server sends them</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_AddCSRRequestFishList</_MsgHandler>
+      <CharacterGID TYPE="GID"></CharacterGID>
+      <FishData TYPE="STR"></FishData>
+    </RECORD>
+  </MSG_CSRREQUESTFISHLIST>
+
+  <MSG_CSRTRASHFISH>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CSRTRASHFISH</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">CSR Client requests a fish to be trashed</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_AddCSRTrashFish</_MsgHandler>
+      <CharacterGID TYPE="GID"></CharacterGID>
+      <FishTemplateID TYPE="UINT"></FishTemplateID>
+      <Size TYPE="FLT"></Size>
+    </RECORD>
+  </MSG_CSRTRASHFISH>
+
+  <MSG_CSRADDFISH>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CSRADDFISH</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">CSR Client requests a fish to be added</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_AddCSRAddFish</_MsgHandler>
+      <CharacterGID TYPE="GID"></CharacterGID>
+      <FishTemplateID TYPE="UINT"></FishTemplateID>
+      <Size TYPE="FLT"></Size>
+      <Count TYPE="UINT"></Count>
+    </RECORD>
+  </MSG_CSRADDFISH>
+
+  <MSG_SETSTOREDMOUNT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SETSTOREDMOUNT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests server sets the stored mount id</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SetStoredMount</_MsgHandler>
+      <MountGID TYPE="GID"></MountGID>
+    </RECORD>
+  </MSG_SETSTOREDMOUNT>
+
+  <MSG_RESTOREORIGINALCASTLE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_RESTOREORIGINALCASTLE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests server restores the original castle</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RestoreOriginalCastle</_MsgHandler>
+    </RECORD>
+  </MSG_RESTOREORIGINALCASTLE>
+
+  <MSG_UPDATESSUBSCRIBERBEBEFITFLAGS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATESUBSCRIBERBENEFITFLAGS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends new Benefit Flags to client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateSubscriberBenefitFlags</_MsgHandler>
+      <SubscriberBenefitFlags TYPE="UINT"></SubscriberBenefitFlags>
+    </RECORD>
+  </MSG_UPDATESSUBSCRIBERBEBEFITFLAGS>
+
+  <MSG_CREATENEWEQUIPMENTSET>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CREATENEWEQUIPMENTSET</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests to create a new equipment set</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CreateNewEquipmentSet</_MsgHandler>
+      <SetName TYPE="UINT"></SetName>
+    </RECORD>
+  </MSG_CREATENEWEQUIPMENTSET>
+
+  <MSG_EQUIPMENTSETCREATED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_EQUIPMENTSETCREATED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server informs client a new set has been successfully created</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_EquipmentSetCreated</_MsgHandler>
+      <NewSet TYPE="STR"></NewSet>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_EQUIPMENTSETCREATED>
+
+  <MSG_DELETEEQUIPMENTSET>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DELETEEQUIPMENTSET</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests to delete an equipment set</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DeleteEquipmentSet</_MsgHandler>
+      <Set TYPE="STR"></Set>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_DELETEEQUIPMENTSET>
+
+  <MSG_EQUIPSET>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_EQUIPSET</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests to equip a set</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_EquipSet</_MsgHandler>
+      <Set TYPE="STR"></Set>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_EQUIPSET>
+
+  <MSG_DELETESETSWITHITEM>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DELETESETSWITHITEM</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends message to client to update equipment set list.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DeleteSetsWithItem</_MsgHandler>
+      <ItemID TYPE="GID"></ItemID>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_DELETESETSWITHITEM>
+
+  <MSG_REMOVEITEMLOCKS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REMOVEITEMLOCKS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to remove all locks from items</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RemoveItemLocks</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_REMOVEITEMLOCKS>
+
+  <MSG_PUBLICJEWELSOCKETUPDATE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PUBLICJEWELSOCKETUPDATE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends the client the current jewel socket data for an item</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PublicJewelSocketUpdate</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <ItemID TYPE="UINT"></ItemID>
+      <SerializedInfo TYPE="STR"></SerializedInfo>
+    </RECORD>
+  </MSG_PUBLICJEWELSOCKETUPDATE>
+
+  <MSG_DISPLAYMESSAGE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DISPLAYMESSAGE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to display message</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DisplayMessage</_MsgHandler>
+      <Message TYPE="STR"></Message>
+    </RECORD>
+  </MSG_DISPLAYMESSAGE>
+
+  <MSG_CREATESETFAILED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CREATESETFAILED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client equipment set wasn't created.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CreateSetFailed</_MsgHandler>
+    </RECORD>
+  </MSG_CREATESETFAILED>
+
+  <MSG_UNEQUIPSOCKETEDJEWEL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UNEQUIPSOCKETEDJEWEL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Jewel unslotted from equipment</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UnequipSocketedJewel</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <ItemGID TYPE="GID"></ItemGID>
+      <SocketNumber TYPE="UBYT"></SocketNumber>
+      <SocketDeleted TYPE="UBYT"></SocketDeleted>
+    </RECORD>
+  </MSG_UNEQUIPSOCKETEDJEWEL>
+
+  <MSG_EQUIPNEWJEWELTOITEM>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_EQUIPNEWJEWELTOITEM</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">New jewel slotted into equipment</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_EquipNewJewelToItem</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <ItemGID TYPE="GID"></ItemGID>
+      <SocketNumber TYPE="UBYT"></SocketNumber>
+      <SerializedJewel TYPE="STR"></SerializedJewel>
+    </RECORD>
+  </MSG_EQUIPNEWJEWELTOITEM>
+
+  <MSG_JEWELSOCKETLOCKUPDATE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_JEWELSOCKETLOCKUPDATE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Item is updating jewel socket lock state</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_JewelSocketLockUpdate</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <ItemGID TYPE="GID"></ItemGID>
+      <Locked TYPE="UBYT"></Locked>
+    </RECORD>
+  </MSG_JEWELSOCKETLOCKUPDATE>
+
+  <MSG_EQUIPJEWELREQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_EQUIPJEWELREQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests to socket jewel.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_EquipJewelRequest</_MsgHandler>
+      <ItemGID TYPE="GID"></ItemGID>
+      <JewelGID TYPE="GID"></JewelGID>
+      <SocketNumber TYPE="UBYT"></SocketNumber>
+    </RECORD>
+  </MSG_EQUIPJEWELREQUEST>
+
+  <MSG_UNSOCKETJEWELREQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UNSOCKETJEWELREQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests to remove jewel from socket.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UnsocketJewelRequest</_MsgHandler>
+      <ItemGID TYPE="GID"></ItemGID>
+      <SocketNumber TYPE="UBYT"></SocketNumber>
+    </RECORD>
+  </MSG_UNSOCKETJEWELREQUEST>
+
+  <MSG_EQUIPJEWELTOITEM>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_EQUIPJEWELTOITEM</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Existing jewel slotted into equipment</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_EquipJewelToItem</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <ItemGID TYPE="GID"></ItemGID>
+      <SocketNumber TYPE="UBYT"></SocketNumber>
+      <JewelGID TYPE="GID"></JewelGID>
+    </RECORD>
+  </MSG_EQUIPJEWELTOITEM>
+
+  <MSG_JEWELSOCKETUNLOCKCOST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_JEWELSOCKETUNLOCKCOST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message Cli to Ser asking for cost and Ser to Cli giving cost</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_JewelSocketUnlockCost</_MsgHandler>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_JEWELSOCKETUNLOCKCOST>
+
+  <MSG_UNLOCKSOCKETS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UNLOCKSOCKETS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UnlockSockets</_MsgHandler>
+      <ItemGID TYPE="GID"></ItemGID>
+      <CostChoice TYPE="UBYT"></CostChoice>
+    </RECORD>
+  </MSG_UNLOCKSOCKETS>
+
+  <MSG_UNLOCKSOCKETSCONFIRM>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UNLOCKSOCKETSCONFIRM</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UnlockSocketsConfirm</_MsgHandler>
+      <Failure TYPE="BYT"></Failure>
+      <WebFailure TYPE="BYT"></WebFailure>
+      <Credits TYPE="INT"></Credits>
+    </RECORD>
+  </MSG_UNLOCKSOCKETSCONFIRM>
+
+  <MSG_REQUESTTEAMHELPINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTTEAMHELPINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Used by Team Help to send info about teams wanting help</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestTeamHelpInfo</_MsgHandler>
+      <WorldInfo TYPE="STR"></WorldInfo>
+      <SigilInfo TYPE="STR"></SigilInfo>
+    </RECORD>
+  </MSG_REQUESTTEAMHELPINFO>
+
+  <MSG_REQUESTSIGILINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTSIGILINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server requests sigil info from a zone server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestSigilInfo</_MsgHandler>
+      <SigilID TYPE="UINT"></SigilID>
+      <WorldID TYPE="UINT"></WorldID>
+      <SigilInfo TYPE="STR"></SigilInfo>
+      <Request TYPE="UBYT"></Request>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <IsCluster TYPE="UBYT"></IsCluster>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+    </RECORD>
+  </MSG_REQUESTSIGILINFO>
+
+  <MSG_REQUESTTEAMHELPWORLDINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTTEAMHELPWORLDINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Used by Team Help to send info about teams wanting help by world</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestTeamHelpWorldInfo</_MsgHandler>
+      <WorldID TYPE="UINT"></WorldID>
+      <WorldSigilInfo TYPE="STR"></WorldSigilInfo>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+    </RECORD>
+  </MSG_REQUESTTEAMHELPWORLDINFO>
+
+  <MSG_CLIENTREQUESTTEAMHELPWORLDINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLIENTREQUESTTEAMHELPWORLDINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests info about teams wanting help by world</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClientRequestTeamHelpWorldInfo</_MsgHandler>
+      <WorldID TYPE="UINT"></WorldID>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+    </RECORD>
+  </MSG_CLIENTREQUESTTEAMHELPWORLDINFO>
+
+  <MSG_REQUESTTEAMHELPJOIN>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTTEAMHELPJOIN</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests to join a team</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestTeamHelpJoin</_MsgHandler>
+      <SigilID TYPE="UINT"></SigilID>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <SchoolID TYPE="UINT"></SchoolID>
+      <WorldID TYPE="UINT"></WorldID>
+      <Level TYPE="INT"></Level>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+    </RECORD>
+  </MSG_REQUESTTEAMHELPJOIN>
+
+  <MSG_REQUESTTEAMHELPJOINFAIL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTTEAMHELPJOINFAIL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server sends to client when request to join a team fails</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestTeamHelpJoinFail</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+    </RECORD>
+  </MSG_REQUESTTEAMHELPJOINFAIL>
+
+  <MSG_REQUESTTEAMHELPFAIL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTTEAMHELPFAIL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Zone server sends to client when request to join a team fails</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestTeamHelpFail</_MsgHandler>
+      <TimeLeft TYPE="UINT"></TimeLeft>
+    </RECORD>
+  </MSG_REQUESTTEAMHELPFAIL>
+
+  <MSG_REQUESTMINIGAME>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTMINIGAME</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Zone server gives client a chance to reject teleport to minigame</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestMiniGame</_MsgHandler>
+    </RECORD>
+  </MSG_REQUESTMINIGAME>
+
+  <MSG_UPDATEPETBILLBOARD>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEPETBILLBOARD</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Zone server tells clients to update a pet's billboard</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdatePetBillboard</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Level TYPE="INT"></Level>
+      <OverallRating TYPE="INT"></OverallRating>
+      <ActiveRating TYPE="INT"></ActiveRating>
+      <HasJewel TYPE="INT"></HasJewel>
+    </RECORD>
+  </MSG_UPDATEPETBILLBOARD>
+
+  <MSG_UPDATEITEMSPELLEXCLUSIONLIST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEITEMSPELLEXCLUSIONLIST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client tells server to add or remove a spell id from player's exclusion list.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateItemSpellExclusionList</_MsgHandler>
+      <SpellID TYPE="INT"></SpellID>
+      <DeckID TYPE="GID"></DeckID>
+      <Exclude TYPE="UBYT"></Exclude>
+      <Success TYPE="UBYT"></Success>
+    </RECORD>
+  </MSG_UPDATEITEMSPELLEXCLUSIONLIST>
+
+  <MSG_CSRDELETEGIFT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CSRDELETEGIFT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message sent from server to csr confirming promo gift deletion.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CSRDeleteGift</_MsgHandler>
+      <GiftID TYPE="STR"></GiftID>
+      <Success TYPE="INT"></Success>
+    </RECORD>
+  </MSG_CSRDELETEGIFT>
+
+  <MSG_RIDEOBJECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_RIDEOBJECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client about an object rider</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RideObject</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <Slot TYPE="INT"></Slot>
+      <AddPlayer TYPE="UBYT"></AddPlayer>
+    </RECORD>
+  </MSG_RIDEOBJECT>
+
+  <MSG_RIDERSLIST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_RIDERSLIST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client about existing riders</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RidersList</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <RiderList TYPE="STR"></RiderList>
+    </RECORD>
+  </MSG_RIDERSLIST>
+
+  <MSG_RIDEOBJECTFULL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_RIDEOBJECTFULL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client no free slots</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RideObjectFull</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_RIDEOBJECTFULL>
+
+  <MSG_TOURNAMENTLOOTROLLRESPONSE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TOURNAMENTLOOTROLLRESPONSE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from client to server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TournamentLootRollResponse</_MsgHandler>
+      <BracketID TYPE="GID"></BracketID>
+    </RECORD>
+  </MSG_TOURNAMENTLOOTROLLRESPONSE>
+
+
+  <MSG_CSRSETFRIENDSTATUS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CSRSETFRIENDSTATUS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests that the server set friend status</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SetFriendStatus</_MsgHandler>
+      <CharacterGID TYPE="GID"></CharacterGID>
+      <FriendGID TYPE="GID"></FriendGID>
+      <StatusCode TYPE="INT"></StatusCode>
+    </RECORD>
+  </MSG_CSRSETFRIENDSTATUS>
+
+  <MSG_TOURNAMENTLOOTROLLRESULT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TOURNAMENTLOOTROLLRESULT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to tell client of roll results</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TournamentLootRollResult</_MsgHandler>
+      <Id TYPE="GID"></Id>
+      <Cost TYPE="INT"></Cost>
+      <Balance TYPE="INT"></Balance>
+      <Uses TYPE="INT"></Uses>
+      <Loot TYPE="STR"></Loot>
+    </RECORD>
+  </MSG_TOURNAMENTLOOTROLLRESULT>
+
+  <MSG_TOURNAMENTLOOTROLLINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TOURNAMENTLOOTROLLINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">client to server asks, server to client responds</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TournamentLootRollInfo</_MsgHandler>
+      <InitialCost TYPE="UINT"></InitialCost>
+    </RECORD>
+  </MSG_TOURNAMENTLOOTROLLINFO>
+
+  <MSG_DAILYQUESTEFFECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DAILYQUESTEFFECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to play a daily effect</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DailyQuestEffect</_MsgHandler>
+      <EffectType TYPE="UINT"></EffectType>
+    </RECORD>
+  </MSG_DAILYQUESTEFFECT>
+
+  <MSG_REQUESTMONSTERTOME>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTMONSTERTOME</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests a players monster tome and server sends it</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestMonsterTome</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <MonsterData TYPE="STR"></MonsterData>
+    </RECORD>
+  </MSG_REQUESTMONSTERTOME>
+
+  <MSG_UPDATEMONSTERMAGICXP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEMONSTERMAGICXP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">The player has changed Monster Magic xp or Monster Magic level</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateMonsterMagicXP</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <XP TYPE="INT"></XP>
+      <Level TYPE="INT"></Level>
+    </RECORD>
+  </MSG_UPDATEMONSTERMAGICXP>
+
+  <MSG_MONSTERMAGICLEVELUP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MONSTERMAGICLEVELUP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">This player has gained a new Monster Magic level</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_MonsterMagicLevelUp</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <NewLevel TYPE="INT"></NewLevel>
+    </RECORD>
+  </MSG_MONSTERMAGICLEVELUP>
+
+  <MSG_UPDATECOLLECTEDESSENCES>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATECOLLECTEDESSENCES</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Update the collected essence info</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateCollectedEssences</_MsgHandler>
+      <EssenceData TYPE="STR"></EssenceData>
+    </RECORD>
+  </MSG_UPDATECOLLECTEDESSENCES>
+
+  <MSG_MONSTERMAGICREQUESTCREATE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MONSTERMAGICREQUESTCREATE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests server create a TC or house guest.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_MonsterMagicRequestCreate</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <RequestType TYPE="INT"></RequestType>
+      <MobTemplate TYPE="UINT"></MobTemplate>
+    </RECORD>
+  </MSG_MONSTERMAGICREQUESTCREATE>
+
+  <MSG_MONSTERMAGICUSETOME>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MONSTERMAGICUSETOME</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to open monster tome</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_MonsterMagicUseTome</_MsgHandler>
+    </RECORD>
+  </MSG_MONSTERMAGICUSETOME>
+
+  <MSG_DISPLAYCOLLECTEDESSENCES>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DISPLAYCOLLECTEDESSENCES</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Display the collected essence info at the end of combat</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DisplayCollectedEssences</_MsgHandler>
+      <EssenceData TYPE="STR"></EssenceData>
+    </RECORD>
+  </MSG_DISPLAYCOLLECTEDESSENCES>
+
+  <MSG_UPDATEAFTERCOMBATDANCE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEAFTERCOMBATDANCE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests server update the after combat dance</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateAfterCombatDance</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <AfterCombatDance TYPE="UINT"></AfterCombatDance>
+    </RECORD>
+  </MSG_UPDATEAFTERCOMBATDANCE>
+
+  <MSG_REQUESTTUTORIALTIPLOG>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTTUTORIALTIPLOG</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests server update the tutorial tip log</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestTutorialTipLog</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <TutorialTipCount TYPE="UINT"></TutorialTipCount>
+    </RECORD>
+  </MSG_REQUESTTUTORIALTIPLOG>
+
+  <MSG_UPDATETUTORIALTIPLOG>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATETUTORIALTIPLOG</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client or server updates the tutorial tip log</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateTutorialTipLog</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <TutorialTipData TYPE="STR"></TutorialTipData>
+    </RECORD>
+  </MSG_UPDATETUTORIALTIPLOG>
+
+  <MSG_READTUTORIALTIP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_READTUTORIALTIP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests server add id to the tutorial tip log</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ReadTutorialTip</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <TutorialTipID TYPE="UINT"></TutorialTipID>
+    </RECORD>
+  </MSG_READTUTORIALTIP>
+
+  <MSG_JOINBASICCHATCHANNEL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_JOINBASICCHATCHANNEL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server informs client of their chat channel</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_JoinBasicChatChannel</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <ChannelData TYPE="STR"></ChannelData>
+    </RECORD>
+  </MSG_JOINBASICCHATCHANNEL>
+
+  <MSG_INVITETOBASICCHATCHANNEL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_INVITETOBASICCHATCHANNEL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server informs client of their chat channel</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_InviteToBasicChatChannel</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <InvitingPlayerGID TYPE="GID"></InvitingPlayerGID>
+      <InvitingPlayerNameBlob TYPE="STR"></InvitingPlayerNameBlob>
+      <ChannelPlayerGID TYPE="GID"></ChannelPlayerGID>
+      <ChannelPlayerNameBlob TYPE="STR"></ChannelPlayerNameBlob>
+      <ConfirmationStatus TYPE="UBYT"></ConfirmationStatus>
+      <FriendsOnly TYPE="INT"></FriendsOnly>
+    </RECORD>
+  </MSG_INVITETOBASICCHATCHANNEL>
+
+  <MSG_ADDPLAYERTOBASICCHATCHANNEL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ADDPLAYERTOBASICCHATCHANNEL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server informs client of their chat channel</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_AddPlayerToBasicChatChannel</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <OwningPlayerGID TYPE="GID"></OwningPlayerGID>
+      <NewPlayerGID TYPE="GID"></NewPlayerGID>
+      <NewPlayerNameBlob TYPE="STR"></NewPlayerNameBlob>
+      <NewPlayerSchoolLevel TYPE="UINT"></NewPlayerSchoolLevel>
+      <NewPlayerObjectGID TYPE="GID"></NewPlayerObjectGID >
+      <NewPlayerPlatformType TYPE="INT"></NewPlayerPlatformType>
+    </RECORD>
+  </MSG_ADDPLAYERTOBASICCHATCHANNEL>
+
+  <MSG_REMOVEPLAYERFROMBASICCHATCHANNEL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REMOVEPLAYERFROMBASICCHATCHANNEL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests player removed from chat channel</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RemovePlayerFromBasicChatChannel</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <OwningPlayerGID TYPE="GID"></OwningPlayerGID>
+      <IsLeave TYPE="UBYT"></IsLeave>
+    </RECORD>
+  </MSG_REMOVEPLAYERFROMBASICCHATCHANNEL>
+
+  <MSG_REMOVEPLAYERFROMBASICCHATCHANNELUPDATE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REMOVEPLAYERFROMBASICCHATCHANNELUPDATE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat channel sends messages to clients to remove player</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RemovePlayerFromBasicChatChannelUpdate</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <RemovedPlayerGID TYPE="GID"></RemovedPlayerGID>
+      <OwningPlayerGID TYPE="GID"></OwningPlayerGID>
+    </RECORD>
+  </MSG_REMOVEPLAYERFROMBASICCHATCHANNELUPDATE>
+
+  <MSG_SETBASICCHATCHANNELPUBLIC>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SETBASICCHATCHANNELPUBLIC</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client asks chat server to switch public or private channel</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SetBasicChatChannelPublic</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <OwningPlayerGID TYPE="GID"></OwningPlayerGID>
+      <IsPublic TYPE="UBYT"></IsPublic>
+    </RECORD>
+  </MSG_SETBASICCHATCHANNELPUBLIC>
+
+  <MSG_INVITEALLTOBASICCHATCHANNEL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_INVITEALLTOBASICCHATCHANNEL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client request chat server invite all friends</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_InviteAllToBasicChatChannel</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+    </RECORD>
+  </MSG_INVITEALLTOBASICCHATCHANNEL>
+
+  <MSG_RADIALZONECLUSTERQUICKCHATEXT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_RADIALZONECLUSTERQUICKCHATEXT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server-initiated radial quickchat response - send to all in range of player who requested radial chat</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RadialZoneClusterQuickChatExt</_MsgHandler>
+      <SourceName TYPE="STR"></SourceName>
+      <SourceID TYPE="GID"></SourceID>
+      <Message TYPE="STR"></Message>
+      <Filter TYPE="UBYT"></Filter>
+      <IsOwner TYPE="UBYT"></IsOwner>
+    </RECORD>
+  </MSG_RADIALZONECLUSTERQUICKCHATEXT>
+
+  <MSG_REQUESTRADIALFRIENDQUICKCHATEXT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTRADIALFRIENDQUICKCHATEXT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client-initiated radial friend quick chat request</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestRadialFriendQuickChatExt</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <Message TYPE="STR"></Message>
+      <SourceID TYPE="GID"></SourceID>
+      <Filter TYPE="UBYT"></Filter>
+      <SourceName TYPE="STR"></SourceName>
+    </RECORD>
+  </MSG_REQUESTRADIALFRIENDQUICKCHATEXT>
+
+  <MSG_REQUESTZONECLUSTERQUICKCHATEXT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTZONECLUSTERQUICKCHATEXT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client-initiated radial quickchat for housing request</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestZoneClusterQuickChatExt</_MsgHandler>
+      <Message TYPE="STR"></Message>
+      <IsOwner TYPE="UBYT"></IsOwner>
+    </RECORD>
+  </MSG_REQUESTZONECLUSTERQUICKCHATEXT>
+
+  <MSG_BASICCHATCHANNELERRORMESSAGE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BASICCHATCHANNELERRORMESSAGE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server informs client of chat channel problem</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BasicChatChannelErrorMessage</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <ErrorCode TYPE="UBYT"></ErrorCode>
+    </RECORD>
+  </MSG_BASICCHATCHANNELERRORMESSAGE>
+
+  <MSG_BASICCHATCHANNELUPDATECOOLDOWN>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BASICCHATCHANNELUPDATECOOLDOWN</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server informs client of cooldown for invite all</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BasicChatChannelUpdateCooldown</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <CooldownTime TYPE="UINT"></CooldownTime>
+    </RECORD>
+  </MSG_BASICCHATCHANNELUPDATECOOLDOWN>
+
+  <MSG_DAILYPVPCOMPLETED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DAILYPVPCOMPLETED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">From server to client, open daily pvp quest conpleted window</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DailyPvPCompleted</_MsgHandler>
+      <ConsecutiveDays TYPE="UBYT"></ConsecutiveDays>
+      <ItemTemplateID TYPE="UINT"></ItemTemplateID>
+    </RECORD>
+  </MSG_DAILYPVPCOMPLETED>
+
+  <MSG_UPDATEMAXSHADOWPIPS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEMAXSHADOWPIPS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">From server to client, update the max shadow pips that a player has</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateMaxShadowPips</_MsgHandler>
+      <MaxShadowPips TYPE="INT"></MaxShadowPips>
+    </RECORD>
+  </MSG_UPDATEMAXSHADOWPIPS>
+
+  <MSG_REQUESTCHATSTATS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTCHATSTATS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Request chat channel stats for the chat server and send to the client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestChatStats</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <Message TYPE="STR"></Message>
+    </RECORD>
+  </MSG_REQUESTCHATSTATS>
+
+  <MSG_ZONEGATELIST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ZONEGATELIST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Send list of available zones from server to client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ZoneGateList</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_ZONEGATELIST>
+
+  <MSG_EQUIPRECIPE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_EQUIPRECIPE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests server equip recipe</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_EquipRecipe</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <RecipeID TYPE="UINT"></RecipeID>
+      <Equip TYPE="UBYT"></Equip>
+    </RECORD>
+  </MSG_EQUIPRECIPE>
+
+  <MSG_MAPREQUIREMENTS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MAPREQUIREMENTS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests server evaulate map requirements</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_MapRequirements</_MsgHandler>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_MAPREQUIREMENTS>
+
+  <MSG_KHANDANCESTATUS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_KHANDANCESTATUS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client sends server info about the Khan dance game</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_KhanDanceStatus</_MsgHandler>
+      <Status TYPE="INT"></Status>
+      <X TYPE="INT"></X>
+      <Y TYPE="INT"></Y>
+      <Z TYPE="INT"></Z>
+    </RECORD>
+  </MSG_KHANDANCESTATUS>
+
+  <MSG_SEPIDIOUSARRIVAL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SEPIDIOUSARRIVAL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to start the Sepidious Arrival sequence</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SepidiousArrival</_MsgHandler>
+    </RECORD>
+  </MSG_SEPIDIOUSARRIVAL>
+
+  <MSG_LAVALOCKSTATUS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_LAVALOCKSTATUS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to start the Lava Lock</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_LavaLockStatus</_MsgHandler>
+      <Status TYPE="INT"></Status>
+    </RECORD>
+  </MSG_LAVALOCKSTATUS>
+
+  <MSG_UPDATEEXTRAINVENTORY>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEEXTRAINVENTORY</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to update the extra inventory space</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateExtraInventory</_MsgHandler>
+      <ExtraInventorySpace TYPE="INT"></ExtraInventorySpace>
+      <CurrentInventorySpace TYPE="INT"></CurrentInventorySpace>
+    </RECORD>
+  </MSG_UPDATEEXTRAINVENTORY>
+
+  <MSG_UPDATEREMEMBERLASTREALM>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEREMEMBERLASTREALM</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests that the server update the remember last realm flag</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateRememberLastRealm</_MsgHandler>
+      <RememberLastRealm TYPE="UBYT"></RememberLastRealm>
+    </RECORD>
+  </MSG_UPDATEREMEMBERLASTREALM>
+
+  <MSG_UPDATEPIPCONVERSION>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEPIPCONVERSION</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Update your pip conversion base</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdatePipConversion</_MsgHandler>
+      <PipConversionBaseAllSchools TYPE="INT"></PipConversionBaseAllSchools>
+      <PipConversionBaseFire TYPE="INT"></PipConversionBaseFire>
+      <PipConversionBaseIce TYPE="INT"></PipConversionBaseIce>
+      <PipConversionBaseStorm TYPE="INT"></PipConversionBaseStorm>
+      <PipConversionBaseLife TYPE="INT"></PipConversionBaseLife>
+      <PipConversionBaseMyth TYPE="INT"></PipConversionBaseMyth>
+      <PipConversionBaseDeath TYPE="INT"></PipConversionBaseDeath>
+      <PipConversionBaseBalance TYPE="INT"></PipConversionBaseBalance>
+    </RECORD>
+  </MSG_UPDATEPIPCONVERSION>
+
+  <MSG_CONNECTIONSTATS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CONNECTIONSTATS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client to server message with information about server connection RTT and such</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CONNECTIONSTATS</_MsgHandler>
+      <ServerHostname TYPE="STR"></ServerHostname>
+      <ServerPort TYPE="INT"></ServerPort>
+      <ConnectMS TYPE="INT"></ConnectMS>
+      <Timeouts TYPE="INT"></Timeouts>
+      <Errors TYPE="INT"></Errors>
+    </RECORD>
+  </MSG_CONNECTIONSTATS>
+
+  <MSG_UPDATENEWSPELLBOOKLAYOUTWARNING>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATENEWSPELLBOOKLAYOUTWARNING</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests that the server update the new spellbool layout warning flag</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateNewSpellbookLayoutWarning</_MsgHandler>
+      <WarningShown TYPE="UBYT"></WarningShown>
+    </RECORD>
+  </MSG_UPDATENEWSPELLBOOKLAYOUTWARNING>
+
+  <MSG_ATHANORARRIVAL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ATHANORARRIVAL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to start the Athanor Arrival sequence</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_AthanorArrival</_MsgHandler>
+    </RECORD>
+  </MSG_ATHANORARRIVAL>
+
+  <MSG_TEAMUPFAILED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TEAMUPFAILED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client that player didn't get credit for team up</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TeamUpFailed</_MsgHandler>
+    </RECORD>
+  </MSG_TEAMUPFAILED>
+
+  <MSG_REQUESTPETTOME>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTPETTOME</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests a players pet tome and server sends it</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestPetTome</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <PetData TYPE="STR"></PetData>
+      <Buffer TYPE="STR"></Buffer>
+      <PremiumPetExceptionCode TYPE="UINT"></PremiumPetExceptionCode>
+    </RECORD>
+  </MSG_REQUESTPETTOME>
+
+  <MSG_PETTOMEPETADDED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETTOMEPETADDED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client that a pet was added to their pet tome</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetTomePetAdded</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <PetTemplateID TYPE="UINT"></PetTemplateID>
+    </RECORD>
+  </MSG_PETTOMEPETADDED>
+
+  <MSG_REQUESTHATCHMAKING>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTHATCHMAKING</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends client hatchmaking info</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestHatchmaking</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <PetData TYPE="STR"></PetData>
+      <CrownCost TYPE="FLT"></CrownCost>
+      <HatchDayCode TYPE="UINT"></HatchDayCode>
+      <NoInPersonHatching TYPE="UBYT"></NoInPersonHatching>
+    </RECORD>
+  </MSG_REQUESTHATCHMAKING>
+
+  <MSG_REQUESTHATCHMAKINGADDPET>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTHATCHMAKINGADDPET</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client request that server add a pet to the hatchmaking kiosk</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestHatchmakingAddPet</_MsgHandler>
+      <PetID TYPE="GID"></PetID>
+    </RECORD>
+  </MSG_REQUESTHATCHMAKINGADDPET>
+
+  <MSG_HATCHMAKINGSTATUS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_HATCHMAKINGSTATUS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends client hatchmaking status</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_HatchmakingStatus</_MsgHandler>
+      <ErrorCode TYPE="UINT"></ErrorCode>
+    </RECORD>
+  </MSG_HATCHMAKINGSTATUS>
+
+  <MSG_REQUESTHATCHMAKINGREMOVEPET>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTHATCHMAKINGREMOVEPET</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client request that server remove a pet from the hatchmaking kiosk</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestHatchmakingRemovePet</_MsgHandler>
+      <PetID TYPE="GID"></PetID>
+    </RECORD>
+  </MSG_REQUESTHATCHMAKINGREMOVEPET>
+
+  <MSG_REQUESTHATCHMAKINGPETTYPES>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTHATCHMAKINGPETTYPES</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests and server sends hatchmaking pet types</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestHatchmakingPetTypes</_MsgHandler>
+      <PetData TYPE="STR"></PetData>
+    </RECORD>
+  </MSG_REQUESTHATCHMAKINGPETTYPES>
+
+  <MSG_REQUESTHATCHMAKINGPETS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTHATCHMAKINGPETS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests and server sends hatchmaking pets</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestHatchmakingPets</_MsgHandler>
+      <PetData TYPE="STR"></PetData>
+      <PetTemplateID TYPE="UINT"></PetTemplateID>
+      <Skip TYPE="UINT"></Skip>
+    </RECORD>
+  </MSG_REQUESTHATCHMAKINGPETS>
+
+  <MSG_REQUESTHATCHMAKINGPETDATA>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTHATCHMAKINGPETDATA</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests and server sends hatchmaking pet data</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestHatchmakingPetData</_MsgHandler>
+      <PetData TYPE="STR"></PetData>
+      <PetID TYPE="GID"></PetID>
+      <IsInPetTome TYPE="UBYT"></IsInPetTome>
+    </RECORD>
+  </MSG_REQUESTHATCHMAKINGPETDATA>
+
+  <MSG_REQUESTHATCHMAKINGHATCH>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTHATCHMAKINGHATCH</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests a hatchmaking hatch</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestHatchmakingHatch</_MsgHandler>
+      <PetID1 TYPE="GID"></PetID1>
+      <PetID2 TYPE="GID"></PetID2>
+    </RECORD>
+  </MSG_REQUESTHATCHMAKINGHATCH>
+
+  <MSG_HATCHMAKINGMESSAGE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_HATCHMAKINGMESSAGE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests a hatchmaking hatch</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_HatchmakingMessage</_MsgHandler>
+      <MessageType TYPE="UINT"></MessageType>
+      <MyPetTemplateID TYPE="UINT"></MyPetTemplateID>
+      <MyPetName TYPE="UINT"></MyPetName>
+      <TheirPetTemplateID TYPE="UINT"></TheirPetTemplateID>
+      <HatchPepperCount TYPE="UBYT"></HatchPepperCount>
+    </RECORD>
+  </MSG_HATCHMAKINGMESSAGE>
+
+  <MSG_REQUESTHATCHMAKINGHATCHEDPET>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTHATCHMAKINGHATCHEDPET</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests and server sends a hatched pet</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestHatchmakingHatchedPet</_MsgHandler>
+      <PetID TYPE="GID"></PetID>
+      <PetIndex TYPE="UINT"></PetIndex>
+      <PetData TYPE="STR"></PetData>
+      <IsInPetTome TYPE="UBYT"></IsInPetTome>
+    </RECORD>
+  </MSG_REQUESTHATCHMAKINGHATCHEDPET>
+
+  <MSG_REQUESTHATCHMAKINGHATCH2>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTHATCHMAKINGHATCH2</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests a hatchmaking hatch with pets that my pet hatched with</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestHatchmakingHatch2</_MsgHandler>
+      <PetID1 TYPE="GID"></PetID1>
+      <PetID2 TYPE="GID"></PetID2>
+      <PetIndex TYPE="UINT"></PetIndex>
+    </RECORD>
+  </MSG_REQUESTHATCHMAKINGHATCH2>
+
+  <MSG_HATCHMAKINGSCSRRESULTS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_HATCHMAKINGSCSRRESULTS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends csr results to client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_HatchmakingCSRResults</_MsgHandler>
+      <Result TYPE="STR"></Result>
+    </RECORD>
+  </MSG_HATCHMAKINGSCSRRESULTS>
+
+  <MSG_HATCHMAKINGSREQUESTPREMIUMPETEXEMPTIONS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_HATCHMAKINGSREQUESTPREMIUMPETEXEMPTIONS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests and server sends premium pet exemption list</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_HatchmakingRequestPremiumPetExemptions</_MsgHandler>
+      <Buffer TYPE="STR"></Buffer>
+      <PremiumPetExceptionCode TYPE="UINT"></PremiumPetExceptionCode>
+    </RECORD>
+  </MSG_HATCHMAKINGSREQUESTPREMIUMPETEXEMPTIONS>
+
+  <MSG_HATCHMAKINGSUPDATEHATCHDAYPET>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_HATCHMAKINGSUPDATEHATCHDAYPET</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sever informs client that the hatch day pet has changed</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_HatchMakingUpdateHatchDayPet</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <PetTemplateID TYPE="INT"></PetTemplateID>
+    </RECORD>
+  </MSG_HATCHMAKINGSUPDATEHATCHDAYPET>
+
+  <MSG_HATCHMAKINGSUPDATEHATCHDAYPET2>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_HATCHMAKINGSUPDATEHATCHDAYPET2</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sever informs client that the hatch day pet has changed</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_HatchMakingUpdateHatchDayPet2</_MsgHandler>
+      <PetTemplateID TYPE="INT"></PetTemplateID>
+    </RECORD>
+  </MSG_HATCHMAKINGSUPDATEHATCHDAYPET2>
+
+  <MSG_HATCHMAKINGUSETOME>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_HATCHMAKINGUSETOME</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to hatchmaking tome</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_HatchmakingUseTome</_MsgHandler>
+    </RECORD>
+  </MSG_HATCHMAKINGUSETOME>
+
+  <MSG_CSRREQUESTGLOBALREGISTRY>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CSRREQUESTGLOBALREGISTRY</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests Global Registry</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CSRRequestGlobalRegistry</_MsgHandler>
+      <Buffer TYPE="STR"></Buffer>
+    </RECORD>
+  </MSG_CSRREQUESTGLOBALREGISTRY>
+
+  <MSG_MAGICMIRRORSHOPOPEN>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MAGICMIRRORSHOPOPEN</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">From server to client, includes magic mirror shop title</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_MagicMirrorShopOpen</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_MAGICMIRRORSHOPOPEN>
+
+  <MSG_MAGICMIRRORREQUESTCHANGE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MAGICMIRRORREQUESTCHANGE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests character changes</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_MagicMirrorRequestChange</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <HairStyleID TYPE="UINT"></HairStyleID>
+      <HairColorID TYPE="UINT"></HairColorID>
+      <SkinColorID TYPE="UINT"></SkinColorID>
+      <FaceStyleID TYPE="UINT"></FaceStyleID >
+      <EyeColorID TYPE="UINT"></EyeColorID >
+      <FacePaintID TYPE="INT"></FacePaintID >
+      <NoseStyleID TYPE="UINT"></NoseStyleID >
+      <MouthStyleID TYPE="UINT"></MouthStyleID >
+      <AccessoryStyleID TYPE="UINT"></AccessoryStyleID >
+      <EyeBrowColorID TYPE="UINT"></EyeBrowColorID >
+      <LipColorID TYPE="UINT"></LipColorID >
+    </RECORD>
+  </MSG_MAGICMIRRORREQUESTCHANGE>
+
+  <MSG_MAGICMIRRORCHANGEPLAYER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MAGICMIRRORCHANGEPLAYER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends client player changes</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_MagicMirrorChangePlayer</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <HairStyleIndex TYPE="INT"></HairStyleIndex>
+      <HairColorIndex TYPE="INT"></HairColorIndex>
+      <SkinColorIndex TYPE="INT"></SkinColorIndex>
+      <FaceStyleIndex TYPE="INT"></FaceStyleIndex >
+      <FacePaintIndex TYPE="INT"></FacePaintIndex >
+      <EyeColorIndex TYPE="INT"></EyeColorIndex >
+      <NoseStyleIndex TYPE="INT"></NoseStyleIndex>
+      <MouthStyleIndex TYPE="INT"></MouthStyleIndex >
+      <AccessoryStyleIndex TYPE="INT"></AccessoryStyleIndex >
+      <EyeBrowColorIndex TYPE="INT"></EyeBrowColorIndex >
+      <LipColorIndex TYPE="INT"></LipColorIndex >
+    </RECORD>
+  </MSG_MAGICMIRRORCHANGEPLAYER>
+
+  <MSG_ZONEHOP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ZONEHOP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests a reload of the current zone</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ZoneHop</_MsgHandler>
+    </RECORD>
+  </MSG_ZONEHOP>
+
+  <MSG_HOLIDAYDATA>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_HOLIDAYDATA</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Msg sent by server containing data when holiday flags set.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_HOLIDAYDATA</_MsgHandler>
+      <SerializedHolidayLoadingScreens TYPE="STR"></SerializedHolidayLoadingScreens>
+      <HolidayLoadingScreensDisplayPer TYPE="UINT"></HolidayLoadingScreensDisplayPer>
+    </RECORD>
+  </MSG_HOLIDAYDATA>
+
+  <MSG_PHOTOTAKEN>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PHOTOTAKEN</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client takes a photo</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PhotoTaken</_MsgHandler>
+      <Buffer TYPE="STR"></Buffer>
+      <Filter TYPE="STR"></Filter>
+    </RECORD>
+  </MSG_PHOTOTAKEN>
+
+  <MSG_PETELIXIROPEN>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETELIXIROPEN</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">From server to client or server to client, request to open pet elixir shop</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetElixirOpen</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <WebFailure TYPE="BYT"></WebFailure>
+      <Credits TYPE="INT"></Credits>
+    </RECORD>
+  </MSG_PETELIXIROPEN>
+
+  <MSG_PETELIXIRBUYREQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETELIXIRBUYREQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Pet Elixir buy request from client to server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetElixirBuyRequest</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <WebFailure TYPE="BYT"></WebFailure>
+      <Credits TYPE="INT"></Credits>
+    </RECORD>
+  </MSG_PETELIXIRBUYREQUEST>
+
+  <MSG_BUYPETELIXIRCONFIRM>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BUYPETELIXIRCONFIRM</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server to client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BuyPetElixirConfirm</_MsgHandler>
+      <Failure TYPE="BYT"></Failure>
+      <WebFailure TYPE="BYT"></WebFailure>
+      <Credits TYPE="INT"></Credits>
+    </RECORD>
+  </MSG_BUYPETELIXIRCONFIRM>
+
+  <MSG_LOGCLASSICMODE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_LOGCLASSICMODE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message sent from the client when the player turns on or off classic mode</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_LogClassicMode</_MsgHandler>
+      <ClassicMode TYPE="UBYT"></ClassicMode>
+    </RECORD>
+  </MSG_LOGCLASSICMODE>
+
+  <MSG_ACCESSPASSPURCHASE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ACCESSPASSPURCHASE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client which access pass to offer for sale</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_AccessPassPurchase</_MsgHandler>
+      <AccessPass TYPE="STR"></AccessPass>
+      <RequestedZoneDisplayName TYPE="STR"></RequestedZoneDisplayName>
+      <PayToPlayStyle TYPE="STR"></PayToPlayStyle>
+      <TargetLoc TYPE="STR"></TargetLoc>
+      <ZoneID TYPE="GID"></ZoneID>
+      <ZoneName TYPE="STR"></ZoneName>
+      <ClusterID TYPE="GID"></ClusterID>
+      <ClusterName TYPE="STR"></ClusterName>
+    </RECORD>
+  </MSG_ACCESSPASSPURCHASE>
+
+  <MSG_PHOTOMANCYUSETOME>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PHOTOMANCYUSETOME</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message sent server to client to open Photomancy tome</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PhotomancyUseTome</_MsgHandler>
+    </RECORD>
+  </MSG_PHOTOMANCYUSETOME>
+
+  <MSG_WHIRLYBURLYMESSAGE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_WHIRLYBURLYMESSAGE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server and client Whirly Burly Messages</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_WhirlyBurlyMessage</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <MessageType TYPE="UBYT"></MessageType>
+      <GameID TYPE="UINT"></GameID>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_WHIRLYBURLYMESSAGE>
+
+  <MSG_WHIRLYBURLYOPENKIOSK>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_WHIRLYBURLYOPENKIOSK</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to open Whirly Burly kiosk</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_WhirlyBurlyOpenKiosk</_MsgHandler>
+    </RECORD>
+  </MSG_WHIRLYBURLYOPENKIOSK>
+
+  <MSG_CROWNSREWARDSTIERREACHED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CROWNSREWARDSTIERREACHED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client crowns rewards tier reached</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CrownsRewardsTierReached</_MsgHandler>
+      <Data TYPE="STR"></Data>
+      <Delay TYPE="INT"></Delay>
+    </RECORD>
+  </MSG_CROWNSREWARDSTIERREACHED>
+
+  <MSG_REQUESTCROWNSREWARDSEVENTS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTCROWNSREWARDSEVENTS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests the current crowns rewards events from the server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_REQUESTCROWNSREWARDSEVENTS</_MsgHandler>
+    </RECORD>
+  </MSG_REQUESTCROWNSREWARDSEVENTS>
+
+  <MSG_ADDCROWNSREWARDSEVENT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ADDCROWNSREWARDSEVENT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client about a new crowns rewards event</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ADDCROWNSREWARDSEVENT</_MsgHandler>
+      <SerializedEvent TYPE="STR"></SerializedEvent>
+    </RECORD>
+  </MSG_ADDCROWNSREWARDSEVENT>
+
+  <MSG_REMOVECROWNSREWARDSEVENT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REMOVECROWNSREWARDSEVENT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to remove an expired crowns rewards event</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_REMOVECROWNSREWARDSEVENT</_MsgHandler>
+      <EventID TYPE="UINT"></EventID>
+    </RECORD>
+  </MSG_REMOVECROWNSREWARDSEVENT>
+
+  <MSG_UPDATECUSTOMEMOTES>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATECUSTOMEMOTES</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to update custom emotes</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateCustomEmotes</_MsgHandler>
+      <CustomEmotes TYPE="UINT"></CustomEmotes>
+      <CustomTeleportEffects TYPE="UINT"></CustomTeleportEffects>
+      <Rank TYPE="UBYT"></Rank>
+    </RECORD>
+  </MSG_UPDATECUSTOMEMOTES>
+
+  <MSG_UPDATETELEPORTEFFECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATETELEPORTEFFECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to update teleport effect</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateTeleportEffect</_MsgHandler>
+      <TeleportEffect TYPE="UINT"></TeleportEffect>
+      <PlayerGID TYPE="GID"></PlayerGID>
+    </RECORD>
+  </MSG_UPDATETELEPORTEFFECT>
+
+  <MSG_REQUESTCLASSPROJECTINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTCLASSPROJECTINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests, server sends class project info</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestClassProjectInfo</_MsgHandler>
+      <Buffer TYPE="STR"></Buffer>
+      <TokenBuffer TYPE="STR"></TokenBuffer>
+      <DisplayInfo TYPE="UBYT"></DisplayInfo>
+    </RECORD>
+  </MSG_REQUESTCLASSPROJECTINFO>
+
+  <MSG_UPDATECLASSPROJECTBUTTON>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATECLASSPROJECTBUTTON</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends class project button status</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateClassProjectButton</_MsgHandler>
+      <Buffer TYPE="STR"></Buffer>
+    </RECORD>
+  </MSG_UPDATECLASSPROJECTBUTTON>
+
+  <MSG_UPDATECLASSPROJECTSTATUS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATECLASSPROJECTSTATUS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends class project status</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateClassProjectStatus</_MsgHandler>
+      <Status TYPE="UBYT"></Status>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <Count TYPE="UINT"></Count>
+      <Points TYPE="UINT"></Points>
+      <HasUnclaimedReward TYPE="UBYT"></HasUnclaimedReward>
+    </RECORD>
+  </MSG_UPDATECLASSPROJECTSTATUS>
+
+  <MSG_UpdateClassProjectPlayerProgress>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UpdateClassProjectPlayerProgress</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends updated class project player progress to the client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateClassProjectPlayerProgress</_MsgHandler>
+      <ProgressData TYPE="STR"></ProgressData>
+    </RECORD>
+  </MSG_UpdateClassProjectPlayerProgress>
+
+  <MSG_SetBGPolymorphLevel>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SetBGPolymorphLevel</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends updated polymorph level to the client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SetBGPolymorphLevel</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <Index TYPE="INT"></Index>
+      <Level TYPE="INT"></Level>
+    </RECORD>
+  </MSG_SetBGPolymorphLevel>
+
+  <MSG_UPDATEBANKLIMIT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEBANKLIMIT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to update the banks capacity</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_UpdateBankLimit</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <BankLimit TYPE="INT"></BankLimit>
+    </RECORD>
+  </MSG_UPDATEBANKLIMIT>
+
+  <MSG_UPDATEEXPANSION>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEEXPANSION</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sever sends a message to update the expansion count on the client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_UpdateExpansion</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Category TYPE="INT"></Category>
+      <Expansions TYPE="INT"></Expansions>
+    </RECORD>
+  </MSG_UPDATEEXPANSION>
+
+  <MSG_SETELIXIRTIMER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SETELIXIRTIMER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server informing client that a elixir timer has started.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SetElixirTimer</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <TimerTime TYPE="UINT"></TimerTime>
+    </RECORD>
+  </MSG_SETELIXIRTIMER>
+
+  <MSG_OPENCLASSPROJECTPORTAL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_OPENCLASSPROJECTPORTAL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to open portal window</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_OpenClassProjectPortal</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <Tokens TYPE="UINT"></Tokens>
+      <Level TYPE="UINT"></Level>
+      <ClaimedDailyCredits TYPE="BYT"></ClaimedDailyCredits>
+      <TeleporterCheckPoint TYPE="UBYT"></TeleporterCheckPoint>
+      <GlobalID TYPE="GID"></GlobalID>
+      <WebFailure TYPE="BYT"></WebFailure>
+      <Credits TYPE="INT"></Credits>
+    </RECORD>
+  </MSG_OPENCLASSPROJECTPORTAL>
+
+  <MSG_CLASSPROJECTUSETOKEN>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLASSPROJECTUSETOKEN</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client request that server use a token</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClassProjectUseToken</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <Level TYPE="UINT"></Level>
+    </RECORD>
+  </MSG_CLASSPROJECTUSETOKEN>
+
+  <MSG_CLASSPROJECTUSECROWNS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLASSPROJECTUSECROWNS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client request that server use use crowns to enter a class project</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClassProjectUseCrowns</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <Level TYPE="UINT"></Level>
+      <IsMonthlyGauntlet TYPE="UBYT"></IsMonthlyGauntlet>
+    </RECORD>
+  </MSG_CLASSPROJECTUSECROWNS>
+
+  <MSG_CLASSPROJECTSCSRRESULTS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLASSPROJECTSCSRRESULTS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends client csr results</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClassProjectsCSRResults</_MsgHandler>
+      <Result TYPE="STR"></Result>
+    </RECORD>
+  </MSG_CLASSPROJECTSCSRRESULTS>
+
+  <MSG_UPDATEPURCHASEDCHARACTERSLOTS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEPURCHASEDCHARACTERSLOTS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server updates Purchased Character Slots</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdatePurchasedCharacterSlots</_MsgHandler>
+      <PurchasedCharacterSlots TYPE="INT"></PurchasedCharacterSlots>
+    </RECORD>
+  </MSG_UPDATEPURCHASEDCHARACTERSLOTS>
+
+  <MSG_CLASSPROJECTCLAIMREWARD>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLASSPROJECTCLAIMREWARD</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client request that server claim a class project reward</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClassProjectClaimReward</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <RewardIndex TYPE="UINT"></RewardIndex>
+    </RECORD>
+  </MSG_CLASSPROJECTCLAIMREWARD>
+
+  <MSG_CLASSPROJECTREQUESTLEADERBOARD>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLASSPROJECTREQUESTLEADERBOARD</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests, server sends a class project leaderboard</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClassProjectRequestLeaderboard</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <TopBuffer TYPE="STR"></TopBuffer>
+      <Buffer TYPE="STR"></Buffer>
+    </RECORD>
+  </MSG_CLASSPROJECTREQUESTLEADERBOARD>
+
+  <MSG_GotoDormConfirm>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_GotoDormConfirm</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message that allows the client to confirm an exit teleport.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_GotoDormConfirm</_MsgHandler>
+      <PromptKey TYPE="STR"></PromptKey>
+    </RECORD>
+  </MSG_GotoDormConfirm>
+
+  <MSG_GoHomeConfirm>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_GoHomeConfirm</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message that allows the client to confirm an exit teleport.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_GoHomeConfirm</_MsgHandler>
+      <PromptKey TYPE="STR"></PromptKey>
+    </RECORD>
+  </MSG_GoHomeConfirm>
+
+  <MSG_RecallLocationConfirm>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_RecallLocationConfirm</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message that allows the client to confirm an exit teleport.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RecallLocationConfirm</_MsgHandler>
+      <PromptKey TYPE="STR"></PromptKey>
+    </RECORD>
+  </MSG_RecallLocationConfirm>
+
+  <MSG_GotoPlayerConfirm>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_GotoPlayerConfirm</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Request to teleport to the position of a given player.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_GotoPlayerConfirm</_MsgHandler>
+      <PromptKey TYPE="STR"></PromptKey>
+      <TargetCharacterID TYPE="GID"></TargetCharacterID>
+      <DisableCrossPlay TYPE="UBYT"></DisableCrossPlay>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+    </RECORD>
+  </MSG_GotoPlayerConfirm>
+
+  <MSG_CLASSPROJECTSREQUESTFRIENDS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLASSPROJECTSREQUESTFRIENDS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Class projects reuqests friend list from chat server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClassProjectsRequestFriends</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <CharacterID TYPE="GID"></CharacterID>
+      <Data TYPE="STR"></Data>
+      <PlayerName TYPE="UINT"></PlayerName>
+      <LootTable TYPE="STR"></LootTable>
+      <BuddyListID TYPE="GID"></BuddyListID>
+    </RECORD>
+  </MSG_CLASSPROJECTSREQUESTFRIENDS>
+
+  <MSG_CLASSPROJECTREQUESTTELEPORT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLASSPROJECTREQUESTTELEPORT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests, server teleports player to event area</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClassProjectRequestTeleport</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <TeleportType TYPE="UBYT"></TeleportType>
+    </RECORD>
+  </MSG_CLASSPROJECTREQUESTTELEPORT>
+
+  <MSG_QUICKSELLREQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_QUICKSELLREQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Send a list of items to sell from client to server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_QuickSellRequest</_MsgHandler>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_QUICKSELLREQUEST>
+
+  <MSG_RIDABLEUPDATE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_RIDABLEUPDATE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client tells server about a ridable object yaw</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RidableUpdate</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Yaw TYPE="FLT"></Yaw>
+      <Slot TYPE="UBYT"></Slot>
+    </RECORD>
+  </MSG_RIDABLEUPDATE>
+
+  <MSG_BattlegroundChatProjectData>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BattlegroundChatProjectData</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server requesting all project data</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundChatProjectData</_MsgHandler>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_BattlegroundChatProjectData>
+
+  <MSG_BATTLEGROUNDQUEUEGROUP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDQUEUEGROUP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests to be queued for a class project battleground</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundQueueGroup</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <PlayerGID TYPE="GID"></PlayerGID>
+    </RECORD>
+  </MSG_BATTLEGROUNDQUEUEGROUP>
+
+  <MSG_BATTLEGROUNDQUEUEGROUPCHECK>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDQUEUEGROUPCHECK</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests to be queued for a class project battleground</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundQueueGroupCheck</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <GroupID TYPE="GID"></GroupID>
+      <Status TYPE="UINT"></Status>
+    </RECORD>
+  </MSG_BATTLEGROUNDQUEUEGROUPCHECK>
+
+  <MSG_BATTLEGROUNDQUEUEGROUPSTATUS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDQUEUEGROUPSTATUS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests to be queued for a class project battleground</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundQueueGroupStatus</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <Status TYPE="STR"></Status>
+    </RECORD>
+  </MSG_BATTLEGROUNDQUEUEGROUPSTATUS>
+
+  <MSG_BATTLEGROUNDQUEUEGROUPJOINED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDQUEUEGROUPJOINED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server telling group members they have been added to the Beastmoon Hunt queue</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundQueueGroupJoined</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <LeaderName TYPE="STR"></LeaderName>
+    </RECORD>
+  </MSG_BATTLEGROUNDQUEUEGROUPJOINED>
+
+
+  <MSG_BATTLEGROUNDQUEUEPLAYER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDQUEUEPLAYER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests to be queued for a class project battleground</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundQueuePlayer</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <MachineID TYPE="GID"></MachineID>
+      <LastMatchStatus TYPE="INT"></LastMatchStatus>
+      <DisableCrossPlay TYPE="UBYT"></DisableCrossPlay>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+    </RECORD>
+  </MSG_BATTLEGROUNDQUEUEPLAYER>
+
+  <MSG_BATTLEGROUNDQUEUEUPDATE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDQUEUEUPDATE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client that they are queued for a class project battleground</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundQueueUpdate</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <Waiting TYPE="UBYT"></Waiting>
+      <Cancel TYPE="UINT"></Cancel>
+      <Kicked TYP="STR"></Kicked>
+      <Ready TYPE="UBYT"></Ready>
+      <TimeLeft TYPE="FLT"></TimeLeft>
+      <DisableCrossPlay TYPE="UBYT"></DisableCrossPlay>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+    </RECORD>
+  </MSG_BATTLEGROUNDQUEUEUPDATE>
+
+  <MSG_BGQueueStatus>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGQueueStatus</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client that they are queued for a class project battleground</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGQueueStatus</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <State TYPE="INT"></State>
+      <Lines TYPE="STR"></Lines>
+    </RECORD>
+  </MSG_BGQueueStatus>
+
+  <MSG_BATTLEGROUNDTELEPORTPLAYER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDTELEPORTPLAYER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Chat server tells zone server to teleport a player</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundTeleportPlayer</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <ZoneID TYPE="GID"></ZoneID>
+      <Team TYPE="UBYT"></Team>
+    </RECORD>
+  </MSG_BATTLEGROUNDTELEPORTPLAYER>
+
+  <MSG_BATTLEGROUNDREQUESTMATCHDATA>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDREQUESTMATCHDATA</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Zone server requests match data from chat server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundRequestMatchData</_MsgHandler>
+      <ZoneID TYPE="GID"></ZoneID>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_BATTLEGROUNDREQUESTMATCHDATA>
+
+  <MSG_BGSigilProxyEvent>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGSigilProxyEvent</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message sent from the server to the client to modify a sigils proxy visuals</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGSigilProxyEvent</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Operation TYPE="UINT"></Operation>
+      <Data TYPE="STR"></Data>
+      <Team TYPE="STR"></Team>
+    </RECORD>
+  </MSG_BGSigilProxyEvent>
+
+  <MSG_BattleBookAdd>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BattleBookAdd</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message sent from the server to the client to add cards to the battle book</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattleBookAdd</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <SpellID TYPE="UINT"></SpellID>
+      <EnchantmentID TYPE="UINT"></EnchantmentID>
+    </RECORD>
+  </MSG_BattleBookAdd>
+
+  <MSG_BattleBookRemove>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BattleBookRemove</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message sent from the server to the client to remove cards from the battle book</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattleBookRemove</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <SpellID TYPE="UINT"></SpellID>
+      <EnchantmentID TYPE="UINT"></EnchantmentID>
+      <Quantity TYPE="UINT"></Quantity>
+    </RECORD>
+  </MSG_BattleBookRemove>
+
+  <MSG_BattleBookClear>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BattleBookClear</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message sent to the server or the client to empty the book</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattleBookClear</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_BattleBookClear>
+
+  <MSG_BattleBookRating>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BattleBookRating</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message sent to the server or the client to empty the book</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattleBookRating</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <RatingData TYPE="STR"></RatingData>
+    </RECORD>
+  </MSG_BattleBookRating>
+
+  <MSG_BATTLEGROUNDUPDATEPOINTS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDUPDATEPOINTS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Zone server tells client new team points</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundUpdatePoints</_MsgHandler>
+      <Points TYPE="INT"></Points>
+      <Delta TYPE="INT"></Delta>
+      <Team TYPE="UBYT"></Team>
+      <PointEvent TYPE="INT"></PointEvent>
+      <Tag TYPE="STR"></Tag>
+    </RECORD>
+  </MSG_BATTLEGROUNDUPDATEPOINTS>
+
+  <MSG_BATTLEGROUNDEND>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDEND</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Zone server tells client how match ended</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundEnd</_MsgHandler>
+      <EndCode TYPE="UBYT"></EndCode>
+      <PvE TYPE="UBYT"></PvE>
+    </RECORD>
+  </MSG_BATTLEGROUNDEND>
+
+  <MSG_BATTLEGROUNDSHOWCOMPASS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDSHOWCOMPASS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Zone server tells client to show the compass</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundShowCompass</_MsgHandler>
+      <ShowCompass TYPE="UBYT"></ShowCompass>
+    </RECORD>
+  </MSG_BATTLEGROUNDSHOWCOMPASS>
+
+  <MSG_BATTLECARDSHOPLIST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLECARDSHOPLIST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Send list from server to client of battle cards the player can buy</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattleCardShopList</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_BATTLECARDSHOPLIST>
+
+  <MSG_REINTERACT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REINTERACT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message sent from the server to the client to cause a reinteract</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_Reinteract</_MsgHandler>
+      <ReinteractType TYPE="UBYT"></ReinteractType>
+    </RECORD>
+  </MSG_REINTERACT>
+
+  <MSG_BGOPENPOLYMORPHSELECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGOPENPOLYMORPHSELECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message sent from the server to the client to open polymorph select screen</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGOpenPolymorphSelect</_MsgHandler>
+      <npcGlobalID TYPE="GID"></npcGlobalID>
+      <PolymorphCategory TYPE="STR"></PolymorphCategory>
+      <PolymorphCategoryAvailable TYPE="UBYT"></PolymorphCategoryAvailable>
+    </RECORD>
+  </MSG_BGOPENPOLYMORPHSELECT>
+
+  <MSG_BGISPOLYMORPHUNLOCKEDREQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGISPOLYMORPHUNLOCKEDREQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Send battleground is polymorph unlocked request from client to server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGIsPolymorphUnlockedRequest</_MsgHandler>
+      <PolymorphTemplateID TYPE="GID"></PolymorphTemplateID>
+      <npcGlobalID TYPE="GID"></npcGlobalID>
+    </RECORD>
+  </MSG_BGISPOLYMORPHUNLOCKEDREQUEST>
+
+  <MSG_BGISPOLYMORPHUNLOCKEDRESPONSE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGISPOLYMORPHUNLOCKEDRESPONSE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Send battleground is polymorph unlocked response from server to client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGIsPolymorphUnlockedResponse</_MsgHandler>
+      <PolymorphTemplateID TYPE="GID"></PolymorphTemplateID>
+      <PolymorphRating TYPE="INT"></PolymorphRating>
+      <IsPolymorphUnlocked TYPE="UBYT"></IsPolymorphUnlocked>
+    </RECORD>
+  </MSG_BGISPOLYMORPHUNLOCKEDRESPONSE>
+
+  <MSG_BGSELECTPOLYMORPHREQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGSELECTPOLYMORPHREQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Send battleground polymorph select request from client to server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGSelectPolymorphRequest</_MsgHandler>
+      <npcGlobalID TYPE="GID"></npcGlobalID>
+      <PolymorphTemplateID TYPE="GID"></PolymorphTemplateID>
+    </RECORD>
+  </MSG_BGSELECTPOLYMORPHREQUEST>
+
+  <MSG_BGSELECTPOLYMORPHRESPONSE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGSELECTPOLYMORPHRESPONSE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Send battleground polymorph select response from server to client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGSelectPolymorphResponse</_MsgHandler>
+      <PolymorphCategory TYPE="STR"></PolymorphCategory>
+      <PolymorphCategoryAvailable TYPE="UBYT"></PolymorphCategoryAvailable>
+      <ReleasedPolymorphCategory TYPE="STR"></ReleasedPolymorphCategory>
+    </RECORD>
+  </MSG_BGSELECTPOLYMORPHRESPONSE>
+
+  <MSG_BGSELECTPOLYMORPHDONE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGSELECTPOLYMORPHDONE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Send battleground polymorph select done from client to server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGSelectPolymorphDone</_MsgHandler>
+    </RECORD>
+  </MSG_BGSELECTPOLYMORPHDONE>
+
+  <MSG_BATTLEGROUNDQUEUESTATS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDQUEUESTATS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Zone server rquests q stats, chat server forwards to zone server and client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundQueueStats</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_BATTLEGROUNDQUEUESTATS>
+
+  <MSG_BATTLECARDBUY>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLECARDBUY</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">battle card buy request from client to server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattleCardBuy</_MsgHandler>
+      <npcGlobalID TYPE="GID"></npcGlobalID>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_BATTLECARDBUY>
+
+  <MSG_BATTLECARDBUYCONFIRM>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLECARDBUYCONFIRM</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Confirm battle card purchase.  From Server to Client. </_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattleCardBuyConfirm</_MsgHandler>
+      <Failure TYPE="BYT"></Failure>
+    </RECORD>
+  </MSG_BATTLECARDBUYCONFIRM>
+
+  <MSG_BATTLECARDTRASH>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLECARDTRASH</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">battle card trash request from client to server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattleCardTrash</_MsgHandler>
+      <npcGlobalID TYPE="GID"></npcGlobalID>
+      <SpellID TYPE="INT"></SpellID>
+    </RECORD>
+  </MSG_BATTLECARDTRASH>
+
+  <MSG_BATTLECARDTRASHCONFIRM>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLECARDTRASHCONFIRM</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Confirm battle card trash.  From Server to Client.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattleCardTrashConfirm</_MsgHandler>
+      <Failure TYPE="BYT"></Failure>
+    </RECORD>
+  </MSG_BATTLECARDTRASHCONFIRM>
+
+  <MSG_BATTLEGROUNDPOLYMORPHIMPROVEMENT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDPOLYMORPHIMPROVEMENT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Open screen. From server to client.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundPolymorphImprovement</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <RatingData TYPE="STR"></RatingData>
+      <BGClassProjectID TYPE="UINT"></BGClassProjectID>
+    </RECORD>
+  </MSG_BATTLEGROUNDPOLYMORPHIMPROVEMENT>
+
+  <MSG_BATTLEGROUNDPOLYMORPHIMPROVEREQ>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDPOLYMORPHIMPROVEREQ</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Request from client to server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundPolymorphImproveReq</_MsgHandler>
+      <npcGlobalID TYPE="GID"></npcGlobalID>
+      <Level TYPE="BYT"></Level>
+      <Rating TYPE="BYT"></Rating>
+      <Tag TYPE="STR"></Tag>
+    </RECORD>
+  </MSG_BATTLEGROUNDPOLYMORPHIMPROVEREQ>
+
+  <MSG_BATTLEGROUNDPOLYMORPHIMPROVERESP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDPOLYMORPHIMPROVERESP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Confirm purchase.  From Server to Client. </_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundPolymorphImproveResp</_MsgHandler>
+      <Failure TYPE="BYT"></Failure>
+      <Rating TYPE="INT"></Rating>
+      <Level TYPE="INT"></Level>
+      <Tag TYPE="STR"></Tag>
+    </RECORD>
+  </MSG_BATTLEGROUNDPOLYMORPHIMPROVERESP>
+
+  <MSG_BUYSEASONPASS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BUYSEASONPASS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client request season pass info</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BuySeasonPass</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <Purchase TYPE="UBYT"></Purchase>
+      <Credits TYPE="INT"></Credits>
+      <BattlePass TYPE="INT"></BattlePass>
+    </RECORD>
+  </MSG_BUYSEASONPASS>
+
+  <MSG_BGResetStats>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGResetStats</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server telling the client to purge it's BG stats</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGResetStats</_MsgHandler>
+      <Stats TYPE="STR"></Stats>
+    </RECORD>
+  </MSG_BGResetStats>
+
+  <MSG_BGPlayerStatsUpdate>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGPlayerStatsUpdate</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server updating a player's information</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGPlayerStatsUpdate</_MsgHandler>
+      <Stats TYPE="STR"></Stats>
+    </RECORD>
+  </MSG_BGPlayerStatsUpdate>
+  <MSG_UPDATEEVENTCURRENCY1>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEEVENTCURRENCY1</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Update your eventCurrency1 and max eventCurrency1</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateEventCurrency1</_MsgHandler>
+      <EventCurrency1 TYPE="INT"></EventCurrency1>
+      <MaxEventCurrency1 TYPE="INT"></MaxEventCurrency1>
+    </RECORD>
+  </MSG_UPDATEEVENTCURRENCY1>
+
+  <MSG_UPDATEEVENTCURRENCY2>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEEVENTCURRENCY2</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Update your eventCurrency2 and max eventCurrency2</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateEventCurrency2</_MsgHandler>
+      <EventCurrency2 TYPE="INT"></EventCurrency2>
+      <MaxEventCurrency2 TYPE="INT"></MaxEventCurrency2>
+    </RECORD>
+  </MSG_UPDATEEVENTCURRENCY2>
+
+  <MSG_BGPOIUpdate>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGPOIUpdate</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server updating the POI data</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGPOIUpdate</_MsgHandler>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_BGPOIUpdate>
+
+  <MSG_DISPLAYHELPGUI>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DISPLAYHELPGUI</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server updating the POI data</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DisplayHelpGUI</_MsgHandler>
+      <GUIFilename TYPE="STR"></GUIFilename>
+    </RECORD>
+  </MSG_DISPLAYHELPGUI>
+
+  <MSG_REQUESTBATTLEGROUNDSLOOT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTBATTLEGROUNDSLOOT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client is ready for BG loot</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestBattlegroundsLoot</_MsgHandler>
+    </RECORD>
+  </MSG_REQUESTBATTLEGROUNDSLOOT>
+
+  <MSG_BATTLEGROUNDPENALTY>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BATTLEGROUNDPENALTY</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells chat server to give player a queue penalty</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundPenalty</_MsgHandler>
+      <ProjectID TYPE="UINT"></ProjectID>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <CancelPenalty TYPE="UINT"></CancelPenalty>
+    </RECORD>
+  </MSG_BATTLEGROUNDPENALTY>
+
+  <MSG_BGPlayerSync>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGPlayerSync</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client syncing player stats</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGPlayerSync</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Data TYPE="UINT"></Data>
+      <Flags TYPE="UINT"></Flags>
+    </RECORD>
+  </MSG_BGPlayerSync>
+
+  <MSG_BGPlayerSyncStatus>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BGPlayerSyncStatus</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client syncing player stats</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BGPlayerSyncStatus</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <TargetID TYPE="GID"></TargetID>
+      <Flags TYPE="UINT"></Flags>
+      <Config TYPE="STR"></Config>
+    </RECORD>
+  </MSG_BGPlayerSyncStatus>
+
+  <MSG_BattlegroundTimeAdjust>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BattlegroundTimeAdjust</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Adjusts the amount of time left in a match</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BattlegroundTimeAdjust</_MsgHandler>
+      <DeltaS TYPE="INT"></DeltaS>
+    </RECORD>
+  </MSG_BattlegroundTimeAdjust>
+
+  <MSG_REQUESTHATCHMAKINGFRIENDPETS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTHATCHMAKINGFRIENDPETS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests and server sends friends hatchmaking pets</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestHatchmakingFriendPets</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Data TYPE="STR"></Data>
+      <InPerson TYPE="BYT"></InPerson>
+    </RECORD>
+  </MSG_REQUESTHATCHMAKINGFRIENDPETS>
+
+  <MSG_REQUESTHATCHMAKINGSEARCHPETS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTHATCHMAKINGSEARCHPETS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests and server sends a search hatchmaking pets</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestHatchmakingSearchPets</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Data TYPE="STR"></Data>
+      <SearchType TYPE="BYT"></SearchType>
+      <InPerson TYPE="BYT"></InPerson>
+    </RECORD>
+  </MSG_REQUESTHATCHMAKINGSEARCHPETS>
+
+  <MSG_HATCHMAKINGSEARCHRESULTS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_HATCHMAKINGSEARCHRESULTS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Job server sends search results to chat server to zone server to client</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_HatchmakingSearchResults</_MsgHandler>
+      <CharacterID TYPE="GID"></CharacterID>
+      <Data TYPE="STR"></Data>
+      <InPerson TYPE="BYT"></InPerson>
+    </RECORD>
+  </MSG_HATCHMAKINGSEARCHRESULTS>
+
+  <MSG_OPENITEMFINDER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_OPENITEMFINDER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to open Item Finder</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_OpenItemFinder</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_OPENITEMFINDER>
+
+  <MSG_ITEMFINDERREQUESTBANK>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ITEMFINDERREQUESTBANK</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to bank is loaded for Item Finder</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ItemFinderRequestBank</_MsgHandler>
+    </RECORD>
+  </MSG_ITEMFINDERREQUESTBANK>
+
+
+  <MSG_ITEMFINDERREQUESTHOUSE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ITEMFINDERREQUESTHOUSE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client about housing items for Item Finder</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ItemFinderRequestHouse</_MsgHandler>
+      <Data TYPE="STR"></Data>
+      <HouseTemplateID TYPE="UINT"></HouseTemplateID>
+      <SectionCode TYPE="BYT"></SectionCode>
+    </RECORD>
+  </MSG_ITEMFINDERREQUESTHOUSE>
+
+  <MSG_ITEMFINDERHOUSECOMPLETE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ITEMFINDERHOUSECOMPLETE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client about housing items for Item Finder</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ItemFinderHouseComplete</_MsgHandler>
+    </RECORD>
+  </MSG_ITEMFINDERHOUSECOMPLETE>
+
+  <MSG_CANSEETIEREDSPELLGROUPS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CANSEETIEREDSPELLGROUPS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">client asks, server responsds</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CanSeeTieredSpellGroups</_MsgHandler>
+      <Visibility TYPE="STR"></Visibility>
+      <CheckTieredSpellNotifications TYPE="UBYT"></CheckTieredSpellNotifications>
+      <ShardType TYPE="GID"></ShardType>
+    </RECORD>
+  </MSG_CANSEETIEREDSPELLGROUPS>
+
+  <MSG_TIEREDSPELLUPGRADE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TIEREDSPELLUPGRADE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client Tells the server to upgrade a tiered spell</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TieredSpellUpgrade</_MsgHandler>
+      <SpellID TYPE="UINT"></SpellID>
+      <SpellIDNew TYPE="UINT"></SpellIDNew>
+      <TieredSpellGroup TYPE="UINT"></TieredSpellGroup>
+    </RECORD>
+  </MSG_TIEREDSPELLUPGRADE>
+
+  <MSG_TIEREDSPELLUPGRADERESP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TIEREDSPELLUPGRADERESP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells the client success or failure</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TieredSpellUpgradeResponse</_MsgHandler>
+      <Success TYPE="UBYT"></Success>
+      <FailedRequirementIndex TYPE="INT"></FailedRequirementIndex>
+    </RECORD>
+  </MSG_TIEREDSPELLUPGRADERESP>
+
+  <MSG_TIEREDSPELLRESET>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TIEREDSPELLRESET</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client Tells the server to upgrade a tiered spell</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TieredSpellReset</_MsgHandler>
+      <SpellID TYPE="UINT"></SpellID>
+      <SpellIDOld TYPE="UINT"></SpellIDOld>
+    </RECORD>
+  </MSG_TIEREDSPELLRESET>
+
+  <MSG_TIEREDSPELLRESETRESP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_TIEREDSPELLRESETRESP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells the client success or failure</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_TieredSpellResetResponse</_MsgHandler>
+      <Success TYPE="UBYT"></Success>
+      <FailedRequirementIndex TYPE="INT"></FailedRequirementIndex>
+    </RECORD>
+  </MSG_TIEREDSPELLRESETRESP>
+
+  <MSG_CASTLETOURSGOTOFRIEND>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CASTLETOURSGOTOFRIEND</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Zone server requests friend info from chat server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CastleToursGotoFriend</_MsgHandler>
+      <PlayerGID TYPE="GID"></PlayerGID>
+      <TargetGID TYPE="GID"></TargetGID>
+      <ZoneName TYPE="STR"></ZoneName>
+      <ZoneGID TYPE="GID"></ZoneGID>
+      <DisableCrossPlay TYPE="UBYT"></DisableCrossPlay>
+      <ClientPlatform TYPE="UBYT"></ClientPlatform>
+    </RECORD>
+  </MSG_CASTLETOURSGOTOFRIEND>
+
+  <MSG_SWITCHTOPET>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SWITCHTOPET</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">The player switched to their pet</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SwitchToPet</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Status TYPE="UBYT"></Status>
+      <PetTemplate TYPE="UINT"></PetTemplate>
+    </RECORD>
+    </MSG_SWITCHTOPET>
+
+  <MSG_PETGAMESKIP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMESKIP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests server skip pet game</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameSkip</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Game TYPE="STR"></Game>
+      <Bonus TYPE="UBYT"></Bonus>
+    </RECORD>
+  </MSG_PETGAMESKIP>
+
+  <MSG_PETGAMESKIPFEED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMESKIPFEED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests server skip pet game feed pet</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameSkipFeed</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Game TYPE="STR"></Game>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_PETGAMESKIPFEED>
+
+  <MSG_DISPLAYPETONLYMESSAGE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DISPLAYPETONLYMESSAGE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to display pet only message</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DisplayPetOnlyMessage</_MsgHandler>
+    </RECORD>
+  </MSG_DISPLAYPETONLYMESSAGE>
+
+  <MSG_PETFEEDHAPPINESS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETFEEDHAPPINESS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests server feed pet for happiness</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetFeedHappiness</_MsgHandler>
+      <SnackTemplateID TYPE="UINT"></SnackTemplateID>
+      <FeedStack TYPE="UBYT"></FeedStack>
+      <Happiness TYPE="UINT"></Happiness>
+    </RECORD>
+  </MSG_PETFEEDHAPPINESS>
+
+  <MSG_PETTELEPORT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETTELEPORT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to teleport pet</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetTeleport</_MsgHandler>
+      <PositionX TYPE="FLT"></PositionX>
+      <PositionY TYPE="FLT"></PositionY>
+      <PositionZ TYPE="FLT"></PositionZ>
+      <Yaw TYPE="FLT"></Yaw>
+    </RECORD>
+  </MSG_PETTELEPORT>
+
+  <MSG_USEPETADVENTUREPOWER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_USEPETADVENTUREPOWER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests that the server use an adventure power</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UsePetAdventurePower</_MsgHandler>
+      <ItemGID TYPE="GID"></ItemGID>
+      <PowerID TYPE="UINT"></PowerID>
+    </RECORD>
+  </MSG_USEPETADVENTUREPOWER>
+
+  <MSG_UPDATEADVENTUREPOWERCOOLDOWN>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEADVENTUREPOWERCOOLDOWN</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to update the adventure power cooldown</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateAdventurePowerCooldown</_MsgHandler>
+      <AdventurePowerCooldownTime TYPE="UINT"></AdventurePowerCooldownTime>
+    </RECORD>
+  </MSG_UPDATEADVENTUREPOWERCOOLDOWN>
+
+  <MSG_UNLOCKPETTALENT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UNLOCKPETTALENT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests that the server start the process of unlocking a pet talent</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UnlockPetTalent</_MsgHandler>
+      <PetGID TYPE="GID"></PetGID>
+      <DerbyTalent TYPE="UBYT"></DerbyTalent>
+      <TalentID TYPE="UINT"></TalentID>
+      <NewTalentID TYPE="UINT"></NewTalentID>
+    </RECORD>
+  </MSG_UNLOCKPETTALENT>
+
+  <MSG_Infraction>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_Infraction</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to add or remove an infraction</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_Infraction</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Add TYPE="STR"></Add>
+      <Remove TYPE="UINT"></Remove>
+    </RECORD>
+  </MSG_Infraction>
+
+  <MSG_GAINPETXP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_GAINPETXP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends pet xp gained to client for display</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_GainPetXP</_MsgHandler>
+      <PetGID TYPE="GID"></PetGID>
+      <XP TYPE="UINT"></XP>
+    </RECORD>
+  </MSG_GAINPETXP>
+
+  <MSG_CLEARALLINTERACTIONS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLEARALLINTERACTIONS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server tells client to clear all interactions</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClearAllInteractions</_MsgHandler>
+    </RECORD>
+  </MSG_CLEARALLINTERACTIONS>
+
+  <MSG_REQUESTMAINLINEAUDIT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_REQUESTMAINLINEAUDIT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests a mainline quest audit</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_RequestMainlineAudit</_MsgHandler>
+    </RECORD>
+  </MSG_REQUESTMAINLINEAUDIT>
+
+  <MSG_MOVEEQUIPMENTSET>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MOVEEQUIPMENTSET</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests server moves an equipment set up or down</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_MoveEquipmentSet</_MsgHandler>
+      <SetNumber TYPE="UINT"></SetNumber>
+      <MoveDown TYPE="UBYT"></MoveDown>
+    </RECORD>
+  </MSG_MOVEEQUIPMENTSET>
+
+  <MSG_UPDATEEQUIPMENTSETS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_UPDATEEQUIPMENTSETS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server send updated equipment sets</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_UpdateEquipmentSets</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Buffer TYPE="STR"></Buffer>
+    </RECORD>
+  </MSG_UPDATEEQUIPMENTSETS>
+
+  <MSG_ITEMACQUISITION>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ITEMACQUISITION</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Update the client delivery invoice about an item purchase</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ItemAcquisition</_MsgHandler>
+      <ItemGlobalID TYPE="GID"></ItemGlobalID>
+      <ItemTemplateID TYPE="UINT"></ItemTemplateID>
+      <ItemLocation TYPE="UINT"></ItemLocation>
+    </RECORD>
+  </MSG_ITEMACQUISITION>
+
+  <MSG_DISETLEVELUPELIXIRTELEPORT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DISETLEVELUPELIXIRTELEPORT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server asks client to trigger a level up elixir teleport once the Delivery Invoice is closed</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DISetLevelUpElixirTeleport</_MsgHandler>
+    </RECORD>
+  </MSG_DISETLEVELUPELIXIRTELEPORT>
+
+  <MSG_DILEVELUPELIXIRTELEPORT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DILEVELUPELIXIRTELEPORT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests a level up elixir teleport</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DILevelUpElixirTeleport</_MsgHandler>
+      <ItemGlobalID TYPE="GID"></ItemGlobalID>
+    </RECORD>
+  </MSG_DILEVELUPELIXIRTELEPORT>
+
+  <MSG_DISETCHECKSUBSCRIPTIONPURCHASE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DISETCHECKSUBSCRIPTIONPURCHASE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server asks client to possibly (But not always) trigger a logout once the Delivery Invoice is closed</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DISetCheckSubscriptionPurchase</_MsgHandler>
+    </RECORD>
+  </MSG_DISETCHECKSUBSCRIPTIONPURCHASE>
+
+  <MSG_SELLMODIFIER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SELLMODIFIER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests the sell modifier from the server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SellModifier</_MsgHandler>
+      <SellModifier TYPE="FLT"></SellModifier>
+    </RECORD>
+  </MSG_SELLMODIFIER>
+
+  <MSG_BANKCOUNT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_BANKCOUNT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests the current bank count from the server</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_BankCount</_MsgHandler>
+      <BankCount TYPE="UINT"></BankCount>
+    </RECORD>
+  </MSG_BANKCOUNT>
+
+  <MSG_CrownShopEvent>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CrownShopEvent</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests a teleport</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CrownShopEvent</_MsgHandler>
+      <EventID TYPE="UBYT"></EventID>
+      <Params TYPE="STR"></Params>
+      <Log TYPE="UBYT"></Log>
+    </RECORD>
+  </MSG_CrownShopEvent>
+
+  <MSG_CrownShopLogging>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CrownShopLogging</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server toggling CS logging events</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CrownShopLogging</_MsgHandler>
+      <Enabled TYPE="UBYT"></Enabled>
+    </RECORD>
+  </MSG_CrownShopLogging>
+
+  <MSG_SplashEnabled>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SplashEnabled</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client checks to see if the splash page is enabled</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SplashEnabled</_MsgHandler>
+    </RECORD>
+  </MSG_SplashEnabled>
+
+  <MSG_PATCHBEFORETELEPORT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PATCHBEFORETELEPORT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server request that client patch a zone</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PatchBeforeTeleport</_MsgHandler>
+      <ZoneName TYPE="STR"></ZoneName>
+      <Buffer TYPE="STR"></Buffer>
+    </RECORD>
+  </MSG_PATCHBEFORETELEPORT>
+
+  <MSG_ZONECLUSTERINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_ZONECLUSTERINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends client info about current cluster</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ZoneClusterInfo</_MsgHandler>
+      <NumberOfZones TYPE="UINT"></NumberOfZones>
+      <PlayerCount TYPE="UINT"></PlayerCount>
+      <FreeSlots TYPE="UINT"></FreeSlots>
+    </RECORD>
+  </MSG_ZONECLUSTERINFO>
+
+  <MSG_CLASSPROJECTSTARTTIME>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLASSPROJECTSTARTTIME</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server sends client info about the start time of a class project</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClassProjectStartTime</_MsgHandler>
+      <ClassProjectID TYPE="UINT"></ClassProjectID>
+    </RECORD>
+  </MSG_CLASSPROJECTSTARTTIME>
+
+  <MSG_PERIODICSUBSCRIPTIONS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PERIODICSUBSCRIPTIONS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Periodic Subscription status</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PeriodicSubscriptions</_MsgHandler>
+      <Success TYPE="UBYT"></Success>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_PERIODICSUBSCRIPTIONS>
+
+  <MSG_CLAIMPERIODICOFFERS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CLAIMPERIODICOFFERS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Claim Periodic Offers</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_ClaimPeriodicOffers</_MsgHandler>
+      <Success TYPE="UBYT"></Success>
+      <Crowns TYPE="INT"></Crowns>
+      <Items TYPE="INT"></Items>
+    </RECORD>
+  </MSG_CLAIMPERIODICOFFERS>
+
+  <MSG_SWITCHACTIVEQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SWITCHACTIVEQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client informs server that player switched the active quest or goal</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SwitchActiveQuest</_MsgHandler>
+      <ActiveQuestGID TYPE="GID"></ActiveQuestGID>
+      <ActiveGoalGID TYPE="GID"></ActiveGoalGID>
+    </RECORD>
+  </MSG_SWITCHACTIVEQUEST>
+
+
+</WizardMessages>
+

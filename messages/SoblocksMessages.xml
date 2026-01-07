@@ -1,0 +1,236 @@
+<?xml version="1.0" ?>
+<GameMessages>
+  <_ProtocolInfo>
+    <RECORD>
+      <ServiceID TYPE="UBYT">25</ServiceID>
+      <ProtocolType TYPE="STR">SOBLOCKS_MESSAGES</ProtocolType>
+      <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+      <ProtocolDescription TYPE="STR">Messages for all Soblocks minigames</ProtocolDescription>
+    </RECORD>
+  </_ProtocolInfo>
+
+  <MSG_SOBLOCKS_STARTSWAP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_STARTSWAP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_StartSwap</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_STARTSWAP>
+
+  <MSG_SOBLOCKS_PAUSE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_PAUSE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_Pause</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_PAUSE>
+
+  <MSG_SOBLOCKS_PAUSEON>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_PAUSEON</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_PauseOn</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_PAUSEON>
+
+  <MSG_SOBLOCKS_PAUSEOFF>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_PAUSEOFF</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_PauseOff</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_PAUSEOFF>
+  
+  <MSG_SOBLOCKS_ADVANCEON>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_ADVANCEON</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_AdvanceOn</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_ADVANCEON>
+
+  <MSG_SOBLOCKS_ADVANCEOFF>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_ADVANCEOFF</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_AdvanceOff</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_ADVANCEOFF>
+
+  <MSG_SOBLOCKS_ENDGAME>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_ENDGAME</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_EndGame</_MsgHandler>
+		<Score TYPE="INT"></Score>
+    </RECORD>
+  </MSG_SOBLOCKS_ENDGAME>
+
+  <MSG_SOBLOCKS_RESETGAME>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_RESETGAME</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_ResetGame</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_RESETGAME>
+
+  <MSG_SOBLOCKS_SELECTGAME>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_SELECTGAME</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_SelectGame</_MsgHandler>
+		<GameType TYPE="INT"></GameType>
+    </RECORD>
+  </MSG_SOBLOCKS_SELECTGAME>
+
+  <MSG_SOBLOCKS_SENDROW>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_SENDROW</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_SendRow</_MsgHandler>
+		<Index1 TYPE="INT"></Index1>
+		<Index2 TYPE="INT"></Index2>
+		<Index3 TYPE="INT"></Index3>
+		<Index4 TYPE="INT"></Index4>
+		<Index5 TYPE="INT"></Index5>
+		<Index6 TYPE="INT"></Index6>
+		<Index7 TYPE="INT"></Index7>
+    </RECORD>
+  </MSG_SOBLOCKS_SENDROW>
+
+  <MSG_SOBLOCKS_ROWINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_ROWINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_RowInfo</_MsgHandler>
+		<Index1 TYPE="INT"></Index1>
+		<Index2 TYPE="INT"></Index2>
+		<Index3 TYPE="INT"></Index3>
+		<Index4 TYPE="INT"></Index4>
+		<Index5 TYPE="INT"></Index5>
+		<Index6 TYPE="INT"></Index6>
+		<Index7 TYPE="INT"></Index7>
+    </RECORD>
+  </MSG_SOBLOCKS_ROWINFO>
+
+  <MSG_SOBLOCKS_REQUESTROW>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_REQUESTROW</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_RequestRow</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_REQUESTROW>
+
+  <MSG_SOBLOCKS_LEVELUP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_LEVELUP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_LevelUp</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_LEVELUP>
+
+  <MSG_SOBLOCKS_READY>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_READY</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_Ready</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_READY>
+
+  <MSG_SOBLOCKS_SETLEVEL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_SETLEVEL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_SetLevel</_MsgHandler>
+      <Speed TYPE="INT"></Speed>
+      <SpeedUp TYPE="INT"></SpeedUp>
+      <FallSpeed TYPE="INT"></FallSpeed>
+      <RemoveSpeed TYPE="INT"></RemoveSpeed>
+      <Bonus TYPE="INT"></Bonus>
+      <ComboTime TYPE="INT"></ComboTime>
+      <MultiTime TYPE="INT"></MultiTime>
+    </RECORD>
+  </MSG_SOBLOCKS_SETLEVEL>
+
+  <MSG_SOBLOCKS_LOSS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_LOSS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_Loss</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_LOSS>
+
+  <MSG_SOBLOCKS_WIN>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_WIN</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_Win</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_WIN>
+
+  <MSG_SOBLOCKS_COUNTDOWN>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_COUNTDOWN</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_Countdown</_MsgHandler>
+      <Number TYPE="INT"></Number>
+    </RECORD>
+  </MSG_SOBLOCKS_COUNTDOWN>
+
+  <MSG_SOBLOCKS_INFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_INFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_Info</_MsgHandler>
+      <Name TYPE="STR"></Name>
+    </RECORD>
+  </MSG_SOBLOCKS_INFO>
+
+  <MSG_SOBLOCKS_ROCKDROP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_ROCKDROP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_RockDrop</_MsgHandler>
+    </RECORD>
+  </MSG_SOBLOCKS_ROCKDROP>
+
+  <MSG_SOBLOCKS_FREEZEBLOCKS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_FREEZEBLOCKS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_FreezeBlocks</_MsgHandler>
+      <Amount TYPE="INT"></Amount>
+    </RECORD>
+  </MSG_SOBLOCKS_FREEZEBLOCKS>
+
+  <MSG_SOBLOCKS_TIMEDDROP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_TIMEDDROP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_TimedDrop</_MsgHandler>
+		<Index1 TYPE="INT"></Index1>
+		<Index2 TYPE="INT"></Index2>
+		<Index3 TYPE="INT"></Index3>
+		<Index4 TYPE="INT"></Index4>
+		<Index5 TYPE="INT"></Index5>
+		<Index6 TYPE="INT"></Index6>
+		<Index7 TYPE="INT"></Index7>
+    </RECORD>
+  </MSG_SOBLOCKS_TIMEDDROP>
+
+  <MSG_SOBLOCKS_ATTACK>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SOBLOCKS_ATTACK</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_Soblocks_Attack</_MsgHandler>
+		<Index1 TYPE="INT"></Index1>
+		<Index2 TYPE="INT"></Index2>
+		<Index3 TYPE="INT"></Index3>
+		<Index4 TYPE="INT"></Index4>
+		<Index5 TYPE="INT"></Index5>
+		<Index6 TYPE="INT"></Index6>
+		<Index7 TYPE="INT"></Index7>
+    </RECORD>
+  </MSG_SOBLOCKS_ATTACK>
+  
+</GameMessages>

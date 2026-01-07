@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<LoginMessages>
+<_ProtocolInfo>
+  <RECORD>
+    <ServiceID TYPE="UBYT">11</ServiceID>
+    <ProtocolType TYPE="STR">TESTMANAGER</ProtocolType>
+    <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+    <ProtocolDescription TYPE="STR">Test Manager Server Messages</ProtocolDescription>
+  </RECORD>
+</_ProtocolInfo>
+<MSG_LOGIN>
+  <RECORD>
+    <_MsgType TYPE="UBYT" NOXFER="TRUE">100</_MsgType>
+    <_MsgName TYPE="STR" NOXFER="TRUE">MSG_LOGIN</_MsgName>
+    <_MsgDescription TYPE="STR" NOXFER="TRUE">Login Message.</_MsgDescription>
+    <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_Login</_MsgHandler>
+    <Username TYPE="STR"></Username>
+    <Password TYPE="STR"></Password>
+  </RECORD>
+</MSG_LOGIN>
+<MSG_LOGINRESPONSE>
+  <RECORD>
+    <_MsgType TYPE="UBYT" NOXFER="TRUE">101</_MsgType>
+    <_MsgName TYPE="STR" NOXFER="TRUE">MSG_LOGINRESPONSE</_MsgName>
+    <_MsgDescription TYPE="STR" NOXFER="TRUE">Login Response Message.</_MsgDescription>
+    <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_LoginResponse</_MsgHandler>
+    <Success TYPE="INT"></Success>
+  </RECORD>
+</MSG_LOGINRESPONSE>
+</LoginMessages>

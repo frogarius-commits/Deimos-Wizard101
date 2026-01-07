@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<GameMessages>
+  <_ProtocolInfo>
+    <RECORD>
+      <ServiceID TYPE="UBYT">55</ServiceID>
+      <ProtocolType TYPE="STR">GAME2</ProtocolType>
+      <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+      <ProtocolDescription TYPE="STR">Game Messages2</ProtocolDescription>
+    </RECORD>
+  </_ProtocolInfo>
+  <MSG_NOTIFYITEMFORSETBONUS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_NOTIFYITEMFORSETBONUS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server notify to client about an item that should be treated as equipped/unequipped for purpose of item set bonus</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_NotifyItemForSetBonus</_MsgHandler>
+      <AsEquip TYPE="INT"></AsEquip>
+      <ItemID TYPE="GID"></ItemID>
+    </RECORD>
+  </MSG_NOTIFYITEMFORSETBONUS>
+  <MSG_PLATFORMSYNCPURCHASES>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PLATFORMSYNCPURCHASES</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Console client requesting sync for purchases from platform store</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PlatformSyncPurchases</_MsgHandler>
+      <PurchaseToken TYPE="STR"></PurchaseToken>
+      <ProductID TYPE="STR"></ProductID>
+      <PlatformCurrency TYPE="STR"></PlatformCurrency>
+      <PurchaseAmount TYPE="STR"></PurchaseAmount>
+      <Timestamp TYPE="UINT"></Timestamp>
+    </RECORD>
+  </MSG_PLATFORMSYNCPURCHASES>
+  <MSG_SetPlatformFriends>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SetPlatformFriends</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Updates the player's friends list based on their platforms friends list</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SetPlatformFriends</_MsgHandler>
+      <ListOwnerGID TYPE="GID"></ListOwnerGID>
+      <FullList TYPE="UBYT"></FullList>
+      <Added TYPE="STR"></Added>
+      <Removed TYPE="STR"></Removed>
+    </RECORD>
+  </MSG_SetPlatformFriends>
+  <MSG_SetPlatformIgnore>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_SetPlatformIgnore</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Updates the player's ignore list based on their platforms ignore list</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_SetPlatformIgnore</_MsgHandler>
+      <ListOwnerGID TYPE="GID"></ListOwnerGID>
+      <FullList TYPE="UBYT"></FullList>
+      <Added TYPE="STR"></Added>
+      <Removed TYPE="STR"></Removed>
+    </RECORD>
+  </MSG_SetPlatformIgnore>
+  <MSG_PVPBLOCK>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PVPBLOCK</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to notify the client that he has been pvp blocked</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PvPBlock</_MsgHandler>
+      <PvPBlockTime TYPE="STR"></PvPBlockTime>
+      <ForceMessage TYPE="UBYT"></ForceMessage>
+    </RECORD>
+  </MSG_PVPBLOCK>
+  <MSG_PVPBLOCK_RSP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PVPBLOCK_RSP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to notify the client that the pvp block was successful</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PvPBlock_Rsp</_MsgHandler>
+      <PvPBlockID TYPE="STR"></PvPBlockID>
+      <PvPBlockTime TYPE="STR"></PvPBlockTime>
+      <Success TYPE="UBYT"></Success>
+    </RECORD>
+  </MSG_PVPBLOCK_RSP>
+  <MSG_CURRENTREALM>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CURRENTREALM</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">Asking/responding realm name and zone</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CurrentRealm</_MsgHandler>
+         <CurrentRealm TYPE="STR"></CurrentRealm>
+         <CurrentZone TYPE="STR"></CurrentZone>
+      </RECORD>
+   </MSG_CURRENTREALM>
+</GameMessages>
+

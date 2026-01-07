@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<MoveBehaviorMessages>
+   <_ProtocolInfo>
+      <RECORD>
+         <ServiceID TYPE="UBYT">15</ServiceID>
+         <ProtocolType TYPE="STR">MOVEBEHAVIOR</ProtocolType>
+         <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+         <ProtocolDescription TYPE="STR">MoveBehavior Messages</ProtocolDescription>
+      </RECORD>
+   </_ProtocolInfo>
+   <MSG_MB_MOVE>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MB_MOVE</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">A move update for a mobile, transferred from client to server.</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_MB_Move</_MsgHandler>
+         <LocationX TYPE="USHRT"></LocationX>
+         <LocationY TYPE="USHRT"></LocationY>
+         <LocationZ TYPE="USHRT"></LocationZ>
+         <Direction TYPE="UBYT"></Direction>
+         <ZoneCounter TYPE="UBYT"></ZoneCounter>
+         <GlobalID TYPE="GID"></GlobalID>
+      </RECORD>
+   </MSG_MB_MOVE>
+   <MSG_MB_MOVE_T>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MB_MOVE_T</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">A move update for a mobile, transferred from client to server.</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_MB_Move</_MsgHandler>
+         <LocationX TYPE="USHRT"></LocationX>
+         <LocationY TYPE="USHRT"></LocationY>
+         <LocationZ TYPE="USHRT"></LocationZ>
+         <Direction TYPE="UBYT"></Direction>
+         <ZoneCounter TYPE="UBYT"></ZoneCounter>
+         <GlobalID TYPE="GID"></GlobalID>
+		 <Time TYPE="FLT"></Time>
+      </RECORD>
+   </MSG_MB_MOVE_T>
+    <MSG_MB_TELEPORT>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MB_TELEPORT</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">A forced teleport message, transferred from server to client (contains GID).</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_MB_Teleport</_MsgHandler>
+         <LocationX TYPE="USHRT"></LocationX>
+         <LocationY TYPE="USHRT"></LocationY>
+         <LocationZ TYPE="USHRT"></LocationZ>
+         <Direction TYPE="UBYT"></Direction>
+         <GlobalID TYPE="GID"></GlobalID>
+      </RECORD>
+   </MSG_MB_TELEPORT>
+   <MSG_MB_MOVESTATE>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MB_MOVESTATE</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">The server is changing the movement state on a mobile</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_MB_MoveState</_MsgHandler>
+         <GlobalID TYPE="GID"></GlobalID>
+         <NewState TYPE="BYT"></NewState>
+      </RECORD>
+   </MSG_MB_MOVESTATE>
+</MoveBehaviorMessages>

@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<MG4Messages>
+<_ProtocolInfo>
+    <RECORD>
+      <ServiceID TYPE="UBYT">45</ServiceID>
+      <ProtocolType TYPE="STR">MG4_MESSAGES</ProtocolType>
+      <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+      <ProtocolDescription TYPE="STR">Messages for MG4 MinigameWindow Mini-Game</ProtocolDescription>
+    </RECORD>
+  </_ProtocolInfo>
+
+   <MSG_MG4_REWARDS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MG4_REWARDS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_MG4_Rewards</_MsgHandler>
+      		<score TYPE="INT"></score>
+		<gameName TYPE="STR"></gameName>
+    </RECORD>
+  </MSG_MG4_REWARDS>
+  
+   <MSG_MG4_MOVED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MG4_MOVED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_MG4_Moved</_MsgHandler>
+    </RECORD>
+  </MSG_MG4_MOVED>
+
+   <MSG_MG4_CONNECT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_MG4_CONNECT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE"></_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">Msg_MG4_Connect</_MsgHandler>
+    </RECORD>
+  </MSG_MG4_CONNECT>
+</MG4Messages>

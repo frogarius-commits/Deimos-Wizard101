@@ -1,0 +1,125 @@
+<?xml version="1.0" ?>
+<PhysicsMessages>
+   <_ProtocolInfo>
+      <RECORD>
+         <ServiceID TYPE="UBYT">16</ServiceID>
+         <ProtocolType TYPE="STR">PHYSICS</ProtocolType>
+         <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+         <ProtocolDescription TYPE="STR">PhysicsBehavior Messages</ProtocolDescription>
+      </RECORD>
+   </_ProtocolInfo>
+   <MSG_PHYSICS_STATE>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PHYSICS_STATE</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">PhysicsBehavior message.</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PhysicsState</_MsgHandler>
+         <PositionX TYPE="FLT"></PositionX>
+         <PositionY TYPE="FLT"></PositionY>
+         <PositionZ TYPE="FLT"></PositionZ>
+         <RotationX TYPE="FLT"></RotationX>
+         <RotationY TYPE="FLT"></RotationY>
+         <RotationZ TYPE="FLT"></RotationZ>
+         <VelocityX TYPE="FLT"></VelocityX>
+         <VelocityY TYPE="FLT"></VelocityY>
+         <VelocityZ TYPE="FLT"></VelocityZ>
+         <AngularVelocityX TYPE="FLT"></AngularVelocityX>
+         <AngularVelocityY TYPE="FLT"></AngularVelocityY>
+         <AngularVelocityZ TYPE="FLT"></AngularVelocityZ>
+         <GlobalID TYPE="GID"></GlobalID>
+      </RECORD>
+   </MSG_PHYSICS_STATE>
+   <MSG_PHYSICS_FORCE>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PHYSICS_FORCE</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">PhysicsBehavior message.</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PhysicsForce</_MsgHandler>
+         <PositionX TYPE="FLT"></PositionX>
+         <PositionY TYPE="FLT"></PositionY>
+         <PositionZ TYPE="FLT"></PositionZ>
+         <RotationX TYPE="FLT"></RotationX>
+         <RotationY TYPE="FLT"></RotationY>
+         <RotationZ TYPE="FLT"></RotationZ>
+         <VelocityX TYPE="FLT"></VelocityX>
+         <VelocityY TYPE="FLT"></VelocityY>
+         <VelocityZ TYPE="FLT"></VelocityZ>
+         <AngularVelocityX TYPE="FLT"></AngularVelocityX>
+         <AngularVelocityY TYPE="FLT"></AngularVelocityY>
+         <AngularVelocityZ TYPE="FLT"></AngularVelocityZ>
+         <ForceX TYPE="FLT"></ForceX>
+         <ForceY TYPE="FLT"></ForceY>
+         <ForceZ TYPE="FLT"></ForceZ>
+         <GlobalID TYPE="GID"></GlobalID>
+      </RECORD>
+   </MSG_PHYSICS_FORCE>
+   <MSG_PHYSICS_FORCE_AT_POS>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PHYSICS_FORCE_AT_POS</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">PhysicsBehavior message.</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PhysicsForce</_MsgHandler>
+         <PositionX TYPE="FLT"></PositionX>
+         <PositionY TYPE="FLT"></PositionY>
+         <PositionZ TYPE="FLT"></PositionZ>
+         <RotationX TYPE="FLT"></RotationX>
+         <RotationY TYPE="FLT"></RotationY>
+         <RotationZ TYPE="FLT"></RotationZ>
+         <VelocityX TYPE="FLT"></VelocityX>
+         <VelocityY TYPE="FLT"></VelocityY>
+         <VelocityZ TYPE="FLT"></VelocityZ>
+         <AngularVelocityX TYPE="FLT"></AngularVelocityX>
+         <AngularVelocityY TYPE="FLT"></AngularVelocityY>
+         <AngularVelocityZ TYPE="FLT"></AngularVelocityZ>
+         <ForceX TYPE="FLT"></ForceX>
+         <ForceY TYPE="FLT"></ForceY>
+         <ForceZ TYPE="FLT"></ForceZ>
+         <ForcePosX TYPE="FLT"></ForcePosX>
+         <ForcePosY TYPE="FLT"></ForcePosY>
+         <ForcePosZ TYPE="FLT"></ForcePosZ>
+         <GlobalID TYPE="GID"></GlobalID>
+      </RECORD>
+   </MSG_PHYSICS_FORCE_AT_POS>
+   <MSG_PHYSICS_TORQUE>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PHYSICS_TORQUE</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">PhysicsBehavior message.</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PhysicsTorque</_MsgHandler>
+         <PositionX TYPE="FLT"></PositionX>
+         <PositionY TYPE="FLT"></PositionY>
+         <PositionZ TYPE="FLT"></PositionZ>
+         <RotationX TYPE="FLT"></RotationX>
+         <RotationY TYPE="FLT"></RotationY>
+         <RotationZ TYPE="FLT"></RotationZ>
+         <VelocityX TYPE="FLT"></VelocityX>
+         <VelocityY TYPE="FLT"></VelocityY>
+         <VelocityZ TYPE="FLT"></VelocityZ>
+         <AngularVelocityX TYPE="FLT"></AngularVelocityX>
+         <AngularVelocityY TYPE="FLT"></AngularVelocityY>
+         <AngularVelocityZ TYPE="FLT"></AngularVelocityZ>
+         <TorqueX TYPE="FLT"></TorqueX>
+         <TorqueY TYPE="FLT"></TorqueY>
+         <TorqueZ TYPE="FLT"></TorqueZ>
+         <GlobalID TYPE="GID"></GlobalID>
+      </RECORD>
+   </MSG_PHYSICS_TORQUE>
+   <MSG_PHYSICS_GRAB>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PHYSICS_GRAB</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">PhysicsBehavior message.</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PhysicsGrab</_MsgHandler>
+         <GlobalID TYPE="GID"></GlobalID>
+         <HolderID TYPE="GID"></HolderID>
+         <OffsetX TYPE="FLT"></OffsetX>
+         <OffsetY TYPE="FLT"></OffsetY>
+         <OffsetZ TYPE="FLT"></OffsetZ>
+         <Force TPYE="FLT"></Force>
+      </RECORD>
+   </MSG_PHYSICS_GRAB>
+   <MSG_PHYSICS_RELEASE>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PHYSICS_RELEASE</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">PhysicsBehavior message.</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PhysicsRelease</_MsgHandler>
+         <GlobalID TYPE="GID"></GlobalID>
+         <HolderID TYPE="GID"></HolderID>
+      </RECORD>
+   </MSG_PHYSICS_RELEASE>
+</PhysicsMessages>

@@ -1,0 +1,561 @@
+<?xml version="1.0" ?>
+<PetMessages>
+  <_ProtocolInfo>
+    <RECORD>
+      <ServiceID TYPE="UBYT">9</ServiceID>
+      <ProtocolType TYPE="STR">PET</ProtocolType>
+      <ProtocolVersion TYPE="INT">1</ProtocolVersion>
+      <ProtocolDescription TYPE="STR">Pet Messages</ProtocolDescription>
+    </RECORD>
+  </_ProtocolInfo>
+  
+  <MSG_PETSNACKADD>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETSNACKADD</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Notifying the client of a brand new petsnack</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetSnackAdd</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_PETSNACKADD>
+
+  <MSG_PETSNACKREMOVE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETSNACKREMOVE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Notifying the client to drop a petsnack</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetSnackRemove</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <ItemID TYPE="GID"></ItemID>
+    </RECORD>
+  </MSG_PETSNACKREMOVE>
+
+  <MSG_PETSNACKREMOVEREQUEST>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETSNACKREMOVEREQUEST</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Notify the server to remove a petsnack</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetSnackRemoveRequest</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+    </RECORD>
+  </MSG_PETSNACKREMOVEREQUEST>
+
+  <MSG_PETSNACKUPDATE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETSNACKUPDATE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">The quantity of a petsnack stack has changed</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetSnackUpdate</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <ItemID TYPE="GID"></ItemID>
+      <Quantity TYPE="INT"></Quantity>
+    </RECORD>
+  </MSG_PETSNACKUPDATE>
+  
+  <MSG_PETGAMEJOIN>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEJOIN</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from client to server to initiate a pet game</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameJoin</_MsgHandler>
+      <Game TYPE="STR"></Game>
+      <Track TYPE="STR"></Track>
+    </RECORD>
+  </MSG_PETGAMEJOIN>
+
+   <MSG_PETGAMEJOINRSP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEJOINRSP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to cientl for ack that they can acutally join a pet game</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameJoinRsp</_MsgHandler>
+      <Game TYPE="STR"></Game>
+      <Success TYPE="UBYT"></Success>
+    </RECORD>
+   </MSG_PETGAMEJOINRSP>
+   
+   <MSG_PETGAMEINIT>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEINIT</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to initialize the game</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameInit</_MsgHandler>
+         <Game TYPE="STR"></Game>
+         <Data TYPE="STR"></Data>
+         <MinLevel TYPE="UBYT"></MinLevel>
+         <Track TYPE="UBYT"></Track>
+      </RECORD>
+   </MSG_PETGAMEINIT>
+
+   <MSG_PETGAMEREADY>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEREADY</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from client to server to say the player is ready</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameReady</_MsgHandler>
+      </RECORD>
+   </MSG_PETGAMEREADY>
+
+   <MSG_PETGAMESTART>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMESTART</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to start a pet game</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameStart</_MsgHandler>
+      <Game TYPE="STR"></Game>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_PETGAMESTART>
+
+  <MSG_PETGAMEDATA>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEDATA</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to set up a round </_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameData</_MsgHandler>
+      <Game TYPE="STR"></Game>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_PETGAMEDATA>
+
+  <MSG_PETGAMEINDIVIDUALRESULTS>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEINDIVIDUALRESULTS</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client send down individual-specific data</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameIndividualResults</_MsgHandler>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_PETGAMEINDIVIDUALRESULTS>
+  
+  <MSG_PETGAMESNACKFEEDSUCCESS>
+        <RECORD>
+          <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMESNACKFEEDSUCCESS</_MsgName>
+          <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client as snack feeding success.</_MsgDescription>
+          <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameSnackFeedSuccess</_MsgHandler>
+          <Data TYPE="STR"></Data>
+        </RECORD>
+  </MSG_PETGAMESNACKFEEDSUCCESS>
+  
+  <MSG_PETGAMESNACKFEEDFAILED>
+          <RECORD>
+            <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMESNACKFEEDFAILED</_MsgName>
+            <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client as snack feeding failure.</_MsgDescription>
+            <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameSnackFeedFailed</_MsgHandler>
+          </RECORD>
+  </MSG_PETGAMESNACKFEEDFAILED>
+  
+  <MSG_PETGAMEEND>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEEND</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to end a pet game</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameEnd</_MsgHandler>
+      <Game TYPE="STR"></Game>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_PETGAMEEND>
+
+  <MSG_PETGAMEJUMP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEJUMP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Jump message for Gobbler Drop, etc.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameJump</_MsgHandler>
+    </RECORD>
+  </MSG_PETGAMEJUMP>
+
+  <MSG_PETENERGYTICK>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETENERGYTICK</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell client our pet regained a point of energy</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetEnergyTick</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Energy TYPE="INT"></Energy>
+      <MaxEnergy TYPE="INT"></MaxEnergy>
+      <TickTime TYPE="INT"></TickTime>
+    </RECORD>
+  </MSG_PETENERGYTICK>
+  
+  <MSG_PETENERGYMAX>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETENERGYMAX</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell client his new max energy</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetEnergyMax</_MsgHandler>
+      <MaxEnergy TYPE="INT"></MaxEnergy>
+    </RECORD>
+  </MSG_PETENERGYMAX>
+  
+  <MSG_PETLEVELUP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETLEVELUP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell client our pet just went up a level</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetLevelUp</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <OverallRating TYPE="UBYT"></OverallRating>
+      <ActiveRating TYPE="UBYT"></ActiveRating>
+      <PetLevel TYPE="UBYT"></PetLevel>
+      <NewTalent TYPE="UINT"></NewTalent>
+      <NewDerbyPower TYPE="UINT"></NewDerbyPower>
+      <NewJewel TYPE="UINT"></NewJewel>
+      <Display TYPE="UBYT"></Display>
+    </RECORD>
+  </MSG_PETLEVELUP>
+
+  <MSG_PETUPDATEBEHAVIOR>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETUPDATEBEHAVIOR</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell a client the new state of the behavior after a major update</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetUpdateBehavior</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_PETUPDATEBEHAVIOR>
+
+  <MSG_PETHATCHED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETHATCHED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell a client that a pet hatched</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetHatched</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <TemplateID TYPE="GID"></TemplateID>
+    </RECORD>
+  </MSG_PETHATCHED>
+
+  <MSG_PETMORPHSET>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETMORPHSET</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell a client that another partner has chosen a different pet for morphing</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetMorphSet</_MsgHandler>
+      <PetID TYPE="GID"></PetID>  
+    </RECORD>
+  </MSG_PETMORPHSET>
+
+  <MSG_PETMORPHCANAFFORD>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETMORPHCANAFFORD</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell a client that they can or cant afford to morph</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetMorphCanAfford</_MsgHandler>
+      <CanAfford TYPE="BYT"></CanAfford>
+    </RECORD>
+  </MSG_PETMORPHCANAFFORD>
+  
+  <MSG_PETMORPHREADY>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETMORPHREADY</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell a client that another partner has changed its readiness</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetMorphReady</_MsgHandler>
+      <Confirmed TYPE="BYT"></Confirmed>
+    </RECORD>
+  </MSG_PETMORPHREADY>
+
+  <MSG_PETEGGMORPHED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETEGGMORPHED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell a client that an egg was created</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetEggMorphed</_MsgHandler>
+      <PetTemplateGID TYPE="GID"></PetTemplateGID>
+      <PetName TYPE="UINT"></PetName>
+      <HatchTime TYPE="UINT"></HatchTime>
+    </RECORD>
+  </MSG_PETEGGMORPHED>
+  <MSG_PETMORPHINGSLOT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETMORPHINGSLOT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Tell the client a change occured with a morphing slot</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetMorphingSlot</_MsgHandler>
+      <GlobalID TYPE="GID"></GlobalID>
+      <Removed TYPE="UBYT"></Removed>
+      <ExpireTimeCount TYPE="UINT"></ExpireTimeCount>
+    </RECORD>
+  </MSG_PETMORPHINGSLOT>
+
+   <MSG_PETGAMEENDING>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEENDING</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to end a pet game</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameEnding</_MsgHandler>
+         <Game TYPE="STR"></Game>
+         <GlobalID TYPE="GID"></GlobalID>
+      </RECORD>
+   </MSG_PETGAMEENDING>
+   
+   <MSG_PETGAMEMAZE>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEMAZE</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to control the game.</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameMaze</_MsgHandler>
+         <GameCommand TYPE="UBYT"></GameCommand>
+         <GameData TYPE="UBYT"></GameData>
+         <ObjectID TYPE="GID"></ObjectID>
+      </RECORD>
+   </MSG_PETGAMEMAZE>
+
+   <MSG_PETGAMEDANCE>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEDANCE</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to control the game.</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameDance</_MsgHandler>
+         <Moves TYPE="STR"></Moves>
+      </RECORD>
+   </MSG_PETGAMEDANCE>
+
+<!--Derby Messages -->
+   <MSG_PETGAMEDERBYRESULTS>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEDERBYRESULTS</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client with derby results</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameDerbyResults</_MsgHandler>
+         <Data TYPE="STR"></Data>
+      </RECORD>
+   </MSG_PETGAMEDERBYRESULTS>
+
+  <MSG_DERBYEFFECTAPPLY>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DERBYEFFECTAPPLY</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to apply a derby effect.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DerbyEffectApply</_MsgHandler>
+      <Game TYPE="STR"></Game>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_DERBYEFFECTAPPLY>
+
+  <MSG_DERBYEFFECTREMOVE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DERBYEFFECTREMOVE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to remove a derby effect.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DerbyEffectRemove</_MsgHandler>
+      <Game TYPE="STR"></Game>
+      <ID TYPE="INT"></ID>
+    </RECORD>
+  </MSG_DERBYEFFECTREMOVE>
+
+  <MSG_DERBYSTATMOD>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DERBYSTATMOD</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to modify a pet stat.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DerbyStatMod</_MsgHandler>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_DERBYSTATMOD>
+
+  <MSG_DERBYLOCATION>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DERBYLOCATION</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to update a racers location.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DerbyLocation</_MsgHandler>
+      <RacerId TYPE="INT"></RacerId>
+      <TargetId TYPE="INT"></TargetId>
+      <XLoc TYPE="FLT"></XLoc>
+      <YLoc TYPE="FLT"></YLoc>
+      <ZLoc TYPE="FLT"></ZLoc>
+    </RECORD>
+  </MSG_DERBYLOCATION>
+
+  <MSG_DERBYEFFECTSLISTUPDATE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DERBYEFFECTSLISTUPDATE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client represent the remaining active effects.</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DerbyEffectsListUpdate</_MsgHandler>
+      <Data TYPE="STR"></Data>
+    </RECORD>
+  </MSG_DERBYEFFECTSLISTUPDATE>
+
+  <MSG_CHEERCOSTMAPUPDATE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_CHEERCOSTMAPUPDATE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client fixup the cheercostmods</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_CheerCostMapUpdate</_MsgHandler>
+      <CheerCostMods TYPE="STR"></CheerCostMods>
+    </RECORD>
+  </MSG_CHEERCOSTMAPUPDATE>
+
+  <MSG_DERBYSYNC>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DERBYSYNC</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to sync derby locations</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DerbySync</_MsgHandler>
+      <RacerId TYPE="GID"></RacerId>
+      <RacePositionX TYPE="FLT"></RacePositionX>
+      <RacePositionY TYPE="FLT"></RacePositionY>
+      <RacePositionZ TYPE="FLT"></RacePositionZ>
+      <Lane TYPE="UBYT"></Lane>
+    </RECORD>
+  </MSG_DERBYSYNC>
+
+  <MSG_PETDERBYSWITCHLANE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYSWITCHLANE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to switch lanes</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbySwitchLane</_MsgHandler>
+      <PetIndex TYPE="UBYT"></PetIndex>
+      <Lane TYPE="UBYT"></Lane>
+      <MsgID TYPE="INT"></MsgID>
+    </RECORD>
+  </MSG_PETDERBYSWITCHLANE>
+  
+  <MSG_PETDERBYSWITCHLANEFAIL>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYSWITCHLANEFAIL</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message that the attempt to switch lanes failed</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbySwitchLaneFail</_MsgHandler>
+    </RECORD>
+  </MSG_PETDERBYSWITCHLANEFAIL>
+  
+  <MSG_PETDERBYCHEER>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYCHEER</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to cheer</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbyCheer</_MsgHandler>
+      <PetIndex TYPE="UBYT"></PetIndex>
+    </RECORD>
+  </MSG_PETDERBYCHEER>
+
+  <MSG_PETDERBYSLOW>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYSLOW</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to slow</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbySlow</_MsgHandler>
+      <PetIndex TYPE="UBYT"></PetIndex>
+    </RECORD>
+  </MSG_PETDERBYSLOW>
+
+  <MSG_PETDERBYUSETALENT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYUSETALENT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to Use a Talent</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbyUseTalent</_MsgHandler>
+      <TalentID TYPE="UINT"></TalentID>
+      <Used TYPE="UBYT"></Used>
+      <PetIndex TYPE="UBYT"></PetIndex>
+    </RECORD>
+  </MSG_PETDERBYUSETALENT>
+
+  <MSG_PETDERBYJUMPDUCK>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYJUMPDUCK</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to Jump or Duck</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbyJumpDuck</_MsgHandler>
+      <PetIndex TYPE="UBYT"></PetIndex>
+    </RECORD>
+  </MSG_PETDERBYJUMPDUCK>
+
+  <MSG_PETDERBYSPEED>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYSPEED</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to adjust Speed</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbySpeed</_MsgHandler>
+      <PetIndex TYPE="UBYT"></PetIndex>
+      <Speed TYPE="INT"></Speed>
+    </RECORD>
+  </MSG_PETDERBYSPEED>
+
+  <MSG_PETDERBYMORALE>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYMORALE</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to adjust Morale</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbyMorale</_MsgHandler>
+      <PetIndex TYPE="UBYT"></PetIndex>
+      <Morale TYPE="INT"></Morale>
+    </RECORD>
+  </MSG_PETDERBYMORALE>
+
+  <MSG_PETDERBYLAP>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYLAP</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to notify lap change</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbyLap</_MsgHandler>
+      <PetIndex TYPE="UBYT"></PetIndex>
+      <Count TYPE="INT"></Count>
+    </RECORD>
+  </MSG_PETDERBYLAP>
+
+  <MSG_PETDERBYPHOTOFINISH>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYPHOTOFINISH</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to notify race finish</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbyPhotoFinish</_MsgHandler>
+      <Rank TYPE="INT"></Rank>
+      <PetIndex TYPE="UBYT"></PetIndex>
+    </RECORD>
+  </MSG_PETDERBYPHOTOFINISH>
+
+  <MSG_PETDERBYSTART>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYSTART</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to notify race start steps</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbyStart</_MsgHandler>
+      <GoGoGo TYPE="UBYT"></GoGoGo>
+    </RECORD>
+  </MSG_PETDERBYSTART>
+
+  <MSG_PETDERBYBUFF>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYBUFF</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to notify buffs</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbyBuff</_MsgHandler>
+      <Add TYPE="UBYT"></Add>
+      <Type TYPE="INT"></Type>
+      <PetID TYPE="GID"></PetID>
+    </RECORD>
+  </MSG_PETDERBYBUFF>
+
+  <MSG_PETDERBYMODIFYSTAT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYMODIFYSTAT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to modify stats</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbyModifyStat</_MsgHandler>
+      <Name TYPE="UBYT"></Name>
+      <Value TYPE="INT"></Value>
+      <Type TYPE="UBYT"></Type>
+    </RECORD>
+  </MSG_PETDERBYMODIFYSTAT>
+
+  <MSG_PETDERBYPLAYERLEFT>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETDERBYPLAYERLEFT</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Message to notify a player left</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetDerbyPlayerLeft</_MsgHandler>
+      <PetIndex TYPE="UBYT"></PetIndex>
+    </RECORD>
+  </MSG_PETDERBYPLAYERLEFT>
+
+  <MSG_PETGAMEDROPBONUS>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEDROPBONUS</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to control the game.</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameDropBonus</_MsgHandler>
+         <GameCommand TYPE="UBYT"></GameCommand>
+         <Bonus TYPE="INT"></Bonus>
+      </RECORD>
+   </MSG_PETGAMEDROPBONUS>
+
+   <MSG_PETGAMEDROPOBJECT>
+      <RECORD>
+         <_MsgName TYPE="STR" NOXFER="TRUE">MSG_PETGAMEDROPOBJECT</_MsgName>
+         <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to control the game.</_MsgDescription>
+         <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_PetGameDropObject</_MsgHandler>
+         <GameCommand TYPE="UBYT"></GameCommand>
+         <GID TYPE="GID"></GID>
+      </RECORD>
+   </MSG_PETGAMEDROPOBJECT>
+
+  <MSG_DERBYPETENERGYINFO>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_DERBYPETENERGYINFO</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Sent from server to client to set pet energy info</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_DerbyPetEnergyInfo</_MsgHandler>
+      <Cost TYPE="INT"></Cost>
+      <Current TYPE="INT"></Current>
+      <Maximum TYPE="INT"></Maximum>
+      <GID TYPE="GID"></GID>
+    </RECORD>
+  </MSG_DERBYPETENERGYINFO>
+
+  <MSG_HATCHEGGNOW>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_HATCHEGGNOW</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Client requests that an egg is hatched for gold</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_HatchEggNow</_MsgHandler>
+      <EggGID TYPE="GID"></EggGID>
+      <Gold TYPE="INT"></Gold>
+    </RECORD>
+  </MSG_HATCHEGGNOW>
+
+  <MSG_LENTPET>
+    <RECORD>
+      <_MsgName TYPE="STR" NOXFER="TRUE">MSG_LENTPET</_MsgName>
+      <_MsgDescription TYPE="STR" NOXFER="TRUE">Server lets client know they lent their pet</_MsgDescription>
+      <_MsgHandler TYPE="STR" NOXFER="TRUE">MSG_LentPet</_MsgHandler>
+    </RECORD>
+  </MSG_LENTPET>
+
+</PetMessages>
