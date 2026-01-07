@@ -480,7 +480,7 @@ def create_gui(gui_theme, gui_text_color, gui_button_color, tool_name, tool_vers
 						[gui.Combo(['Mana', 'Health', 'Speed'], default_value='Mana', readonly=True, text_color=gui_text_color, size=(13, 1), key='Chest_Type')],
 						[gui.Text(tl('Disabled'), key=f'AutoChestStatus', auto_size_text=False, size=(7, 1), text_color=gui_text_color)],
 						[gui.HorizontalSeparator(color='white', pad=((0, 0),(3, 3)))],
-						[hotkey_button_sized('Find Pet Token', GUIKeys.PetTokenPort, False, gui_text_color, gui_button_color, (13, 1))]]
+						[hotkey_button_sized('P1 Find Pet Token', GUIKeys.PetTokenPort, False, gui_text_color, gui_button_color, (13, 1))]]
 
 	framed_VVR_hotkeys_layout = gui.Frame(tl('VVR Hotkeys'), VVR_buttons_layout, title_color=gui_text_color)
 

@@ -994,23 +994,23 @@ async def main():
 
 	async def pet_token_hotkey():
 		# Check all areas, wait a few seconds, if we see the token go to it, print the name of the token
-		if foreground_client:
+		if walker.clients[0]:
 			locations_to_check = [XYZ(9552.2861328125, 17285.54296875, 30.011260986328125), 
 						 XYZ(15428.990234375, 19433.390625, -300.0122985839844), 
 						 XYZ(7455.91455078125, 29489.142578125, 180.00457763671875), 
 						 XYZ(162.98268127441406, 19441.080078125, -420.0116882324219), 
 						 XYZ(7378.087890625, 20484.857421875, 30.008514404296875)]
 			for location in locations_to_check:
-				await foreground_client.teleport(location)
+				await walker.clients[0].teleport(location)
 				await asyncio.sleep(2.5)
-				entities = await foreground_client.get_base_entity_list()
+				entities = await walker.clients[0].get_base_entity_list()
 				for entity in entities:
 					obj_name = await entity.object_name()
 					if "Coins" in obj_name:
 						if obj_name == "Raid_PET_Coin_Butterfly" | "Raid_PET_Coin_Spider" | "Raid_PET_Coin_Crane" | "Raid_PET_Coin_Snake" | "Raid_PET_Coin_Tree":
 							entity_pos = await entity.location()
 							print(f'Pet token is {obj_name}')
-							await WorldsCollideTP(foreground_client, entity_pos)
+							await WorldsCollideTP(walker.clients[0], entity_pos)
 							break
 
 	async def toggle_drums_hotkey(client, raid):
@@ -1042,11 +1042,11 @@ async def main():
 					csr_drums_task = None
 
 					logger.debug("CSR Drums Disabled")
-					gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("CSRDrumsStatus", "Disabled")))
+					gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("DrumsStatus", "Disabled")))
 					return
 
 				logger.debug("CSR Drums Enabled")
-				gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("CSRDrumsStatus", "Enabled")))
+				gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("DrumsStatus", "Enabled")))
 				csr_drums_task = asyncio.create_task(drums_loop(client))
 
 	async def drums_loop(clients: list[Client]):
@@ -1210,7 +1210,6 @@ async def main():
 	# 		await foreground_client.teleport(XYZ(-854.392578125, -808.9772338867188, 1832.6253662109375))
 
 	async def north_pet_hotkey():
-		print("check")
 		if foreground_client:
 			entities = await foreground_client.get_base_entity_list()
 			for entity in entities:
