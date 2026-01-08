@@ -1112,13 +1112,13 @@ async def main():
 				case 'Pyramid':
 					await foreground_client.teleport(XYZ(-854.392578125, -808.9772338867188, 1832.6253662109375))
 				case 'North':
-					await foreground_client.teleport(XYZ(-6406.0693359375, 22017.552734375, 1881.552490234375))
+					await foreground_client.teleport(XYZ(-6456.4697265625, 22167.0625, 1881.55224609375))
 				case 'South':
-					await foreground_client.teleport(XYZ(-1079.9241943359375, 23360.068359375, 1602.2117919921875))
+					await foreground_client.teleport(XYZ(-1058.5706787109375, -23711.177734375, 1602.2119140625))
 				case 'East':
-					await foreground_client.teleport(XYZ(-854.392578125, -808.9772338867188, 1832.6253662109375)) # Update this
+					await foreground_client.teleport(XYZ(23825.6171875, 14633.3330078125, -344.54388427734375))
 				case 'West':
-					await foreground_client.teleport(XYZ(-21779.3125, -6190.5888671875, 321.2557373046875)) # Update this
+					await foreground_client.teleport(XYZ(-21652.001953125, -6064.04443359375, 321.2434997558594))
 
 	async def south_token_teleport_hotkey(token):
 		if foreground_client:
@@ -1127,35 +1127,44 @@ async def main():
 				case 'Wildlife':
 					for entity in entities:
 						obj_name = await entity.object_name()
-						if "Elements" in obj_name: # update this to wildlife
+						if "RAID-Coins-Wildlife-INVISO_01" in obj_name:
 							behavior = await entity.search_behavior_by_name("AnimationBehavior")
 							string = await behavior.read_string_from_offset(576)
-							if string == "00_Hidden":
+							if string:
 								entity_pos = await entity.location()
-								logger.debug(f'Teleporting to South {token} Token at: XYZ({entity_pos})')
-								await foreground_client.teleport(entity_pos)
+								if string != "00_Hidden":
+									print(string)
+									logger.debug(f'Teleporting to South {token} Token ({string}) at: XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})')
+									await foreground_client.teleport(entity_pos)
+									return
 					logger.debug(f'South {token} Token not found.')
 				case 'School':
 					for entity in entities:
 						obj_name = await entity.object_name()
-						if "Elements" in obj_name: 
+						if "RAID-Coins-Elements-INVISO_01" in obj_name:
 							behavior = await entity.search_behavior_by_name("AnimationBehavior")
 							string = await behavior.read_string_from_offset(576)
-							if string == "00_Hidden":
+							if string:
 								entity_pos = await entity.location()
-								logger.debug(f'Teleporting to South {token} Token at: XYZ({entity_pos})')
-								await foreground_client.teleport(entity_pos)
+								if string != "00_Hidden":
+									print(string)
+									logger.debug(f'Teleporting to South {token} Token ({string}) at: XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})')
+									await foreground_client.teleport(entity_pos)
+									return
 					logger.debug(f'South {token} Token not found.')
 				case 'Astral':
 					for entity in entities:
 						obj_name = await entity.object_name()
-						if "Elements" in obj_name: # update this to astral
+						if "RAID-Coins-Cosmic-INVISO_01" in obj_name:
 							behavior = await entity.search_behavior_by_name("AnimationBehavior")
 							string = await behavior.read_string_from_offset(576)
-							if string == "00_Hidden":
+							if string:
 								entity_pos = await entity.location()
-								logger.debug(f'Teleporting to South {token} Token at: XYZ({entity_pos})')
-								await foreground_client.teleport(entity_pos)
+								if string != "00_Hidden":
+									print(string)
+									logger.debug(f'Teleporting to South {token} Token ({string}) at: XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})')
+									await foreground_client.teleport(entity_pos)
+									return
 					logger.debug(f'South {token} Token not found.')
 
 	async def print_tokens():
@@ -1183,32 +1192,6 @@ async def main():
 							print(f"XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})")
 							print(f"{string}\n")
 
-	# async def center_pyramid_hotkey():
-	# 	if foreground_client:
-	# 		logger.debug(f'Teleporting client to Center Pyramid.')
-	# 		await foreground_client.teleport(XYZ(-854.392578125, -808.9772338867188, 1832.6253662109375))
-
-	# async def voice_of_death_hotkey():
-	# 	if foreground_client:
-	# 		logger.debug(f'Teleporting client to Voice of Death.')
-	# 		await foreground_client.teleport(XYZ(x=-1079.9241943359375,y=-23360.068359375,z=1602.2117919921875))
-
-	# async def xibalba_elemental_hotkey():
-	# 	if foreground_client:
-	# 		logger.debug(f'Teleporting client to Xibalba Elemental.')
-	# 		await foreground_client.teleport(XYZ(-6406.0693359375, 22017.552734375, 1881.552490234375))
-
-	# async def west_portal_hotkey():
-	# 	if foreground_client:
-	# 		logger.debug(f'Teleporting client to West.')
-	# 		await foreground_client.teleport(XYZ(-21779.3125, -6190.5888671875, 321.2557373046875))
-
-	# async def east_portal_hotkey():
-	# 	if foreground_client:
-	# 		logger.debug(f'Teleporting client to East.')
-	# 		# Update Coordiantes
-	# 		await foreground_client.teleport(XYZ(-854.392578125, -808.9772338867188, 1832.6253662109375))
-
 	async def north_pet_hotkey():
 		if foreground_client:
 			entities = await foreground_client.get_base_entity_list()
@@ -1219,13 +1202,18 @@ async def main():
 					if obj_name == "RAID-Coins-Elements-PET_01":
 						behav = await entity.search_behavior_by_name("AnimationBehavior")
 						string = await behav.read_string_from_offset(576)
-						if string != "00_Hidden":
-							print(obj_name)
-							print(hex(await behav.read_base_address()))
+						if string:
 							entity_pos = await entity.location()
-							await WorldsCollideTP(foreground_client, entity_pos)
-							print(f"Teleporting client to token at XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})")
-							print(f"{string}\n")
+							if string != "00_Hidden":
+								print(obj_name)
+								print(hex(await behav.read_base_address()))
+								entity_pos = await entity.location()
+								await WorldsCollideTP(foreground_client, entity_pos)
+								print(f"Teleporting client to token at XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})")
+								print(f"{string}\n")
+								return
+			logger.debug(f'North Pet Token not found.')
+			
 
 	# Toggles
 	async def cacao_pods_loop(clients: list[Client]):
