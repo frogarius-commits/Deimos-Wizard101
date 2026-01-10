@@ -924,23 +924,29 @@ async def main():
 					case 'Mana':
 						await entity_tp_helper(foreground_client, "Temp", "raid_powersource", debug=False)
 						await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
+						await asyncio.sleep(0.75)
 						await foreground_client.send_key(Keycode.X, 0.2)
-						await foreground_client.teleport(XYZ(-854.392578125, -808.9772338867188, 1832.6253662109375))
+						await foreground_client.teleport(XYZ(9700.25, 9086.134765625, 100.98583984375))
 						await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
+						await asyncio.sleep(0.75)
 						await foreground_client.send_key(Keycode.X, 0.2)
 					case 'Health':
 						await entity_tp_helper(foreground_client, "Temp", "raid_powersource", debug=False)
 						await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
+						await asyncio.sleep(0.75)
 						await foreground_client.send_key(Keycode.X, 0.2)
-						await foreground_client.teleport(XYZ(-6406.0693359375, 22017.552734375, 1881.552490234375))
+						await foreground_client.teleport(XYZ(9820.8486328125, 16914.041015625, 30.01177978515625))
 						await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
+						await asyncio.sleep(0.75)
 						await foreground_client.send_key(Keycode.X, 0.2)
 					case 'Speed':
 						await entity_tp_helper(foreground_client, "Temp", "raid_powersource", debug=False)
 						await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
+						await asyncio.sleep(0.75)
 						await foreground_client.send_key(Keycode.X, 0.2)
-						await foreground_client.teleport(XYZ(-1079.9241943359375, 23360.068359375, 1602.2117919921875))
+						await foreground_client.teleport(XYZ(16230.8935546875, 26521.58984375, 39.994598388671875))
 						await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
+						await asyncio.sleep(0.75)
 						await foreground_client.send_key(Keycode.X, 0.2)
 
 		except asyncio.CancelledError:
@@ -1580,148 +1586,6 @@ async def main():
 			await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
 			await asyncio.sleep(0.25)
 			await foreground_client.send_key(Keycode.X, 0.2)
-
-	# async def toggle_wood_tokens_hotkey(token):
-	# 	global wood_tokens_task
-	# 	global gui_send_queue
-	# 	global wood_tokens_enabled
-
-	# 	if freecam_status:
-	# 		logger.debug("Disable freecam before running")
-	# 		return
-
-	# 	if wood_tokens_task is not None and not wood_tokens_task.cancelled():
-	# 		wood_tokens_task.cancel()
-	# 		wood_tokens_task = None
-
-	# 		logger.debug(f"Wood Tokens ({token}) Disabled")
-	# 		wood_tokens_enabled = False
-	# 		gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("WoodTokenStatus", "Disabled")))
-	# 		return
-
-	# 	logger.debug(f"Wood Tokens ({token}) Enabled")
-	# 	wood_tokens_enabled = True
-	# 	gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("WoodTokenStatus", "Enabled")))
-	# 	#wood_tokens_task = asyncio.create_task(wood_chest_loop(foreground_client, token))
-
-	# async def wood_chest_loop(clients: list[Client], token):
-	# 	match token:
-	# 		case 'Snake':
-	# 			entityname = "Raid_Coin_Snake_PU"
-	# 		case 'Spider':
-	# 			entityname = "Raid_Coin_Spider_PU"
-	# 		case 'Crane':
-	# 			entityname = "Raid_Coin_Crane_PU"
-	# 		case 'Butterfly':
-	# 			entityname = "Raid_Coin_Butterfly_PU"
-	# 		case 'Tree':
-	# 			entityname = "Raid_Coin_Tree_PU"
-	# 	await entity_tp_helper(foreground_client, "poopy", entityname, debug=False)
-	# 	await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
-	# 	await asyncio.sleep(0.25)
-	# 	await foreground_client.send_key(Keycode.X, 0.2)
-	# 	await foreground_client.teleport(XYZ(x=-2309.12158203125,y=-7644.15673828125,z=750.4605102539062))
-	# 	await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
-	# 	await asyncio.sleep(0.25)
-	# 	await foreground_client.send_key(Keycode.X, 0.2)
-
-	# async def toggle_silver_tokens_hotkey(token):
-	# 	global silver_tokens_task
-	# 	global gui_send_queue
-
-	# 	if freecam_status:
-	# 		logger.debug("Disable freecam before running")
-	# 		return
-
-	# 	if silver_tokens_task is not None and not silver_tokens_task.cancelled():
-	# 		silver_tokens_task.cancel()
-	# 		silver_tokens_task = None
-
-	# 		logger.debug(f"Silver Tokens ({token}) Disabled")
-	# 		gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("SilverTokenStatus", "Disabled")))
-	# 		return
-
-	# 	logger.debug(f"Silver Tokens ({token}) Enabled")
-	# 	gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("SilverTokenStatus", "Enabled")))
-	# 	silver_tokens_task = asyncio.create_task(silver_chest_loop(foreground_client, token))
-
-	# async def silver_chest_loop(clients: list[Client], token):
-	# 	try:
-	# 		while True:
-	# 			logger.debug(f"Starting Silver Tokens Task")
-	# 			match token:
-	# 				case 'Snake':
-	# 					entityname = "Raid_Coin_Snake_PU"
-	# 				case 'Spider':
-	# 					entityname = "Raid_Coin_Spider_PU"
-	# 				case 'Crane':
-	# 					entityname = "Raid_Coin_Crane_PU"
-	# 				case 'Butterfly':
-	# 					entityname = "Raid_Coin_Butterfly_PU"
-	# 				case 'Tree':
-	# 					entityname = "Raid_Coin_Tree_PU"
-	# 			logger.debug(f"Going to silver token")
-	# 			await entity_tp_helper(foreground_client, "poopy", entityname, debug=False)
-	# 			await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
-	# 			await asyncio.sleep(0.4)
-	# 			await foreground_client.send_key(Keycode.X, 0.2)
-	# 			logger.debug(f"Going to silver chest")
-	# 			await foreground_client.teleport(XYZ(-9570.93359375, -8118.32470703125, 750.46044921875))
-	# 			await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
-	# 			await asyncio.sleep(0.4)
-	# 			await foreground_client.send_key(Keycode.X, 0.2)
-
-	# 	except asyncio.CancelledError:
-	# 		logger.debug("Silver Tokens task cancelled.")
-
-	# async def toggle_gold_tokens_hotkey(token):
-	# 	global gold_tokens_task
-	# 	global gui_send_queue
-
-	# 	if freecam_status:
-	# 		logger.debug("Disable freecam before running")
-	# 		return
-
-	# 	if gold_tokens_task is not None and not gold_tokens_task.cancelled():
-	# 		gold_tokens_task.cancel()
-	# 		gold_tokens_task = None
-
-	# 		logger.debug(f"Gold Tokens ({token}) Disabled")
-	# 		gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("GoldTokenStatus", "Disabled")))
-	# 		return
-
-	# 	logger.debug(f"Gold Tokens ({token}) Enabled")
-	# 	gui_send_queue.put(deimosgui.GUICommand(deimosgui.GUICommandType.UpdateWindow,("GoldTokenStatus", "Enabled")))
-	# 	gold_tokens_task = asyncio.create_task(gold_chest_loop(foreground_client, token))
-
-	# async def gold_chest_loop(clients: list[Client], token):
-	# 	try:
-	# 		while True:
-	# 			logger.debug(f"Starting Gold Tokens Task")
-	# 			match token:
-	# 				case 'Snake':
-	# 					entityname = "Raid_Coin_Snake_PU"
-	# 				case 'Spider':
-	# 					entityname = "Raid_Coin_Spider_PU"
-	# 				case 'Crane':
-	# 					entityname = "Raid_Coin_Crane_PU"
-	# 				case 'Butterfly':
-	# 					entityname = "Raid_Coin_Butterfly_PU"
-	# 				case 'Tree':
-	# 					entityname = "Raid_Coin_Tree_PU"
-	# 			logger.debug(f"Going to gold token")
-	# 			await entity_tp_helper(foreground_client, "poopy", entityname, debug=False)
-	# 			await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
-	# 			await asyncio.sleep(0.4)
-	# 			await foreground_client.send_key(Keycode.X, 0.2)
-	# 			logger.debug(f"Going to gold chest")
-	# 			await foreground_client.teleport(XYZ(-6051.0302734375, -3219.81103515625, 271.30438232421875))
-	# 			await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
-	# 			await asyncio.sleep(0.4)
-	# 			await foreground_client.send_key(Keycode.X, 0.2)
-
-	# 	except asyncio.CancelledError:
-	# 		logger.debug("Gold Tokens task cancelled.")
 
 	async def toggle_forensic_hotkey():
 		global forensic_task
