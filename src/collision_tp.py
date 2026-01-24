@@ -85,7 +85,7 @@ async def _perform_single_teleport_attempt(
         bounds: tuple,
 ) -> bool:
     """Performs a single, non-looping teleport attempt and verifies the result."""
-    player_radius = 40 #44.2
+    player_radius = 44.2 #44.2
     minx, miny, maxx, maxy = bounds
 
     if not free_area or free_area.is_empty:

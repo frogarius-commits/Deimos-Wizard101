@@ -79,6 +79,7 @@ class GUICommandType(Enum):
 	MisfortuneTears = auto()
 	CacaoPods = auto()
 	QuetzalEggs = auto()
+	InitializeTokens = auto()
 
 	# CRR
 	RopePort = auto()
@@ -189,6 +190,7 @@ class GUIKeys:
 	MisfortuneTears =  "misfortunetears"
 	CacaoPods = "cacaopods"
 	QuetzalEggs = "quetzaleggs"
+	InitializeTokens = "initializetokens"
 
 	# CRR
 	RopePort = "ropeport"
@@ -495,13 +497,16 @@ def create_gui(gui_theme, gui_text_color, gui_button_color, tool_name, tool_vers
 	CSR_toggles_layout = [[hotkey_button(name, key), gui.Text(tl('Disabled'), key=f'{name}Status', auto_size_text=False, size=(7, 1), text_color=gui_text_color)] for name, key in CSR_Toggles]
 	framed_CSR_toggles_layout = gui.Frame(tl('CSR Toggles'), CSR_toggles_layout, title_color=gui_text_color)
 
-	CSR_hotkeys_layout = [[hotkey_button_sized('Location Teleport', GUIKeys.LocationTeleport, False, gui_text_color, gui_button_color, (13, 1))],
-					   [gui.Combo(['Pyramid', 'North', 'South', 'East', 'West'], default_value='Pyramid', readonly=True, text_color=gui_text_color, size=(13, 1), key='CSR_Location')],
+	CSR_hotkeys_layout = [ 
+					   #[hotkey_button_sized('Initalize Tokens', GUIKeys.InitializeTokens, False, gui_text_color, gui_button_color, (13, 1))],
+					   #[gui.HorizontalSeparator(color='white', pad=((0, 0),(3, 3)))],
+					   [hotkey_button_sized('North Pet Token', GUIKeys.NorthPetToken, False, gui_text_color, gui_button_color, (13, 1))],
 					   [gui.HorizontalSeparator(color='white', pad=((0, 0),(3, 3)))],
 					   [hotkey_button_sized('South Token TP', GUIKeys.SouthToken, False, gui_text_color, gui_button_color, (13, 1))],
 					   [gui.Combo(['Wildlife', 'School', 'Astral'], default_value='Wildlife', readonly=True, text_color=gui_text_color, size=(13, 1), key='South_Token')],
 					   [gui.HorizontalSeparator(color='white', pad=((0, 0),(3, 3)))],
-					   [hotkey_button_sized('North Pet Token', GUIKeys.NorthPetToken, False, gui_text_color, gui_button_color, (13, 1))]]
+					   [hotkey_button_sized('Location Teleport', GUIKeys.LocationTeleport, False, gui_text_color, gui_button_color, (13, 1))],
+					   [gui.Combo(['Pyramid', 'North', 'South', 'East', 'West'], default_value='Pyramid', readonly=True, text_color=gui_text_color, size=(13, 1), key='CSR_Location')]]
 
 	framed_CSR_hotkeys_layout = gui.Frame(tl('CSR Hotkeys'), CSR_hotkeys_layout, title_color=gui_text_color)
 
@@ -865,6 +870,9 @@ def manage_gui(send_queue: queue.Queue, recv_queue: queue.Queue, gui_theme, gui_
 
 			case GUIKeys.NorthPetToken:
 				send_queue.put(GUICommand(GUICommandType.NorthPetToken))
+
+			case GUIKeys.InitializeTokens:
+				send_queue.put(GUICommand(GUICommandType.InitializeTokens))
 
 			case GUIKeys.RopePort:
 				send_queue.put(GUICommand(GUICommandType.RopePort))

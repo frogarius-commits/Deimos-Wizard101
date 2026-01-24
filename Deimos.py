@@ -321,6 +321,8 @@ pet_task: asyncio.Task = None
 hail_limbow_task: asyncio.Task = None
 fov_task: asyncio.Task = None
 
+
+
 vvr_drums_task: asyncio.Task = None
 auto_chest_task: asyncio.Task = None
 
@@ -1131,47 +1133,64 @@ async def main():
 			entities = await foreground_client.get_base_entity_list()
 			match token:
 				case 'Wildlife':
-					for entity in entities:
-						obj_name = await entity.object_name()
-						if "RAID-Coins-Wildlife-INVISO_01" in obj_name:
-							behavior = await entity.search_behavior_by_name("AnimationBehavior")
-							string = await behavior.read_string_from_offset(576)
-							if string:
-								entity_pos = await entity.location()
-								if string != "00_Hidden":
-									print(string)
-									logger.debug(f'Teleporting to South {token} Token ({string}) at: XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})')
-									await foreground_client.teleport(entity_pos)
-									return
-					logger.debug(f'South {token} Token not found.')
+					if south_wildlife_location.x == 0.0 and south_wildlife_location.y == 0.0 and south_wildlife_location.z == 0.0:
+						logger.debug(f'South Wildlife Token location not found, re-initialize token locations.')
+					else:
+						logger.debug(f'Teleporting to South Wildlife Token location at XYZ({south_wildlife_location.x}, {south_wildlife_location.y}, {south_wildlife_location.z})')
+						await foreground_client.teleport(south_wildlife_location)
+					# for entity in entities:
+					# 	obj_name = await entity.object_name()
+					# 	if "RAID-Coins-Wildlife-INVISO_01" in obj_name:
+					# 		behavior = await entity.search_behavior_by_name("AnimationBehavior")
+					# 		string = await behavior.read_string_from_offset(576)
+					# 		if string:
+					# 			entity_pos = await entity.location()
+					# 			if string == "00_Hidden":
+					# 				logger.debug(f'Teleporting to South {token} Token ({string}) at: XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z}) \n \
+					#   Ensure no player has revealead any potential South {token} Token spots prior to teleport.')
+					# 				await foreground_client.teleport(entity_pos)
+					# 				return
+					# logger.debug(f'South {token} Token not found.')
 				case 'School':
-					for entity in entities:
-						obj_name = await entity.object_name()
-						if "RAID-Coins-Elements-INVISO_01" in obj_name:
-							behavior = await entity.search_behavior_by_name("AnimationBehavior")
-							string = await behavior.read_string_from_offset(576)
-							if string:
-								entity_pos = await entity.location()
-								if string != "00_Hidden":
-									print(string)
-									logger.debug(f'Teleporting to South {token} Token ({string}) at: XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})')
-									await foreground_client.teleport(entity_pos)
-									return
-					logger.debug(f'South {token} Token not found.')
+					if south_school_location.x == 0.0 and south_school_location.y == 0.0 and south_school_location.z == 0.0:
+						logger.debug(f'South School Token location not found, re-initialize token locations.')
+					else:
+						logger.debug(f'Teleporting to South School Token location at XYZ({south_school_location.x}, {south_school_location.y}, {south_school_location.z})')
+						await foreground_client.teleport(south_school_location)
+					# for entity in entities:
+					# 	obj_name = await entity.object_name()
+					# 	if "RAID-Coins-Elements-INVISO_01" in obj_name:
+					# 		behavior = await entity.search_behavior_by_name("AnimationBehavior")
+					# 		string = await behavior.read_string_from_offset(576)
+					# 		if string:
+					# 			entity_pos = await entity.location()
+					# 			if string == "00_Hidden":
+					# 				print(string)
+					# 				logger.debug(f'Teleporting to South {token} Token ({string}) at: XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z}) \n \
+					#   Ensure no player has revealead any potential South {token} Token spots prior to teleport.')
+					# 				await foreground_client.teleport(entity_pos)
+					# 				return
+					# logger.debug(f'South {token} Token not found.')
 				case 'Astral':
-					for entity in entities:
-						obj_name = await entity.object_name()
-						if "RAID-Coins-Cosmic-INVISO_01" in obj_name:
-							behavior = await entity.search_behavior_by_name("AnimationBehavior")
-							string = await behavior.read_string_from_offset(576)
-							if string:
-								entity_pos = await entity.location()
-								if string != "00_Hidden":
-									print(string)
-									logger.debug(f'Teleporting to South {token} Token ({string}) at: XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})')
-									await foreground_client.teleport(entity_pos)
-									return
-					logger.debug(f'South {token} Token not found.')
+					if south_astral_location.x == 0.0 and south_astral_location.y == 0.0 and south_astral_location.z == 0.0:
+						logger.debug(f'South Astral Token location not found, re-initialize token locations.')
+					else:
+						logger.debug(f'Teleporting to South Astral Token location at XYZ({south_astral_location.x}, {south_astral_location.y}, {south_astral_location.z})')
+						await foreground_client.teleport(south_astral_location)
+					# for entity in entities:
+					# 	obj_name = await entity.object_name()
+					# 	if "RAID-Coins-Cosmic-INVISO_01" in obj_name:
+					# 		behavior = await entity.search_behavior_by_name("AnimationBehavior")
+					# 		string = await behavior.read_string_from_offset(576)
+					# 		if string:
+					# 			entity_pos = await entity.location()
+					# 			if string == "00_Hidden":
+					# 				print(string)
+					# 				logger.debug(f'Teleporting to South {token} Token ({string}) at: XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z}) \n \
+					#   Ensure no player has revealead any potential South {token} Token spots prior to teleport.')
+					# 				await foreground_client.teleport(entity_pos)
+					# 				return
+					# logger.debug(f'South {token} Token not found.')
 
 	async def print_tokens():
 		if foreground_client:
@@ -1199,6 +1218,48 @@ async def main():
 							print(f"{string}\n")
 
 	async def north_pet_hotkey():
+		if north_pet_location.x == 0.0 and north_pet_location.y == 0.0 and north_pet_location.z == 0.0:
+			logger.debug(f'North Pet Token location not found, re-initialize token locations.')
+		else:
+			logger.debug(f'Teleporting to North Pet Token location at XYZ({north_pet_location.x}, {north_pet_location.y}, {north_pet_location.z})')
+			await foreground_client.teleport(north_pet_location)
+		
+
+		# if foreground_client:
+		# 	entities = await foreground_client.get_base_entity_list()
+		# 	for entity in entities:
+		# 		obj_name = await entity.object_name()
+		# 		if "Coins" in obj_name:
+		# 			# Update North Pet Token entity 
+		# 			if obj_name == "RAID-Coins-Elements-PET_01":
+		# 				behav = await entity.search_behavior_by_name("AnimationBehavior")
+		# 				string = await behav.read_string_from_offset(576)
+		# 				if string:
+		# 					entity_pos = await entity.location()
+		# 					if string != "00_Hidden":
+		# 						print(obj_name)
+		# 						print(hex(await behav.read_base_address()))
+		# 						entity_pos = await entity.location()
+		# 						await WorldsCollideTP(foreground_client, entity_pos)
+		# 						print(f"Teleporting client to token at XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})")
+		# 						print(f"{string}\n")
+		# 						return
+		# 	logger.debug(f'North Pet Token not found.')
+
+	async def initialize_tokens_hotkey():
+		global north_pet_location
+		global south_wildlife_location
+		global south_school_location
+		global south_astral_location
+		global default
+
+		default = XYZ(0.0,0.0,0.0)
+		print(north_pet_location)
+		print(XYZ(0.0,0.0,0.0))
+		print(south_wildlife_location)
+		print(south_school_location)
+		print(south_astral_location)
+
 		if foreground_client:
 			entities = await foreground_client.get_base_entity_list()
 			for entity in entities:
@@ -1211,14 +1272,44 @@ async def main():
 						if string:
 							entity_pos = await entity.location()
 							if string != "00_Hidden":
-								print(obj_name)
-								print(hex(await behav.read_base_address()))
 								entity_pos = await entity.location()
-								await WorldsCollideTP(foreground_client, entity_pos)
-								print(f"Teleporting client to token at XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})")
-								print(f"{string}\n")
-								return
-			logger.debug(f'North Pet Token not found.')
+								north_pet_location = entity_pos
+								logger.debug(f"North Pet Token found at XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})")
+					if "RAID-Coins-Wildlife-INVISO_01" in obj_name:
+							behavior = await entity.search_behavior_by_name("AnimationBehavior")
+							string = await behavior.read_string_from_offset(576)
+							if string:
+								entity_pos = await entity.location()
+								if string == "00_Hidden":
+									south_wildlife_location = entity_pos
+									logger.debug(f"South Wildlife Token found at XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})")
+					if "RAID-Coins-Elements-INVISO_01" in obj_name:
+							behavior = await entity.search_behavior_by_name("AnimationBehavior")
+							string = await behavior.read_string_from_offset(576)
+							if string:
+								entity_pos = await entity.location()
+								if string == "00_Hidden":
+									south_school_location = entity_pos
+									logger.debug(f"South School Token found at XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})")
+					if "RAID-Coins-Cosmic-INVISO_01" in obj_name:
+							behavior = await entity.search_behavior_by_name("AnimationBehavior")
+							string = await behavior.read_string_from_offset(576)
+							if string:
+								entity_pos = await entity.location()
+								if string == "00_Hidden":
+									south_astral_location = entity_pos
+									logger.debug(f"South Astral Token found at XYZ({entity_pos.x}, {entity_pos.y}, {entity_pos.z})")
+					
+			print(north_pet_location)
+			if north_pet_location.x == default.x and north_pet_location.y == default.y and north_pet_location.z == default.z:
+				logger.debug(f'North Pet Token not found, initialize tokens in pet mode.')
+			if south_wildlife_location.x == default.x and south_wildlife_location.y == default.y and south_wildlife_location.z == default.z:
+				logger.debug(f'South Wildlife Token not found, initialize tokens in player mode.')
+			if south_school_location.x == default.x and south_school_location.y == default.y and south_school_location.z == default.z:
+				logger.debug(f'South School Token not found, initialize tokens in player mode.')
+			if south_astral_location.x == default.x and south_astral_location.y == default.y and south_astral_location.z == default.z:
+				logger.debug(f'South Astral Token not found, initialize tokens in player mode.')
+			
 			
 
 	# Toggles
@@ -1524,6 +1615,7 @@ async def main():
 			gcr_tokens_task = asyncio.create_task(gcr_tokens())
 
 	async def gcr_chest_loop(clients: list[Client], wood_token, silver_token, gold_token, wood_tokens_enabled, silver_tokens_enabled, gold_tokens_enabled):
+		asyncio.sleep(0.1)
 		if wood_tokens_enabled:
 			match wood_token:
 				case 'Snake':
@@ -1538,11 +1630,9 @@ async def main():
 					entityname = "Raid_Coin_Tree_PU"
 			await entity_tp_helper(foreground_client, "poopy", entityname, debug=False)
 			await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
-			await asyncio.sleep(0.25)
 			await foreground_client.send_key(Keycode.X, 0.2)
 			await foreground_client.teleport(XYZ(x=-2309.12158203125,y=-7644.15673828125,z=750.4605102539062))
 			await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
-			await asyncio.sleep(0.25)
 			await foreground_client.send_key(Keycode.X, 0.2)
 
 		if silver_tokens_enabled:
@@ -1559,11 +1649,9 @@ async def main():
 					entityname = "Raid_Coin_Tree_PU"
 			await entity_tp_helper(foreground_client, "poopy", entityname, debug=False)
 			await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
-			await asyncio.sleep(0.25)
 			await foreground_client.send_key(Keycode.X, 0.2)
 			await foreground_client.teleport(XYZ(-9570.93359375, -8118.32470703125, 750.46044921875))
 			await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
-			await asyncio.sleep(0.25)
 			await foreground_client.send_key(Keycode.X, 0.2)
 
 		if gold_tokens_enabled:
@@ -1580,11 +1668,9 @@ async def main():
 					entityname = "Raid_Coin_Tree_PU"
 			await entity_tp_helper(foreground_client, "poopy", entityname, debug=False)
 			await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
-			await asyncio.sleep(0.25)
 			await foreground_client.send_key(Keycode.X, 0.2)
 			await foreground_client.teleport(XYZ(-6051.0302734375, -3219.81103515625, 271.30438232421875))
 			await is_visible_by_path(foreground_client, ['WorldView', 'NPCRangeWin', 'imgBackground'])
-			await asyncio.sleep(0.25)
 			await foreground_client.send_key(Keycode.X, 0.2)
 
 	async def toggle_forensic_hotkey():
@@ -1644,8 +1730,8 @@ async def main():
 		try:
 			while True:
 				if await entity_tp_helper(foreground_client, "poopy", "Raid_Fire_Starter", debug=False):
-					await foreground_client.teleport(XYZ(7870.747, -670.420, 750.909))
-					await asyncio.sleep(0.2)
+					await foreground_client.teleport(XYZ(8263.65625, -766.0567016601562, 735.370361328125))
+					await asyncio.sleep(0.5)
 				await entity_tp_helper(foreground_client, "poopy", "Raid_LM_Folder_C", debug=False)
 				await asyncio.sleep(0.2)
 				await foreground_client.send_key(Keycode.X, 0.2)
@@ -2019,7 +2105,7 @@ async def main():
 					txt_window = txt_windows[0]
 					curr_flags = await txt_window.flags() - WindowFlags.disabled
 					if curr_flags >= 0:
-						await txt_window.write_maybe_text("All Hail Limbow")
+						await txt_window.write_maybe_text("All Hail Hunter")
 						await txt_window.write_flags(WindowFlags(curr_flags + WindowFlags.visible))
 				await asyncio.sleep(0.1)
 		await asyncio.gather(*[limbow_hail(p) for p in walker.clients])
@@ -2162,6 +2248,41 @@ async def main():
 
 
 		await asyncio.gather(*[async_afk_questing(p) for p in walker.clients])
+
+	async def raid_zone_check_loop():
+		global north_pet_location
+		global south_wildlife_location
+		global south_school_location
+		global south_astral_location
+
+		north_pet_location = XYZ(0.0, 0.0, 0.0)
+		south_wildlife_location = XYZ(0.0, 0.0, 0.0)
+		south_school_location = XYZ(0.0, 0.0, 0.0)
+		south_astral_location = XYZ(0.0, 0.0, 0.0)
+		tokens_initialized = False
+
+		while True:
+			
+			await asyncio.sleep(0.5)
+			if await foreground_client.zone_name() != "": # Insert CSR zone name
+				if north_pet_location != XYZ(0.0, 0.0, 0.0):
+					north_pet_location = XYZ(0.0, 0.0, 0.0)
+				if south_wildlife_location != XYZ(0.0, 0.0, 0.0):
+					south_wildlife_location = XYZ(0.0, 0.0, 0.0)
+				if south_school_location != XYZ(0.0, 0.0, 0.0):
+					south_school_location = XYZ(0.0, 0.0, 0.0)
+				if south_astral_location != XYZ(0.0, 0.0, 0.0):
+					south_astral_location = XYZ(0.0, 0.0, 0.0)
+				tokens_initialized = False
+			else:
+				if not tokens_initialized:
+					entities = await foreground_client.get_base_entity_list()
+					for entity in entities:
+						obj_name = await entity.object_name()
+						if obj_name == "RAID-Coins-Elements-PET_01":
+							await asyncio.sleep(3.0)
+							initialize_tokens_hotkey()
+							tokens_initialized = True
 
 	# logger.catch()
 	async def auto_pet_loop():
@@ -2997,6 +3118,9 @@ async def main():
 							case deimosgui.GUICommandType.NorthPetToken:
 								await north_pet_hotkey()
 
+							case deimosgui.GUICommandType.InitializeTokens:
+								await initialize_tokens_hotkey()
+
 							# CSR Toggles
 
 							case GUIKeys.CacaoPods:
@@ -3528,7 +3652,8 @@ async def main():
 		#zone_check_loop_task = asyncio.create_task(zone_check_loop())
 		anti_afk_questing_loop_task = asyncio.create_task(anti_afk_questing_loop())
 		#ban_watcher_task = asyncio.create_task(ban_watcher())
-		global hail_limbow_bool
+		raid_zone_check_task = asyncio.create_task(raid_zone_check_loop())
+		global hail_limbow_bool 
 		if hail_limbow_bool:
 			hail_limbow_task = asyncio.create_task(hail_limbow())
 		else:
@@ -3566,7 +3691,7 @@ async def main():
                                drop_logging_loop_task, #zone_check_loop_task, 
                                anti_afk_questing_loop_task, hail_limbow_task,
                                speed_task, fish_task,
-                               fov_task, 
+                               fov_task, raid_zone_check_task,
 							   pods_task, tears_task
                                ]
 		for task in tasks:
